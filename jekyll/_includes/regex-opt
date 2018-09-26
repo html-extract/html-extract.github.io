@@ -1,0 +1,4 @@
+<br>There are two options for regular expressions:<br>
+ <span class="operator-list">
+ <b>i</b>: <i>case insensitive</i>
+ and <b>c</b>: <i>collate</i> (locale aware character groups)</span>

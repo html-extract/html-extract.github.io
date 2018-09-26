@@ -1,0 +1,444 @@
+---
+layout: default
+title: "Hext &mdash; Download"
+desc: "Download, build and install htmlext and language bindings for Node.js, PHP, Python, Ruby"
+id: download
+---
+
+<div class="three wide column">
+  <div class="ui sticky">
+    <div class="jump-table-spacer"></div>
+    <h4>Up & Running</h4>
+    <div class="ui secondary vertical scrollspy pointing fluid menu jump-table">
+      <a class="active item" href="#building-hext">
+        Building Hext on *nix
+      </a>
+      <a class="item" href="#building-hext-win">
+        Building Hext on Win
+      </a>
+      <a class="item" href="#using-htmlext">
+        Using htmlext
+      </a>
+      <a class="item" href="#using-libhext">
+        Using libhext
+      </a>
+    </div>
+    <h4>Language Bindings</h4>
+    <div class="ui secondary vertical scrollspy pointing fluid menu jump-table">
+      <a class="item" href="#building-nodejs-hext">
+        Node.js
+      </a>
+      <a class="item" href="#building-python-hext">
+        Python
+      </a>
+      <a class="item" href="#building-ruby-hext">
+        Ruby
+      </a>
+      <a class="item" href="#building-php-hext">
+        PHP
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="thirteen wide column">
+  <a class="scrollspy anchor" id="building-hext"></a>
+  <h1 class="ui header">Building Hext on *nix</h1>
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <h3>On a Debian-based distribution</h3>
+      <p class="bottom-attached">
+        Install the following packages:
+      </p>
+      <ul class="ui list">
+        <li>g++ ≥4.9 or clang ≥3.5</li>
+        <li>cmake ≥3.02</li>
+        <li>libboost-dev ≥1.55</li>
+        <li>libboost-regex-dev ≥1.55</li>
+        <li>libboost-program-options-dev ≥1.55</li>
+        <li>libgumbo-dev ≥0.10.1, which is available in
+            <a href="https://www.debian.org/releases/sid/">Debian Sid</a>,
+            <a href="https://www.debian.org/releases/stretch/">Debian Stretch</a>
+            and <a href="http://www.ubuntu.com/">Ubuntu</a> ≥15.10</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>On other *nix operating systems</h3>
+      <p class="bottom-attached">
+        You will need:
+      </p>
+      <ul class="ui list">
+        <li>g++ ≥4.9 or clang ≥3.5</li>
+        <li><a href="https://cmake.org/">CMake</a> ≥3.02</li>
+        <li><a href="http://www.boost.org/">Boost</a> ≥1.55,
+            specifically Boost.Regex and Boost.Program_options</li>
+        <li>libtool and autoconf for building
+            <a href="https://github.com/google/gumbo-parser">Gumbo</a></li>
+        <li>
+            Download, build and install Gumbo version 0.10.1 from
+            <a href="https://github.com/google/gumbo-parser/archive/v0.10.1.tar.gz">
+              here</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="six wide column">
+      <p>
+        Download and extract the latest Hext release and navigate to the
+        top-level build directory.
+        Then call cmake and make to build the project.<br>
+        If all went well you'll find the htmlext binary in the current directory.
+      </p>
+    </div>
+    <div class="ten wide column">
+      <pre class="ace-static-hl"><code>{%include build-hext.text%}</code></pre>
+    </div>
+    <div class="eight wide column">
+      <p>
+        If you wish to install Hext on your system, run <i>make install</i> as root.
+        This will install the htmlext binary, libhext's header files, the
+        libhext library and package configuration files for CMake.<br>
+        Run <i>ldconfig</i> so your linker can find the newly installed libhext.
+      </p>
+    </div>
+    <div class="eight wide column">
+      <pre class="ace-static-hl"><code>{%include install-hext.sh%}</code></pre>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="building-hext-win"></a>
+  <h1 class="ui header">Building Hext on Windows</h1>
+  <p>
+    Both htmlext and libhext can be built on Windows.<br>
+    You will need:
+  </p>
+  <ul class="ui list">
+    <li>A C++14 capable compiler, such as the one that comes with the
+        <a href="https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx">
+        Visual Studio 2015 Community Edition</a>.</li>
+    <li>A recent version of <a href="https://cmake.org/download/">CMake</a>.
+        Tested with 3.6 but any version ≥3.02 should suffice.</li>
+    <li>A recent version of
+        <a href="http://www.boost.org/users/download/">Boost</a>,
+        specifically the boost header files and the Boost.Regex and
+        Boost.Program_options libraries.
+        Tested with version 1.59 but any version ≥1.55 should suffice.</li>
+    <li><a href="https://github.com/google/gumbo-parser">Gumbo</a> version
+        0.10.1 from
+        <a href="https://github.com/google/gumbo-parser/archive/v0.10.1.tar.gz">
+        here</a>. Gumbo comes with a
+        <a href="https://github.com/google/gumbo-parser/tree/master/visualc">
+        Visual Studio project file</a>.</li>
+    <li>And of course the latest release of
+        <a href="https://github.com/thomastrapp/hext/releases">Hext</a>.</li>
+  </ul>
+  <p>
+    The tricky part is getting CMake to find all the neccessary headers and
+    libraries. This depends on how and where you installed Boost and Gumbo.
+    But once that is done, CMake can generate a Visual Studio Solution with
+    which Visual Studio will be able to compile the Hext project.<br>
+    <u>Note:</u> So far no effort was made to build the Hext language bindings
+    on Windows. But it may very well be feasible :)
+  </p>
+  <a class="scrollspy anchor" id="using-htmlext"></a>
+  <h1 class="ui header">Using htmlext</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="six wide column">
+      <p class="operator-list">
+        <b>htmlext</b> is a command line utility that accepts Hext snippets,
+        matches them against HTML files and outputs JSON.
+      </p>
+      <p>
+        Every rule tree match gets its own JSON object containing the captured
+        name-value pairs.
+      </p>
+      <p class="operator-list">
+        <b>htmlext</b> detects whether its output is written to a terminal or
+        to a pipe. In the former case, every JSON object is pretty-printed, in
+        the latter the output is compacted, printing one object on each line.
+        You can force either behaviour by using <b>--pretty</b> or <b>--compact</b>.
+      </p>
+      <p class="operator-list">
+        Another notable option is <b>--filter&nbsp;&lt;key&gt;</b>, which will
+        print nothing but the value of every capture whose name equals
+        <b>&lt;key&gt;</b>, one per line.
+      </p>
+    </div>
+    <div class="ten wide column">
+      <pre class="ace-static-hl"><code>{%include htmlext-help.text%}</code></pre>
+    </div>
+  </div>
+  <a class="anchor" id="examples"></a>
+  <h3 class="ui header">htmlext: Examples</h3>
+  <div class="ui doubling top aligned two column grid">
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code>{%include htmlext-reddit.sh%}</code></pre>
+    </div>
+    <div class="seven wide column">
+      <pre class="ace-static-hl"><code>{%include htmlext-links.sh%}</code></pre>
+    </div>
+    <div class="sixteen wide column">
+      <p class="operator-list">
+        Check out <a href="https://stedolan.github.io/jq/">jq</a>,
+        an indispensable tool when dealing with JSON in the shell.
+      </p>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="using-libhext"></a>
+  <h1 class="ui header">Using libhext in a CMake project</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p>
+        After <a href="#building-hext">installing Hext</a> you can use CMake's own
+        FindPackage to add libhext to your project and you should be good to go!
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code>{%include libhext-cmake-example.sh%}</code></pre>
+    </div>
+    <div style="padding-top:0" class="sixteen wide column">
+      <p>
+        Go to the
+        <a href="/libhext-documentation">main page of libhext's documentation</a> for an
+        introduction to libhext.
+      </p>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="building-nodejs-hext"></a>
+  <h1 class="ui header">Building Hext for Node.js</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      <p>
+        First <a href="#building-hext">build and install Hext</a>.
+        Then, install nodejs, nodejs-dev (tested with version ≥v0.10.25), a
+        package called nodejs-legacy (which is just a symlink from /usr/bin/node
+        to /usr/bin/nodejs) and
+        <a href="https://www.npmjs.com/">npm</a> (any version should suffice).
+      </p>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p class="bottom-attached">
+        The Node.js extension is included in the Hext project.
+        To build the extension you will need two packages which
+        are available through the Node.js package manager:
+      </p>
+      <ul class="ui list">
+        <li>
+          <a href="https://github.com/nodejs/nan">nan</a>:
+          Native Abstractions for Node.js
+        </li>
+        <li>
+          <a href="https://github.com/cmake-js/cmake-js">CMake.js</a>:
+          A Node.js/io.js native addon build tool
+        </li>
+      </ul>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code>{%include build-hext-node.sh%}</code></pre>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p class="operator-list">
+        To use the extension in another project you can let npm do all the work.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code>{%include use-hext-node.sh%}</code></pre>
+    </div>
+  </div>
+  <a class="anchor" id="nodejs-example-usage"></a>
+  <h3 class="ui header">Node.js: Example Usage</h3>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      This example JavaScript program demonstrates everything you can do with
+      Hext's Node.js extension as of yet.
+      Also check out
+<a href="https://github.com/thomastrapp/hext/blob/master/libhext/bindings/nodejs/htmlext.js">htmlext.js</a>
+      which is a stripped down JavaScript port of the htmlext command line
+      utility.
+    </div>
+    <div class="sixteen wide column">
+      <pre class="ace-static-hl"><code>{%include using-hext-node.javascript%}</code></pre>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="building-python-hext"></a>
+  <h1 class="ui header">Building Hext for Python</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      <p>
+        First <a href="#building-hext">build and install Hext</a>.
+        Then, install python, python-dev (both version ≥2.7) and
+        <a href="http://www.swig.org/">swig</a> (version ≥3.0).
+      </p>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p>
+        The Python extension is included in the Hext project.
+        Navigate to its build directory. Call cmake and make to build
+        the extension.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code>{%include build-hext-python.sh%}</code></pre>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p class="operator-list">
+        The Hext Python extension is comprised of two files: <b>hext.py</b> and
+        a shared library called <b>_hext.so</b>.
+        Unfortunately, there's no automated way of installing the extension yet, so
+        you'll have to take care of this part yourself :)<br>
+        Running <b>python -m site</b> will show you all the locations Python
+        will check in search of an extension. Use the directory given by
+        <b>python -m site --user-site</b> to install the extension for the
+        current user only.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code>{%include install-hext-python.sh%}</code></pre>
+    </div>
+  </div>
+  <a class="anchor" id="python-example-usage"></a>
+  <h3 class="ui header">Python: Example Usage</h3>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      This Python script demonstrates everything you can do with Hext's Python
+      extension as of yet.
+      Also check out
+<a href="https://github.com/thomastrapp/hext/blob/master/libhext/bindings/python/htmlext.py">htmlext.py</a>
+      which is a stripped down Python port of the htmlext command line utility.
+    </div>
+    <div class="sixteen wide column">
+      <pre class="ace-static-hl"><code>{%include using-hext-python.python%}</code></pre>
+    </div>
+    <div class="sixteen wide column">
+      <a href="http://scrapy.org/">Scrapy</a> is one of the most prolific tools when it
+      comes to crawling the web. This scrapy spider is taken
+      from <a href="https://github.com/scrapy/dirbot">Scrapy's dirbot example</a>
+      and modified to use Hext instead of XPath for extracting content.
+    </div>
+    <div class="sixteen wide column">
+      <pre class="ace-static-hl"><code>{%include using-hext-python-scrapy.python%}</code></pre>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="building-ruby-hext"></a>
+  <h1 class="ui header">Building Hext for Ruby</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      <p>
+        First <a href="#building-hext">build and install Hext</a>.
+        Then, install ruby, ruby-dev (both version ≥2.1) and
+        <a href="http://www.swig.org/">swig</a> (version ≥3.0).
+      </p>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p>
+        The Ruby extension is included in the Hext project.
+        Navigate to its build directory. Call cmake and make to build
+        the extension.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code>{%include build-hext-ruby.sh%}</code></pre>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p class="operator-list">
+        The Hext Ruby extension consists of a single shared library called
+        <b>hext.so</b>.
+        Unfortunately, there's no automated way of installing the extension yet, so
+        you'll have to take care of this part yourself :)<br>
+        Running <b>ruby -e 'puts $LOAD_PATH'</b> will show you all the locations
+        Ruby will check in search of an extension. Copying the shared library
+        to any one of these locations should suffice.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code>{%include install-hext-ruby.sh%}</code></pre>
+    </div>
+  </div>
+  <a class="anchor" id="ruby-example-usage"></a>
+  <h3 class="ui header">Ruby: Example Usage</h3>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      This Ruby script demonstrates everything you can do with Hext's Ruby
+      extension as of yet.
+      Also check out
+<a href="https://github.com/thomastrapp/hext/blob/master/libhext/bindings/ruby/htmlext.rb">htmlext.rb</a>
+      which is a stripped down Ruby port of the htmlext command line utility.
+    </div>
+    <div class="sixteen wide column">
+      <pre class="ace-static-hl"><code>{%include using-hext-ruby.ruby%}</code></pre>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="building-php-hext"></a>
+  <h1 class="ui header">Building Hext for PHP</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      <p>
+        First <a href="#building-hext">build and install Hext</a>.
+        Then, install php5, php5-dev (both version ≥5.6) and
+        <a href="http://www.swig.org/">swig</a> (version ≥3.0).
+      </p>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p>
+        The PHP extension is included in the Hext project.
+        Navigate to its build directory. Call cmake and make to build
+        the extension.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code>{%include build-hext-php.sh%}</code></pre>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      <p class="operator-list bottom-attached">
+        The Hext PHP extension is comprised of two files: <b>hext.php</b> and
+        a shared library called <b>hext.so</b>.
+        In typical PHP setups the
+        <a href="http://php.net/manual/en/function.dl.php">dl()</a> function
+        which loads dynamic libraries at runtime is disabled. Therefore
+        in most cases the extension must be loaded at PHP's startup. There are
+        two ways to do this:
+      </p>
+      <ul class="ui list">
+        <li class="item"><b>php.ini</b>: Add the line "extension=/path/to/hext.so"
+                         to your php.ini file, ideally below the section called
+                         "Dynamic Extensions".</li>
+        <li class="item"><b>PHP CLI's -d parameter:</b> Run PHP with the
+                         argument "-d extension=/path/to/hext.so".</li>
+      </ul>
+      <p class="operator-list">
+        And lastly, PHP needs to be able to find <b>hext.php</b>. This file may
+        be anywhere in your
+        <a href="http://php.net/manual/en/ini.core.php#ini.include-path">include_path</a>.
+      </p>
+    </div>
+  </div>
+  <a class="anchor" id="php-example-usage"></a>
+  <h3 class="ui header">PHP: Example Usage</h3>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      This PHP script demonstrates everything you can do with Hext's PHP
+      extension as of yet.
+      Also check out
+<a href="https://github.com/thomastrapp/hext/blob/master/libhext/bindings/php/htmlext.php">htmlext.php</a>
+      which is a stripped down PHP port of the htmlext command line utility.
+    </div>
+    <div class="sixteen wide column">
+      <pre class="ace-static-hl"><code>{%include using-hext-php.php%}</code></pre>
+    </div>
+  </div>
+</div>

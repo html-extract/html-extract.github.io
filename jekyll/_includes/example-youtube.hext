@@ -1,0 +1,18 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>&#60;div</span><span class='ace_whitespace'> </span>class<span class='ace_entity ace_name ace_tag'>=</span><span class='ace_string'>"yt-lockup-thumbnail"</span><span class='ace_keyword'>&#62;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>&#60;span&#62;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>&#60;span</span><span class='ace_whitespace'> </span>class<span class='ace_entity ace_name ace_tag'>=</span><span class='ace_string'>"video-time"</span> @text<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>duration</span> <span class='ace_keyword'>/&#62;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>&#60;/span&#62;</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;/div&#62;</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;div</span><span class='ace_whitespace'> </span>class<span class='ace_entity ace_name ace_tag'>=</span><span class='ace_string'>"yt-lockup-content"</span><span class='ace_keyword'>&#62;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>&#60;h3&#62;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>&#60;a</span><span class='ace_whitespace'> </span>@text<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>title</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>   href<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_constant ace_numeric'>prepend(</span><span class='ace_string'>"https://youtube.com"</span><span class='ace_constant ace_numeric'>)</span><span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>link</span> <span class='ace_keyword'>/&#62;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>&#60;/h3&#62;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>&#60;div</span><span class='ace_whitespace'> </span>class<span class='ace_entity ace_name ace_tag'>=</span><span class='ace_string'>"yt-lockup-meta"</span><span class='ace_keyword'>&#62;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>&#60;ul&#62;</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_keyword'>&#60;li</span><span class='ace_whitespace'> </span>@text<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_constant ace_numeric'>filter(</span><span class='ace_string'>/[^ ]+/</span><span class='ace_constant ace_numeric'>)</span><span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>view_count</span> <span class='ace_keyword'>/&#62;</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_keyword'>&#60;li</span><span class='ace_whitespace'> </span>@text<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>date_published</span> <span class='ace_keyword'>/&#62;</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>&#60;/ul&#62;</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>&#60;/div&#62;</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;/div&#62;</span>
+</div></div></div>

@@ -1,0 +1,5 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># save the trailing number contained in attr. href</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;a</span><span class='ace_whitespace'> </span>href<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_constant ace_numeric'>filter(</span><span class='ace_string'>/\d+$/</span><span class='ace_constant ace_numeric'>)</span><span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>user_id</span> <span class='ace_keyword'>/&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'># save the number after "post-"</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;a</span><span class='ace_whitespace'> </span>href<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_constant ace_numeric'>filter(</span><span class='ace_string'>/post-(\d+)/</span><span class='ace_constant ace_numeric'>)</span><span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>post_id</span> <span class='ace_keyword'>/&#62;</span>
+</div></div></div>

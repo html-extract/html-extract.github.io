@@ -1,0 +1,26 @@
+[
+  {
+    "comment_count": "42",
+    "href": "http://example.com/witty-submission",
+    "rank": "1.",
+    "score": "23 points",
+    "title": "A witty submission",
+    "user": "MrRobot23"
+  },
+  {
+    "comment_count": "5",
+    "href": "https://www.example.com/checkout-xyz",
+    "rank": "2.",
+    "score": "99 points",
+    "title": "Checkout XYZ",
+    "user": "SillyValley"
+  },
+  {
+    "comment_count": "144",
+    "href": "https://www.example.com/lorem-ipsum",
+    "rank": "3.",
+    "score": "235 points",
+    "title": "Lorem Ipsum",
+    "user": "malicealice"
+  }
+]

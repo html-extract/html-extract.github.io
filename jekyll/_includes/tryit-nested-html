@@ -1,0 +1,12 @@
+<a href="/coffee">
+  <span>#1</span>
+  <span>Coffee</span>
+  <img src="coffee.jpg" />
+  <span>turns nights into code</span>
+</a>
+<a href="/beer">
+  <span>#2</span>
+  <span>Beer</span>
+  <img src="beer.jpg" />
+  <span>improves dance skill by 70%</span>
+</a>

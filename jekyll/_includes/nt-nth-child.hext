@@ -1,0 +1,9 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># &#60;ul&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'>#   &#60;li&#62;These pseudo&#60;/li&#62;  &#60;!-- match --&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'>#   &#60;li&#62;classes     &#60;/li&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'>#   &#60;li&#62;work just   &#60;/li&#62;  &#60;!-- match --&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'>#   &#60;li&#62;like they   &#60;/li&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'>#   &#60;li&#62;do in CSS   &#60;/li&#62;  &#60;!-- match --&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'># &#60;/ul&#62;</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;li</span><span class='ace_entity ace_name ace_tag'>:nth-child</span>(2n+1)<span class='ace_whitespace'> </span><span class='ace_keyword'>/&#62;</span>
+</div></div></div>

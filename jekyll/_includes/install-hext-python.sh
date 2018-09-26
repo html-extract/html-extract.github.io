@@ -1,0 +1,11 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># list all locations where python looks for</span>
+</div><div class='ace_line'><span class='ace_comment'># extensions</span>
+</div><div class='ace_line'><span class='ace_identifier'>python</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>m</span> <span class='ace_identifier'>site</span>
+</div><div class='ace_line'><span class='ace_comment'># create the directory where python expects</span>
+</div><div class='ace_line'><span class='ace_comment'># user installed extensions (if it doesn't</span>
+</div><div class='ace_line'><span class='ace_comment'># exist already)</span>
+</div><div class='ace_line'><span class='ace_identifier'>mkdir</span> <span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>parents</span> $<span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>python</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>m</span> <span class='ace_identifier'>site</span> <span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>user</span><span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>site</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_comment'># copy both files to this directory</span>
+</div><div class='ace_line'><span class='ace_identifier'>cp</span> <span class='ace_identifier'>hext</span>.<span class='ace_identifier'>py</span> <span class='ace_identifier'>_hext</span>.<span class='ace_identifier'>so</span> \
+</div><div class='ace_line'>    $<span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>python</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>m</span> <span class='ace_identifier'>site</span> <span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>user</span><span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>site</span><span class='ace_paren ace_rparen'>)</span>
+</div></div></div>

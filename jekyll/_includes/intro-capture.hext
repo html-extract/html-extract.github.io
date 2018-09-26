@@ -1,0 +1,6 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># match &#60;a&#62; having attribute "href" and store</span>
+</div><div class='ace_line'><span class='ace_comment'># the attribute's value as "link"</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;a</span><span class='ace_whitespace'> </span>href<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>link</span> <span class='ace_keyword'>/&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'># match &#60;article&#62; and store its content as "content"</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;article</span><span class='ace_whitespace'> </span>@text<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>content</span> <span class='ace_keyword'>/&#62;</span>
+</div></div></div>

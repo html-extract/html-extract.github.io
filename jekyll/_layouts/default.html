@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.desc }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/ace/ace.min.js"></script>
+    <script src="assets/ace/theme-clouds.min.js"></script>
+    <script src="assets/ace/mode-hext.min.js"></script>
+    <script src="assets/ace/mode-html.min.js"></script>
+
+    <script src="assets/semantic/semantic.min.js"></script>
+    <script src="assets/script.js"></script>
+
+    <link rel="stylesheet" href="assets/semantic/semantic.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <link rel="canonical" href="http://hext.thomastrapp.com/{%if page.id != 'index'%}{{ page.id }}{%endif%}">
+    <!--link rel="stylesheet" href="assets/combined.min.css">
+    <script src="assets/combined.min.js"></script-->
+  </head>
+  <body>
+
+    <noscript>
+      <div class="ui warning message no-radius">
+        <div class="ui center aligned page container">
+          <div class="header">
+            Site requires Javascript
+          </div>
+          Syntax highlighting and the Hext editor won't work without Javascript.
+        </div>
+      </div>
+    </noscript>
+
+    <div class="ui main-menu">
+      <div class="large-only ui container">
+        <div class="ui inverted labeled icon five item stackable menu">
+          <a href="/"
+             class="{%if page.id == 'index'%}active {%endif%}item"
+             ><img class="logo" alt="Hext" src="assets/img/hext-logo.png"></a>
+          <a href="/documentation"
+             class="{%if page.id == 'documentation'%}active {%endif%}item"
+             ><i class="student icon"></i> Documentation</a>
+          <a href="/download"
+             class="{%if page.id == 'download'%}active {%endif%}item"
+             ><i class="download icon"></i>Get Hext</a>
+          <a href="https://github.com/thomastrapp/hext"
+             class="item"><i class="github icon"></i>Github</a>
+          <a href="/libhext-documentation"
+             class="item"><i class="external square icon"></i>libhext</a>
+        </div>
+      </div>
+      <div class="small-only">
+        <div class="ui one item compact menu">
+          <a href="/"
+             class="{%if page.id == 'index'%}active {%endif%}item"
+             ><img class="logo" alt="Hext" src="assets/img/hext-logo.png"></a>
+        </div>
+        <div class="ui inverted labeled icon four item compact menu">
+          <a href="/documentation"
+             class="{%if page.id == 'documentation'%}active {%endif%}item"
+             ><i class="student icon"></i> Docs</a>
+          <a href="/download"
+             class="{%if page.id == 'download'%}active {%endif%}item"
+             ><i class="download icon"></i>Get Hext</a>
+          <a href="https://github.com/thomastrapp/hext"
+             class="item"><i class="github square icon"></i>Github</a>
+          <a href="/libhext-documentation"
+             class="item"><i class="external square icon"></i>libhext</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="ui stackable grid container page-{{ page.id }}">
+{{ content }}
+    </main>
+
+    <div class="ui inverted segment footer">
+      <div class="ui about-questions two column stackable grid container">
+        <div class="column">
+          <div class="ui two column grid">
+            <div class="three wide column">
+              <h3>How?</h3>
+            </div>
+            <div class="thirteen wide column">
+              <p class="slim"><b>Hext</b> was built with
+                 C++,
+                 <a href="https://github.com/google/gumbo-parser">Gumbo</a>,
+                 <a href="https://www.colm.net/open-source/ragel/">Ragel</a>,
+                 <a href="http://www.boost.org/">Boost</a>,
+                 <a href="https://github.com/miloyip/rapidjson">RapidJSON</a>,
+                 <a href="https://github.com/google/googletest">Google Test</a>,
+                 <a href="http://www.doxygen.org/">doxygen</a> and
+                 <a href="https://cmake.org/">CMake</a>.
+              </p>
+              <p><b>This page</b> was cobbled together with
+                 <a href="https://jekyllrb.com/">Jekyll</a>,
+                 <a href="http://semantic-ui.com/">Semantic UI</a>,
+                 <a href="https://jquery.com/">jQuery</a>,
+                 <a href="http://ace.c9.io/">Ace Code Editor</a> and
+                 <a href="https://github.com/facebook/proxygen">Proxygen</a>,
+                 which powers the "Try Hext in your Browser!" section.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui two column grid">
+            <div class="three wide column">
+              <h3>Who?</h3>
+            </div>
+            <div class="thirteen wide column">
+              <p>I'm <a href="http://thomastrapp.com/">Tom</a>,
+                 a programmer from Munich and I did all this!<br>
+                 Leave a message: <script type="text/javascript">eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%68%65%78%74%40%74%68%6f%6d%61%73%74%72%61%70%70%2e%63%6f%6d%22%3e%68%65%78%74%40%74%68%6f%6d%61%73%74%72%61%70%70%2e%63%6f%6d%3c%2f%61%3e%27%29'))</script><noscript style="color:red">Please enable Javascript to display email address</noscript>
+               </p>
+            </div>
+            <div class="three wide column">
+              <h3>Hext?</h3>
+            </div>
+            <div class="thirteen wide column">
+               <p>
+                 The word "<b>Hext</b>" is a combination of "<b>HTML</b>" and
+                 "<b>extraction</b>".
+                 The German adjective "<b>ver</b>·<b>hext</b>"
+                 may be translated to "<b>bewitched</b>" or "<b>hexed</b>".
+                 <i><a href="https://en.wiktionary.org/wiki/hexen">
+                 &raquo; Wiktionary</a></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="center aligned sixteen wide column">
+          <b>Imprint/Impressum/This site is operated by:</b>
+          <a href="http://thomastrapp.com/">Thomas&nbsp;Trapp</a>
+          ·&nbsp;Rümannstr.&nbsp;61 ·&nbsp;80804&nbsp;München
+          ·&nbsp;<script type="text/javascript">eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%68%65%78%74%40%74%68%6f%6d%61%73%74%72%61%70%70%2e%63%6f%6d%22%3e%68%65%78%74%40%74%68%6f%6d%61%73%74%72%61%70%70%2e%63%6f%6d%3c%2f%61%3e%27%29'))</script><noscript style="color:red">Please enable Javascript to display email address</noscript>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

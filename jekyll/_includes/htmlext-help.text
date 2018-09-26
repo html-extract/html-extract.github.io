@@ -1,0 +1,19 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'>htmlext - Extract structured content from HTML.
+</div><div class='ace_line'>
+</div><div class='ace_line'>Usage:
+</div><div class='ace_line'>  htmlext [options] &#60;hext-file&#62; &#60;html-file...&#62;
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  Apply extraction rules from &#60;hext-file&#62; to each
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  &#60;html-file&#62; and print the captured content as JSON.
+</div><div class='ace_line'>
+</div><div class='ace_line'>Options:
+</div><div class='ace_line'>  -x [ --hext ] &#60;file&#62;  Add Hext from file
+</div><div class='ace_line'>  -i [ --html ] &#60;file&#62;  Add HTML from file
+</div><div class='ace_line'>  -s [ --str ] &#60;string&#62; Add Hext from string
+</div><div class='ace_line'>  -c [ --compact ]      Print one JSON object per line
+</div><div class='ace_line'>  -p [ --pretty ]       Pretty-print JSON
+</div><div class='ace_line'>  -a [ --array ]        Wrap results in a JSON array
+</div><div class='ace_line'>  -f [ --filter ] &#60;key&#62; Print values whose name matches &#60;key&#62;
+</div><div class='ace_line'>  -l [ --lint ]         Do Hext syntax check
+</div><div class='ace_line'>  -h [ --help ]         Print this help message
+</div><div class='ace_line'>  -V [ --version ]      Print info and version
+</div></div></div>

@@ -1,0 +1,24 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>import</span> <span class='ace_identifier'>hext</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># hext.Html's constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># containing an UTF-8 encoded string of HTML.</span>
+</div><div class='ace_line'><span class='ace_identifier'>html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>hext</span>.<span class='ace_identifier'>Html</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>"""</span>
+</div><div class='ace_line'><span class='ace_string'>    &#60;a href="one.html"&#62;  &#60;img src="one.jpg" /&#62;  &#60;/a&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>    &#60;a href="two.html"&#62;  &#60;img src="two.jpg" /&#62;  &#60;/a&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>    &#60;a href="three.html"&#62;&#60;img src="three.jpg" /&#62;&#60;/a&#62;"""</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># hext.Rule's constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># containing a Hext snippet.</span>
+</div><div class='ace_line'><span class='ace_comment'># Throws an exception of type ValueError on invalid syntax.</span>
+</div><div class='ace_line'><span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>hext</span>.<span class='ace_identifier'>Rule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>"&#60;a href:link&#62;  &#60;img src:image /&#62;  &#60;/a&#62;"</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># hext.Rule.extract expects an argument of type hext.Html.</span>
+</div><div class='ace_line'><span class='ace_comment'># Returns a list of dictionaries.</span>
+</div><div class='ace_line'><span class='ace_identifier'>results</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>rule</span>.<span class='ace_identifier'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>html</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># print each key-value pair</span>
+</div><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_identifier'>group</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>results</span>:
+</div><div class='ace_line'>    <span class='ace_keyword'>for</span> <span class='ace_identifier'>key</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>group</span>:
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>print</span> <span class='ace_string'>'{}: {}'</span>.<span class='ace_support ace_function'>format</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>key</span>, <span class='ace_identifier'>group</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>key</span><span class='ace_paren ace_rparen'>])</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>print</span>
+</div></div></div>

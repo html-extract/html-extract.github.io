@@ -1,0 +1,5 @@
+wget https://github.com/thomastrapp/hext/archive/v0.5.2.tar.gz
+tar xf *.tar.gz
+cd hext*/build
+cmake -DBUILD_SHARED_LIBS=On .. && make -j 2
+./htmlext --help

@@ -1,0 +1,10 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># list all locations where ruby looks for</span>
+</div><div class='ace_line'><span class='ace_comment'># extensions</span>
+</div><div class='ace_line'><span class='ace_identifier'>ruby</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>e</span> <span class='ace_string ace_start'>'</span><span class='ace_string'>puts $LOAD_PATH</span><span class='ace_string ace_end'>'</span>
+</div><div class='ace_line'><span class='ace_comment'># Example: install the extension system wide</span>
+</div><div class='ace_line'><span class='ace_comment'># (requires root)</span>
+</div><div class='ace_line'><span class='ace_identifier'>cp</span> <span class='ace_identifier'>hext</span>.<span class='ace_identifier'>so</span> <span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>usr</span><span class='ace_keyword ace_operator'>/</span><span class='ace_keyword'>local</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>lib</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>site_ruby</span>
+</div><div class='ace_line'><span class='ace_comment'># Alternative: Run ruby with the -I parameter,</span>
+</div><div class='ace_line'><span class='ace_comment'># where &#60;path&#62; is the path containing the extension.</span>
+</div><div class='ace_line'><span class='ace_identifier'>ruby</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>I</span><span class='ace_keyword ace_operator'>&#60;</span><span class='ace_identifier'>path</span><span class='ace_keyword ace_operator'>&#62;</span> <span class='ace_identifier'>your</span><span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>script</span>.<span class='ace_identifier'>rb</span>
+</div></div></div>

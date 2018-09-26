@@ -1,0 +1,4 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># relative to the project root</span>
+</div><div class='ace_line'><span class='ace_support ace_function ace_builtin'>cd</span> <span class='ace_identifier'>libhext</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>bindings</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>python</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>build</span>
+</div><div class='ace_line'><span class='ace_identifier'>cmake</span> .. &#38;&#38; <span class='ace_identifier'>make</span>
+</div></div></div>

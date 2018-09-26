@@ -1,0 +1,51 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>#include</span><span class='ace_constant ace_other'> &#60;hext/ParseHext.h&#62;</span>
+</div><div class='ace_line'><span class='ace_keyword'>#include</span><span class='ace_constant ace_other'> &#60;hext/Html.h&#62;</span>
+</div><div class='ace_line'><span class='ace_keyword'>#include</span><span class='ace_constant ace_other'> &#60;iostream&#62;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_storage ace_type'>int</span> <span class='ace_identifier'>main</span><span class='ace_paren ace_lparen'>(</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_comment'>// Build a rule that extracts links containing images</span>
+</div><div class='ace_line'>  <span class='ace_storage ace_type'>auto</span> <span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>hext</span><span class='ace_punctuation ace_operator'>::</span><span class='ace_identifier'>ParseHext</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>"&#60;a href:link @text:title&#62;"</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span>  <span class='ace_string'>"  &#60;img src:image /&#62;"</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span>  <span class='ace_string'>"&#60;/a&#62;"</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'>  <span class='ace_comment'>// Some example HTML input</span>
+</div><div class='ace_line'>  <span class='ace_storage ace_type'>auto</span> <span class='ace_identifier'>html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>hext</span><span class='ace_punctuation ace_operator'>::</span><span class='ace_identifier'>Html</span><span class='ace_paren ace_lparen'>(</span>
+</div><div class='ace_line'>    <span class='ace_string'>"&#60;a href='/coffee'&#62;"</span>
+</div><div class='ace_line'>    <span class='ace_string'>"  &#60;span&#62;#1&#60;/span&#62;"</span>
+</div><div class='ace_line'>    <span class='ace_string'>"  &#60;span&#62;Coffee&#60;/span&#62;"</span>
+</div><div class='ace_line'>    <span class='ace_string'>"  &#60;img src='coffee.jpg' /&#62;"</span>
+</div><div class='ace_line'>    <span class='ace_string'>"  &#60;span&#62;turns nights into code&#60;/span&#62;"</span>
+</div><div class='ace_line'>    <span class='ace_string'>"&#60;/a&#62;"</span>
+</div><div class='ace_line'>    <span class='ace_string'>"&#60;a href='/beer'&#62;"</span>
+</div><div class='ace_line'>    <span class='ace_string'>"  &#60;span&#62;#2&#60;/span&#62;"</span>
+</div><div class='ace_line'>    <span class='ace_string'>"  &#60;span&#62;Beer&#60;/span&#62;"</span>
+</div><div class='ace_line'>    <span class='ace_string'>"  &#60;img src='beer.jpg' /&#62;"</span>
+</div><div class='ace_line'>    <span class='ace_string'>"  &#60;span&#62;improves dance skill by 70%&#60;/span&#62;"</span>
+</div><div class='ace_line'>    <span class='ace_string'>"&#60;/a&#62;"</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'>  <span class='ace_comment'>// Do the actual extraction. Rule::extract returns</span>
+</div><div class='ace_line'>  <span class='ace_comment'>// a std::vector&#60;std::multimap&#60;std::string, std::string&#62;&#62;</span>
+</div><div class='ace_line'>  <span class='ace_comment'>// where each multimap contains a complete rule match.</span>
+</div><div class='ace_line'>  <span class='ace_storage ace_type'>auto</span> <span class='ace_identifier'>results</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>rule</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>html</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'>  <span class='ace_comment'>// Print all key-value pairs from each rule match</span>
+</div><div class='ace_line'>  <span class='ace_keyword ace_control'>for</span><span class='ace_paren ace_lparen'>(</span><span class='ace_storage ace_type'>auto</span> <span class='ace_identifier'>result</span> <span class='ace_punctuation ace_operator'>:</span> <span class='ace_identifier'>results</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>  <span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>    <span class='ace_keyword ace_control'>for</span><span class='ace_paren ace_lparen'>(</span><span class='ace_storage ace_type'>auto</span> <span class='ace_identifier'>pair</span> <span class='ace_punctuation ace_operator'>:</span> <span class='ace_identifier'>result</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_identifier'>std</span><span class='ace_punctuation ace_operator'>::</span><span class='ace_identifier'>cout</span> <span class='ace_keyword ace_operator'>&#60;&#60;</span> <span class='ace_identifier'>pair</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>first</span> <span class='ace_keyword ace_operator'>&#60;&#60;</span> <span class='ace_string'>": "</span> <span class='ace_keyword ace_operator'>&#60;&#60;</span> <span class='ace_identifier'>pair</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>second</span> <span class='ace_keyword ace_operator'>&#60;&#60;</span> <span class='ace_string'>"\n"</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_identifier'>std</span><span class='ace_punctuation ace_operator'>::</span><span class='ace_identifier'>cout</span> <span class='ace_keyword ace_operator'>&#60;&#60;</span> <span class='ace_string'>"\n"</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_paren ace_rparen'>}</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'>  <span class='ace_comment'>// Output:</span>
+</div><div class='ace_line'>  <span class='ace_comment'>//   image: coffee.jpg</span>
+</div><div class='ace_line'>  <span class='ace_comment'>//   link: /coffee</span>
+</div><div class='ace_line'>  <span class='ace_comment'>//   title: #1 Coffee turns nights into code</span>
+</div><div class='ace_line'>  <span class='ace_comment'>//</span>
+</div><div class='ace_line'>  <span class='ace_comment'>//   image: beer.jpg</span>
+</div><div class='ace_line'>  <span class='ace_comment'>//   link: /beer</span>
+</div><div class='ace_line'>  <span class='ace_comment'>//   title: #2 Beer improves dance skill by 70%</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'>  <span class='ace_keyword ace_control'>return</span> <span class='ace_constant ace_numeric'>0</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div>

@@ -1,0 +1,8 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># Turns this:</span>
+</div><div class='ace_line'><span class='ace_comment'>#   &#60;article&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'>#     &#60;h1&#62;   Which   Highway?&#60;/h1&#62;Highway 61!</span>
+</div><div class='ace_line'><span class='ace_comment'>#   &#60;/article&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'># Into this:</span>
+</div><div class='ace_line'><span class='ace_comment'>#   "Which Highway? Highway 61!"</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;article</span><span class='ace_whitespace'> </span>@text<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>content</span> <span class='ace_keyword'>/&#62;</span>
+</div></div></div>

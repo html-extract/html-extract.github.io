@@ -1,0 +1,2 @@
+# Extract links and their text
+<a href:link @text:title />

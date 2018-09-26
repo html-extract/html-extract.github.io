@@ -1,0 +1,166 @@
+---
+layout: default
+title: "Hext &mdash; Extract Data from HTML"
+desc: "Hext is a domain-specific language for extracting structured data from HTML documents. Try Hext in your Browser!"
+id: index
+---
+
+<div class="large-only middle aligned teaser row">
+  <div class="four wide hext column">
+    <pre class="ace-static-hl"><code>{%include teaser-href.hext%}</code></pre>
+  </div>
+  <div class="one wide column">
+    <i class="big add icon"></i>
+  </div>
+  <div class="four wide column">
+    <pre class="ace-static-hl"><code>{%include teaser-href.html%}</code></pre>
+  </div>
+  <div class="one wide column">
+    <i class="big arrow right icon"></i>
+  </div>
+  <div class="six wide json column">
+    <pre class="ace-static-hl ace-clouds"><code><span class="ace_comment">Output:</span>
+{<b>"link"</b>: "one.html",   <b>"title"</b>: "Page 1"}
+{<b>"link"</b>: "two.html",   <b>"title"</b>: "Page 2"}
+{<b>"link"</b>: "three.html", <b>"title"</b>: "Page 3"}</code></pre>
+  </div>
+</div>
+
+<div class="small-only ui hidden divider"></div>
+
+<div class="eight wide column">
+  <h3 class="ui header"><i class="wizard icon"></i>Hext &mdash; Extract Data from HTML</h3>
+  Hext is a domain-specific language for extracting structured data from
+  HTML documents.
+  Learn how to hext in the <a href="/documentation">documentation</a>.
+  Also, there is an editor below, where you can try Hext from the comfort
+  of your browser.
+</div>
+<div class="eight wide column">
+  <h3 class="ui header"><i class="terminal icon"></i>./htmlext</h3>
+  <a href="/download">htmlext</a> is a command line utility that applies Hext snippets
+  to HTML documents and outputs JSON.
+  For example, to extract all links:<br/>
+  <code style="font-size:small">{%include teaser-htmlext-example.sh%}</code>
+</div>
+<div class="eight wide column">
+  <h3 class="ui header"><i class="lab icon"></i>libhext</h3>
+    libhext is a C++ library that contains a Hext parser
+    but also allows for some customization.
+    Find out more in <a href="/libhext-documentation">libhext's documentation</a>.
+    There are language bindings for
+    <a href="/download#building-nodejs-hext">Node.js</a>,
+    <a href="/download#building-python-hext">Python</a>,
+    <a href="/download#building-ruby-hext">Ruby</a> and
+    <a href="/download#building-php-hext">PHP</a>.
+</div>
+<div class="eight wide column">
+  <h3 class="ui header"><i class="empty heart icon"></i>Free Software</h3>
+  Hext is released under the terms of the
+  <a href="https://tldrlegal.com/license/apache-license-2.0-%28apache-2.0%29">
+    Apache License</a> and therefore suitable for inclusion in both open
+  and closed source software. The project is publicly available on
+  <a href="https://github.com/thomastrapp/hext">Github</a> &mdash;
+  Contributions are welcome!
+</div>
+
+<div class="sixteen wide bottom-attached column">
+  <div class="ui stackable grid">
+    <div class="eight wide column">
+      <h1 class="ui header"><a id="anchor-tryit-hext" class="anchor"></a>Try
+        Hext in your Browser!
+      </h1>
+    </div>
+    <div class="eight wide right aligned column">
+      Load an example: &nbsp;
+      <div class="ui selection dropdown">
+        <div class="text">Links</div>
+        <i class="dropdown icon"></i>
+        <div class="menu example-menu">
+          <div class="active selected item" data-example="attribute">Links</div>
+          <div class="item" data-example="nested">Nested</div>
+          <div class="item" data-example="hatternews">Hatter News</div>
+          <div class="item" data-example="breadit">Breadit</div>
+          <div class="item" data-example="touyube">TouYube</div>
+          <div class="item" data-example="posts">Forum Posts</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form id="tryit-form" class="ui stackable grid" enctype="application/x-www-form-urlencoded">
+
+    <div class="eight wide bottom-attached column">
+      <h3 class="ui blue header"><i class="wizard icon"></i><div class="content">Hext</div></h3>
+      {%capture s%}{%include tryit-attribute-text-hext%}{%endcapture%}
+      <div id="tryit-hext">{{s|escape}}</div>
+    </div>
+
+    <div class="eight wide bottom-attached column">
+      <h3 class="ui right aligned blue header"><i class="html5 icon"></i> HTML</h3>
+      {%capture s%}{%include tryit-attribute-text-html%}{%endcapture%}
+      <div id="tryit-html">{{s|escape}}</div>
+    </div>
+
+    <div class="sixteen wide bottom-attached column">
+      <h2 id="tryit-result-header" class="ui left floated green header"></h2>
+      <button id="tryit-button"
+              type="submit"
+              class="ui right floated primary button">
+        EXTRACT
+        <i class="chevron circle right down icon"></i>
+      </button>
+      <h5 id="tryit-shortcut-hint"
+          class="ui right floated large-only header"
+          style="display:none;line-height:36px;color:#aaa">
+        Switch Editor: Ctrl+Alt+X &mdash; Submit: Ctrl+Enter</h5>
+    </div>
+
+  </form>
+</div>
+
+<div class="sixteen wide column">
+  <div id="tryit-error"></div>
+  <div id="tryit-json" class="ui three column stackable grid"></div>
+</div>
+<!-- dummy, fixes overlapping -->
+<div class="sixteen wide column"> </div>
+
+<script type="text/template"
+        id="tryit-example-attribute-hext">{%include tryit-attribute-text-hext%}</script>
+<script type="text/template"
+        id="tryit-example-attribute-html">{%include tryit-attribute-text-html%}</script>
+<script type="text/template"
+        id="tryit-example-attribute-json">{%include tryit-attribute-text-json%}</script>
+<script type="text/template"
+        id="tryit-example-nested-hext">{%include tryit-nested-hext%}</script>
+<script type="text/template"
+        id="tryit-example-nested-html">{%include tryit-nested-html%}</script>
+<script type="text/template"
+        id="tryit-example-nested-json">{%include tryit-nested-json%}</script>
+<script type="text/template"
+        id="tryit-example-hatternews-hext">{%include tryit-hatternews-hext%}</script>
+<script type="text/template"
+        id="tryit-example-hatternews-html">{%include tryit-hatternews-html%}</script>
+<script type="text/template"
+        id="tryit-example-hatternews-json">{%include tryit-hatternews-json%}</script>
+<script type="text/template"
+        id="tryit-example-breadit-hext">{%include tryit-breadit-hext%}</script>
+<script type="text/template"
+        id="tryit-example-breadit-html">{%include tryit-breadit-html%}</script>
+<script type="text/template"
+        id="tryit-example-breadit-json">{%include tryit-breadit-json%}</script>
+<script type="text/template"
+        id="tryit-example-touyube-hext">{%include tryit-touyube-hext%}</script>
+<script type="text/template"
+        id="tryit-example-touyube-html">{%include tryit-touyube-html%}</script>
+<script type="text/template"
+        id="tryit-example-touyube-json">{%include tryit-touyube-json%}</script>
+<script type="text/template"
+        id="tryit-example-posts-hext">{%include tryit-posts-hext%}</script>
+<script type="text/template"
+        id="tryit-example-posts-html">{%include tryit-posts-html%}</script>
+<script type="text/template"
+        id="tryit-example-posts-json">{%include tryit-posts-json%}</script>
+
+

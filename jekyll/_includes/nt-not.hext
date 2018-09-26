@@ -1,0 +1,6 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># match all elements that are not empty</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;*</span><span class='ace_entity ace_name ace_tag'>:not</span>(<span class='ace_entity ace_name ace_tag'>:empty</span>)<span class='ace_whitespace'> </span><span class='ace_keyword'>/&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'># match all elements that are not empty and</span>
+</div><div class='ace_line'><span class='ace_comment'># do not have an attribute count of two</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;*</span><span class='ace_entity ace_name ace_tag'>:not</span>(<span class='ace_entity ace_name ace_tag'>:empty:attribute-count</span>(2))<span class='ace_whitespace'> </span><span class='ace_keyword'>/&#62;</span>
+</div></div></div>

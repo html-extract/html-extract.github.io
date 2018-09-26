@@ -1,0 +1,12 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># match &#60;a&#62; having attribute "name"</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;a</span><span class='ace_whitespace'> </span>name <span class='ace_keyword'>/&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'># match &#60;a&#62; having attribute "href"</span>
+</div><div class='ace_line'><span class='ace_comment'># beginning with "https:"</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;a</span><span class='ace_whitespace'> </span>href<span class='ace_entity ace_name ace_tag'>^=</span><span class='ace_string'>"https:"</span> <span class='ace_keyword'>/&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'># match &#60;a&#62; having attribute href containing</span>
+</div><div class='ace_line'><span class='ace_comment'># the string "post-" followed by a number</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;a</span><span class='ace_whitespace'> </span>href<span class='ace_entity ace_name ace_tag'>=~</span><span class='ace_string'>/post-\d+/</span> <span class='ace_keyword'>/&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'># match &#60;a&#62; not having attribute "href" beginning</span>
+</div><div class='ace_line'><span class='ace_comment'># with "https:"</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;a</span><span class='ace_whitespace'> </span>href<span class='ace_entity ace_name ace_tag'>^=</span><span class='ace_string'>"https:"</span>! <span class='ace_keyword'>/&#62;</span>
+</div></div></div>

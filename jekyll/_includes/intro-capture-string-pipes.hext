@@ -1,0 +1,5 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># match &#60;a&#62; having attribute "href", prepend</span>
+</div><div class='ace_line'><span class='ace_comment'># "https://example.com/" to its value and store</span>
+</div><div class='ace_line'><span class='ace_comment'># it as "url"</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;a</span><span class='ace_whitespace'> </span>href<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_constant ace_numeric'>prepend(</span><span class='ace_string'>"https://example.com/"</span><span class='ace_constant ace_numeric'>)</span><span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>url</span> <span class='ace_keyword'>/&#62;</span>
+</div></div></div>

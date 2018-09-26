@@ -1,0 +1,617 @@
+---
+layout: default
+title: "Hext &mdash; Documentation"
+desc: "Learn how to extract structured data from HTML documents using Hext"
+id: documentation
+---
+
+<div class="three wide column">
+  <div class="ui sticky">
+    <div class="jump-table-spacer"></div>
+    <h4>What the heck is Hext?</h4>
+    <div class="ui secondary vertical scrollspy pointing fluid menu jump-table">
+      <a class="active item" href="#example">
+        An Example
+      </a>
+      <a class="item" href="#big-picture">
+        The Big Picture
+      </a>
+      <a class="item" href="#another-example">
+        Another Example
+      </a>
+      <a class="item" href="#matching-elements">
+        Matching Elements
+      </a>
+      <a class="item" href="#capturing-data">
+        Capturing Data
+      </a>
+      <a class="item" href="#limitations">
+        Limitations
+      </a>
+    </div>
+    <h4>Hext Reference</h4>
+    <div class="ui secondary vertical scrollspy pointing fluid menu jump-table">
+      <a class="item" href="#element-traits">
+        Element Traits
+      </a>
+      <a class="item" href="#match-operators">
+        Match Operators
+      </a>
+      <a class="item" href="#string-pipes">
+        String Pipes
+      </a>
+      <a class="item" href="#builtin-functions">
+        Built-in Functions
+      </a>
+    </div>
+  </div>
+</div>
+<div class="thirteen wide column">
+  <a class="scrollspy anchor" id="example"></a>
+  <h1 class="ui header">Starting with an Example</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="row bottom-attached">
+      <div class="ten wide column">
+          Suppose you want to extract all hyperlinks from a web page.
+          Hyperlinks have an anchor tag <span style="color:#af956f">&lt;a&gt;
+          </span>, an attribute called href
+          and a text that visitors can click. The Hext snippet
+          <span class="intro-large-only">on the right</span>
+          <span class="intro-small-only">below</span> extracts exactly that.
+          Let's break it down one by one.
+      </div>
+      <div class="six wide column">
+        <pre class="ace-static-hl"><code>{%include example-attributes-text.hext%}</code></pre>
+        <div style="text-align:right">
+          <a href="/#attribute"><i class="pointing right icon"></i> Load example in editor</a>
+        </div>
+      </div>
+      <div class="sixteen wide column">
+        <a href="assets/img/example-attribute-text.png">
+          <img class="ui fluid image"
+               alt="*** Image containing a detailed description of the Hext snippet mentioned above ***"
+               src="assets/img/example-attribute-text.png" />
+        </a>
+      </div>
+      <div class="sixteen wide column">
+         If this rule matches an HTML element it will produce key-value pairs,
+         where the key is the name of the capture and the value contains the
+         extracted content:
+      </div>
+    </div>
+    <div class="doc-example row">
+      <div class="eight wide column">
+        <pre class="ace-static-hl" style="background-color:transparent"><code>{%include teaser-href.html%}</code></pre>
+      </div>
+      <div class="eight wide json column">
+        <pre class="ace-static-hl ace-clouds"><code><span class="ace_comment">Hext's output:</span>
+{<b>"link"</b>: "one.html",   <b>"title"</b>: "Page 1"}
+{<b>"link"</b>: "two.html",   <b>"title"</b>: "Page 2"}
+{<b>"link"</b>: "three.html", <b>"title"</b>: "Page 3"}</code></pre>
+      </div>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="big-picture"></a>
+  <h1 class="ui header">The Big Picture</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="one column row">
+      <div class="column">
+        <p>
+          Hext's strength is that you can put together something that looks like the
+          HTML you want to extract data from.
+          Hext snippets can be thought of as a counterpart to
+          <a href="https://en.wikipedia.org/wiki/Web_template_system">web templates</a>.
+          Web developers typically use templates to embed data in HTML and that's why
+          most content on the web does have some sort of structure which is to Hext's
+          advantage.
+        </p>
+      </div>
+    </div>
+    <div class="two column row">
+      <div class="column">
+        <p>
+          The snippet <span class="intro-large-only">on the right</span>
+          <span class="intro-small-only">below</span> collects all Youtube videos
+          from a Youtuber's channel page. For example, if applied to
+          <a href="https://www.youtube.com/user/CppCon/videos">
+            https://www.youtube.com/user/CppCon/videos</a> you'll get a list of
+          the most recent talks at CppCon with each item
+          <span class="capture-list">containing the <b>duration</b>,
+          <b>title</b>, <b>link</b>, <b>view_count</b> and <b>date_published</b>.
+          </span>
+        </p>
+        <p class="bottom-attached">
+          There are currently three ways to use Hext:
+        </p>
+        <ul class="ui list">
+          <li>
+            The <a href="/download#using-htmlext">htmlext command line utility</a>
+            applies Hext to HTML documents and returns JSON containing the
+            captured data.
+          </li>
+          <li>
+            The
+            <a href="/libhext-documentation">libhext library</a> contains a
+            <a href="/libhext-documentation/namespacehext.html#a5eb6ca2a2c1e975426ec416bd60415df">
+            Hext parser</a> but also lets you build a Hext rule tree manually.
+          </li>
+          <li>The Hext language bindings:
+              <a href="/download#building-nodejs-hext">Node.js</a>,
+              <a href="/download#building-python-hext">Python</a>,
+              <a href="/download#building-ruby-hext">Ruby</a>,
+              <a href="/download#building-php-hext">PHP</a>
+          </li>
+        </ul>
+        <p>
+          Also, you can test Hext in the
+          "<a href="/#attribute">Try Hext in your Browser</a>" section: Just paste any
+          HTML from the web into the editor and have a go!
+        </p>
+      </div>
+      <div class="column">
+        <pre class="ace-static-hl"><code>{%include example-youtube.hext%}</code></pre>
+      </div>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="another-example"></a>
+  <h1 class="ui header">Another Example</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="row bottom-attached">
+      <div class="eight wide column capture-list">
+        The Hext snippet <span class="intro-large-only">on the right</span>
+        <span class="intro-small-only">below</span> matches
+        <span style="color:#af956f">&lt;a&gt;</span> containing at least two
+        elements:
+        A <span style="color:#af956f">&lt;span&gt;</span> followed by
+        <span style="color:#af956f">&lt;img&gt;</span>.<br>
+        Notice how only the first span is matched for <b>id</b> in the example
+        below. This is because rules take turns to match elements. The second
+        <span style="color:#af956f">&lt;span&gt;</span> gets tested by the
+        rule for <b>image</b>, which doesn't match and the element gets skipped.
+        The rule then continues with <span style="color:#af956f">&lt;img&gt;</span>,
+        which matches. Then, the first rule (<b>id</b>) takes over again.
+        And indeed it matches the third <span style="color:#af956f">&lt;span&gt;</span>,
+        but the result is discarded because the second rule (<b>image</b>)
+        doesn't match: there are no more elements left.
+      </div>
+      <div class="eight wide column">
+        <pre class="ace-static-hl"><code>{%include example-another.hext%}</code></pre>
+        <div style="text-align:right">
+          <a href="/#nested"><i class="pointing right icon"></i> Load example in editor</a>
+        </div>
+      </div>
+    </div>
+    <div class="doc-example row">
+      <div class="eight wide column">
+        <pre class="ace-static-hl" style="background-color:transparent"><code>{%include example-another.html%}</code></pre>
+      </div>
+      <div class="eight wide json column">
+        <pre class="ace-static-hl ace-clouds"><code><span class="ace_comment">Hext's output:</span>
+{
+  <b>"id"</b>: "#1",
+  <b>"image"</b>: "coffee.jpg",
+  <b>"link"</b>: "/coffee"
+}
+
+{
+  <b>"id"</b>: "#2",
+  <b>"image"</b>: "beer.jpg",
+  <b>"link"</b>: "/beer"
+}</code></pre>
+      </div>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="matching-elements"></a>
+  <h1 class="ui header">How Hext Matches Elements</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="column">
+      <p>
+        <b>A Hext snippet is a set of rules that is matched against
+        an HTML document.</b> Each HTML element is tested by the first rule
+        of a Hext snippet. A rule begins with either a valid HTML tag or
+        an asterisk which matches every HTML element.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-tag.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <p>
+        <b>Rules may have children.</b> If a rule matches an HTML element, the
+        rule's children are matched against the element's children, and must each
+        produce at least one match.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-children.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <p>
+        <b>Rules may have siblings.</b> If a rule matches an HTML element,
+        all the rule's siblings are matched against the element's siblings.
+        While adjacency is not required, matching elements must still appear
+        in the same order as their rule counterparts.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-siblings.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <p>
+        <b>Rules may be optional.</b> A Hext snippet only matches if each rule
+        finds its match, unless it is marked optional with a question mark. These
+        rules are simply skipped if no match is found. Mandatory rules always
+        take precedence over optional rules.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-optional.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <p>
+        <b>Rules may contain match patterns.</b> Match patterns
+        further refine which HTML elements to match. There are three kinds
+        of match patterns: Attribute matches,
+        <a href="#builtin-functions">Built-in Function</a> matches and
+        <a href="#element-traits">Element Traits</a>.<br>
+        Attributes may be compared against a string or a regular expression.
+        There are six <a href="#match-operators">match operators</a> that
+        determine the type of comparison: <span class="operator-list">
+        <b>=</b>&nbsp;contains&nbsp;word, <b>*=</b>&nbsp;contains,
+        <b>^=</b>&nbsp;begins&nbsp;with, <b>$=</b>&nbsp;ends&nbsp;with,
+        <b>==</b>&nbsp;identical and <b>=~/</b>regex<b>/</b>. Regular
+        expressions may also be embedded in quotes, e.g. <b>=~"\d+"</b>,
+        which is particularly useful when matching URLs.</span><br>
+        Match patterns may be negated by an exclamation mark.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-match.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <p>
+        <a href="#builtin-functions">Built-in functions</a> turn an HTML element
+        into a string. As with attributes,
+        <a href="#match-operators">match operators</a> may be used to
+        test for specific contents. There are three built-in functions:
+        <span class="operator-list"><b>@text</b>, <b>@inner-html</b> and
+        <b>@strip-tags</b>.
+        <b>@text</b> is the most powerful, as it turns an HTML element into
+        clean and readable text.</span>
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-match-bf.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <p class="operator-list">
+        <a href="#element-traits">Element traits</a> describe the position of an
+        HTML element relative to its parent or general properties,
+        for example its amount of children or attributes. The intent is to
+        replicate CSS pseudo-classes.<br>
+        Chained traits require elements to match each trait.<br>
+        <b>:not(</b>traits<b>)</b> negates element traits.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-match-node-traits.hext%}</code></pre>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="capturing-data"></a>
+  <h1 class="ui header">How Hext Captures Data</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="column">
+      <p>
+        <b>Rules may contain captures.</b> After a successful and complete
+        match of a Hext snippet the data is extracted. There are two possible
+        sources for data: HTML attributes and the result of
+        <a href="#builtin-functions">built-in functions</a>. Each capture must be
+        named.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-capture.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <p>
+        Attribute captures may be suffixed by a question mark, indicating that the
+        attribute is optional, i.e. a matching element may have this attribute, but
+        doesn't need to.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-capture-optional.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <p>
+        <b>Captures may contain <a href="#string-pipes">string pipes</a>.</b>
+        String pipes transform the content of an HTML attribute or the result of a
+        <a href="#builtin-function">built-in function</a>.<br>
+        String pipes may be chained.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-capture-string-pipes.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <p class="operator-list">
+        A particularly useful string pipe is <b>:filter</b>. It transforms a string
+        according to a regular expression. This regular expression may contain
+        a capture group which isolates a result from the rest of the match.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-capture-filter.hext%}</code></pre>
+    </div>
+  </div>
+  <!--a class="scrollspy anchor" id="roundup"></a>
+  <h1 class="ui header">Roundup</h1>
+  <p>
+    An easy way to examine an HTML document's structure is by using your
+    browser's built-in developer tools. Consult your browser's documentation
+    here:
+    <a href="https://developer.mozilla.org/en-US/docs/Tools">Firefox</a>,
+    <a href="https://developer.chrome.com/devtools">Chrome</a>, and
+    <a href="https://developer.apple.com/safari/tools/">Safari</a>.
+  </p-->
+  <a class="scrollspy anchor" id="limitations"></a>
+  <h1 class="ui header">Limitations</h1>
+  <ul>
+    <li>Hext operates on a bare bones HTML parse tree. It has no knowledge of
+        Javascript or CSS.</li>
+    <li>All input is stubbornly treated as UTF-8.</li>
+    <li>Hext only extracts strings and provides little means to modify the data.</li>
+    <li>There's HTML out there that won't work well with Hext. But such is life.</li>
+  </ul>
+  <p class="bottom-attached">
+    Hext aims to make simple extractions easy; if you have bigger problems
+    you probably need bigger tools ¯\_(ツ)_/¯
+  </p>
+  <h4 class="bottom-attached">
+    See also:
+  </h4>
+  <ul>
+    <li>
+      <a href="http://www.videlibri.de/xidel.html">Xidel</a>: Xidel is a command
+      line tool to download and extract data from HTML/XML pages as well as JSON
+      APIs. Handles multiple extraction methods, including XPath/XQuery, CSS3
+      selectors and "Templates" which are similar to Hext. If htmlext doesn't
+      cut it for you, this marvelous tool has it all.
+    </li>
+    <li>
+      <a href="https://wiki.qt.io/Qt_WebKit">QtWebKit</a>:
+      A full-blown browser that allows access to its internals and can therefore
+      be (ab-)used to extract content.
+    </li>
+    <li>
+      Python's <a href="https://www.crummy.com/software/BeautifulSoup/">
+      BeautifulSoup</a>, Ruby's <a href="http://www.nokogiri.org/">Nokogiri</a>
+      and Node's <a href="https://github.com/cheeriojs/cheerio">cheerio</a>.
+    </li>
+  </ul>
+  <div class="ui horizontal divider">Hext Reference</div>
+  <a class="scrollspy anchor" id="element-traits"></a>
+  <h1 class="ui header">Element Traits</h1>
+  <p>
+    Element traits describe the position of an HTML element relative to its parent
+    or general properties, for example its amount of children or attributes.
+    The intent is to replicate CSS pseudo-classes.<br>
+    Chained traits require elements to match each trait.
+  </p>
+  <div class="ui doubling top aligned two column name-list grid">
+    <div class="column">
+      <h3>
+        :empty<br>
+        :child-count(&lt;amount&gt;)
+      </h3>
+      <p>Select elements that have a certain amount of children.<br>
+         Text nodes are not considered to be children, i.e. an element that
+         only contains text is considered to be empty.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include nt-child-count.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>:attribute-count(&lt;amount&gt;)</h3>
+      <p>Select elements that have a certain amount of attributes.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include nt-attribute-count.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>:not(&lt;:trait&gt;)</h3>
+      <p>Select elements who do not match certain traits.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include nt-not.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>
+        :first-child<br>
+        :first-of-type<br>
+        :last-child<br>
+        :last-of-type<br>
+        :only-child<br>
+        :nth-child(&lt;nth-pattern&gt;)<br>
+        :nth-of-type(&lt;nth-pattern&gt;)<br>
+        :nth-last-child(&lt;nth-pattern&gt;)<br>
+        :nth-last-of-type(&lt;nth-pattern&gt;)<br>
+        :only-of-type
+      </h3>
+      <p>Select elements by position within their parent.<br>
+         &lt;nth-pattern&gt; may be given in the form of <i>an+b</i> or as
+         the shorthands <i>even</i> and <i>odd</i>.<br>
+         See
+         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%3Anth-child">
+            MDN</a> for a detailed description.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include nt-nth-child.hext%}</code></pre>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="match-operators"></a>
+  <h1 class="ui header">Match Operators</h1>
+  <p>
+    Match operators compare an attribute's value or the output
+    of a built-in function against a string or a regular expression.
+  </p>
+  <div class="ui doubling top aligned two column name-list grid">
+    <div class="column">
+      <h3>="&lt;string&gt;"</h3>
+      <p>Matches subjects that contain all of the given words in
+         any order. Word boundaries are the beginning and end of
+         the subject or spaces.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include op-cw.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>*="&lt;string&gt;"</h3>
+      <p>Matches subjects that contain the given string.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include op-c.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>^="&lt;string&gt;"</h3>
+      <p>Matches subjects that begin with the given string.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include op-sw.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>$="&lt;string&gt;"</h3>
+      <p>Matches subjects that end with the given string.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include op-ew.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>=="&lt;string&gt;"</h3>
+      <p>Matches subjects that are equal to the given string.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include op-eq.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>
+        =~/&lt;regex&gt;/[opt]<br>
+        =~"&lt;regex&gt;"[opt]
+      </h3>
+      <p>Matches subjects that match the given regular expression.
+         {%include regex-opt%}</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include op-regex.hext%}</code></pre>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="string-pipes"></a>
+  <h1 class="ui header">String Pipes</h1>
+  <p>
+    String pipes transform strings before they are captured.
+    String pipes can be chained.
+  </p>
+  <div class="ui doubling top aligned two column name-list grid">
+    <div class="column">
+      <h3>
+        :trim<br>
+        :trim("&lt;characters&gt;")
+      </h3>
+      <p>Trims characters from the beginning and the end of a string.
+         Trims spaces by default. If given an argument, trims all
+         given characters. Does not handle unicode.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include sp-trim.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>:collapsews</h3>
+      <p>Trims whitespace from beginning and end and collapses
+         multiple whitespace to a single space.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include sp-collapsews.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>
+        :tolower<br>
+        :toupper
+      </h3>
+      <p>Changes all characters to lower or upper case. Does not handle unicode.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include sp-case.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>
+        :prepend("&lt;string&gt;")<br>
+        :append("&lt;string&gt;")
+      </h3>
+      <p>Prepends or appends a given string.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include sp-pend.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>:filter(/&lt;regex&gt;/[opt])</h3>
+      <p>Filters a string according to a given regex.
+         A regex containing a capture group will produce only the
+         matched content of that capture group, otherwise the whole
+         regex match is returned. All capture groups after the first
+         one will be ignored.
+         {%include regex-opt%}</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include sp-regex.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>:replace(/&lt;regex&gt;/[opt], "&lt;string&gt;")</h3>
+      <p>Replaces a portion matched by the given regex with a string.
+         Backreferences can be used to address capture groups
+         (<a href="http://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/format/boost_format_syntax.html">detailed description</a>).
+         {%include regex-opt%}</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include sp-regex-replace.hext%}</code></pre>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="builtin-functions"></a>
+  <h1 class="ui header">Built-in Functions</h1>
+  <p>
+    Built-in functions transform an element into a string.
+  </p>
+  <div class="ui doubling top aligned two column name-list grid">
+    <div class="column">
+      <h3>@text</h3>
+      <p>
+        Returns the inner text. Trims left and right whitespace and collapses
+        multiple whitespace to a single space.
+        The content of some elements will be embedded in spaces
+        (basically all non-inline elements, like &lt;div&gt; or &lt;h1&gt;).<br>
+        The intent is to mimic functions like jQuery's text(), IE's
+        innerText() or textContent().<br>
+        Does not strip
+        <a href="http://www.w3.org/TR/html5/dom.html#metadata-content-0">
+          metadata content</a>.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include bf-text.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>@inner-html</h3>
+      <p>Serializes the inner HTML to a string.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include bf-inner-html.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <h3>@strip-tags</h3>
+      <p>Returns the inner HTML with all tags removed.</p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include bf-strip-tags.hext%}</code></pre>
+    </div>
+  </div>
+</div>
+

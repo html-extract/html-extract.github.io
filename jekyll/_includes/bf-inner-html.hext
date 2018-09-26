@@ -1,0 +1,8 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># Turns this:</span>
+</div><div class='ace_line'><span class='ace_comment'>#   &#60;div&#62;&#60;h1&#62;Which Highway?&#60;/h1&#62; Highway 61! &#60;/div&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'># Into this:</span>
+</div><div class='ace_line'><span class='ace_comment'>#   "&#60;h1&#62;Which Highway?&#60;/h1&#62; Highway 61! "</span>
+</div><div class='ace_line'><span class='ace_comment'># And the filter turns it into this:</span>
+</div><div class='ace_line'><span class='ace_comment'>#   "Highway 61"</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;div</span><span class='ace_whitespace'> </span>@inner-html<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_constant ace_numeric'>filter(</span><span class='ace_string'>/Highway \d+/</span><span class='ace_constant ace_numeric'>)</span><span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>number</span> <span class='ace_keyword'>/&#62;</span>
+</div></div></div>
