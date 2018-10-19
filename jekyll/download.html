@@ -13,8 +13,8 @@ id: download
       <a class="active item" href="#building-hext">
         Building Hext on *nix
       </a>
-      <a class="item" href="#building-hext-win">
-        Building Hext on Win
+      <a class="item" href="#installing-hext-deb">
+        Packages for Ubuntu
       </a>
       <a class="item" href="#using-htmlext">
         Using htmlext
@@ -51,15 +51,12 @@ id: download
         Install the following packages:
       </p>
       <ul class="ui list">
-        <li>g++ ≥4.9 or clang ≥3.5</li>
+        <li>g++ ≥7.3 or clang ≥6.0</li>
         <li>cmake ≥3.02</li>
         <li>libboost-dev ≥1.55</li>
         <li>libboost-regex-dev ≥1.55</li>
         <li>libboost-program-options-dev ≥1.55</li>
-        <li>libgumbo-dev ≥0.10.1, which is available in
-            <a href="https://www.debian.org/releases/sid/">Debian Sid</a>,
-            <a href="https://www.debian.org/releases/stretch/">Debian Stretch</a>
-            and <a href="http://www.ubuntu.com/">Ubuntu</a> ≥15.10</li>
+        <li>libgumbo-dev ≥0.10.1</li>
       </ul>
     </div>
     <div class="column">
@@ -68,7 +65,7 @@ id: download
         You will need:
       </p>
       <ul class="ui list">
-        <li>g++ ≥4.9 or clang ≥3.5</li>
+        <li>g++ ≥7.3 or clang ≥6.0</li>
         <li><a href="https://cmake.org/">CMake</a> ≥3.02</li>
         <li><a href="http://www.boost.org/">Boost</a> ≥1.55,
             specifically Boost.Regex and Boost.Program_options</li>
@@ -81,6 +78,11 @@ id: download
       </ul>
     </div>
   </div>
+  <p style="padding-top:10px">
+    <u>Hint:</u> If you are on an older system, like Debian Stretch, you can use
+    <a href="https://github.com/thomastrapp/hext/releases/tag/v0.6.0">Hext v0.6.0</a>
+    without missing out on much.
+  </p>
   <div class="ui doubling top aligned two column grid">
     <div class="six wide column">
       <p>
@@ -104,41 +106,29 @@ id: download
     <div class="eight wide column">
       <pre class="ace-static-hl"><code>{%include install-hext.sh%}</code></pre>
     </div>
+    <div class="sixteen wide column">
+      <a class="scrollspy anchor" id="building-hext-win"></a>
+      Note to Windows users: Hext should be buildable on Windows. If you run into any
+      problems, please raise an <a href="https://github.com/thomastrapp/hext/issues">issue</a>
+      on Github.
+    </div>
   </div>
-  <a class="scrollspy anchor" id="building-hext-win"></a>
-  <h1 class="ui header">Building Hext on Windows</h1>
+  <a class="scrollspy anchor" id="installing-hext-deb"></a>
+  <h1 class="ui header">Installing the Debian Packages for Ubuntu</h1>
   <p>
-    Both htmlext and libhext can be built on Windows.<br>
-    You will need:
+    There are binary packages available for Ubuntu 18.04, that include <i>libhext</i>,
+    <i>htmlext</i> and the Hext Python module for Python 2.7 or 3.6.
   </p>
-  <ul class="ui list">
-    <li>A C++14 capable compiler, such as the one that comes with the
-        <a href="https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx">
-        Visual Studio 2015 Community Edition</a>.</li>
-    <li>A recent version of <a href="https://cmake.org/download/">CMake</a>.
-        Tested with 3.6 but any version ≥3.02 should suffice.</li>
-    <li>A recent version of
-        <a href="http://www.boost.org/users/download/">Boost</a>,
-        specifically the boost header files and the Boost.Regex and
-        Boost.Program_options libraries.
-        Tested with version 1.59 but any version ≥1.55 should suffice.</li>
-    <li><a href="https://github.com/google/gumbo-parser">Gumbo</a> version
-        0.10.1 from
-        <a href="https://github.com/google/gumbo-parser/archive/v0.10.1.tar.gz">
-        here</a>. Gumbo comes with a
-        <a href="https://github.com/google/gumbo-parser/tree/master/visualc">
-        Visual Studio project file</a>.</li>
-    <li>And of course the latest release of
-        <a href="https://github.com/thomastrapp/hext/releases">Hext</a>.</li>
-  </ul>
-  <p>
-    The tricky part is getting CMake to find all the neccessary headers and
-    libraries. This depends on how and where you installed Boost and Gumbo.
-    But once that is done, CMake can generate a Visual Studio Solution with
-    which Visual Studio will be able to compile the Hext project.<br>
-    <u>Note:</u> So far no effort was made to build the Hext language bindings
-    on Windows. But it may very well be feasible :)
-  </p>
+  <div class="ui top aligned two column grid">
+    <div class="sixteen wide column">
+      <pre class="ace-static-hl"><code>{%include install-hext-deb.text%}</code></pre>
+    </div>
+    <p>
+      If you are interested in Hext and in need of a binary package for your
+      system or language, please raise an
+      <a href="https://github.com/thomastrapp/hext/issues">issue</a> on Github.
+    </p>
+  </div>
   <a class="scrollspy anchor" id="using-htmlext"></a>
   <h1 class="ui header">Using htmlext</h1>
   <div class="ui doubling top aligned two column grid">
@@ -188,8 +178,8 @@ id: download
   <div class="ui doubling top aligned two column grid">
     <div class="seven wide column">
       <p>
-        After <a href="#building-hext">installing Hext</a> you can use CMake's own
-        FindPackage to add libhext to your project and you should be good to go!
+        After <a href="#building-hext">building and installing Hext</a> you can use
+        CMake's own FindPackage to add libhext to your project and you should be good to go.
       </p>
     </div>
     <div class="nine wide column">

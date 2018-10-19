@@ -1,5 +1,0 @@
-<h3>
-	<a href:prepend("https://touyube.com"):link
-		 @text:title />
-	<span @text:filter(/: (.*)/):duration />
-</h3>
