@@ -249,6 +249,17 @@ id: documentation
     </div>
     <div class="column">
       <p>
+        <b>Rules may be greedy.</b> A rule marked with a plus sign does not stop at
+        the first match, instead it continually searches for a match until a mandatory
+        rule takes precedence or until there are no more elements left.<br>
+        A greedy rule can also be made optional, that is, it may match none or many.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-greedy.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <p>
         <b>Rules may contain match patterns.</b> Match patterns
         further refine which HTML elements to match. There are three kinds
         of match patterns: Attribute matches,
