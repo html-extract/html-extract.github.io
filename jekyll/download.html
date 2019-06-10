@@ -10,11 +10,8 @@ id: download
     <div class="jump-table-spacer"></div>
     <h4>Up & Running</h4>
     <div class="ui secondary vertical scrollspy pointing fluid menu jump-table">
-      <a class="active item" href="#pip-install-hext">
-        Using Pip
-      </a>
-      <a class="item" href="#npm-install-hext">
-        Using NPM
+      <a class="active item" href="#pip-or-npm-install-hext">
+        Using Pip or NPM
       </a>
       <a class="item" href="#building-hext">
         Building Hext
@@ -46,29 +43,34 @@ id: download
 
 <div class="thirteen wide column">
   <a class="scrollspy anchor" id="pip-install-hext"></a>
-  <h1 class="ui header">Installing Hext through Pip</h1>
-  <p>
-    The <a href="#python-example-usage">Hext language bindings for Python</a> and the
-    <a href="#using-htmlext">htmlext command-line utility</a>
-    are installable through pip:
-  </p>
-  <pre class="ace-static-hl"><code>pip install hext</code></pre>
-  <p style="padding-top:10px">
-    Available for all flavors of Linux (x86_64) and Mac OS X ≥ 10.11.
-    See <a href="https://pypi.org/project/hext/">https://pypi.org/project/hext/</a>.
-  </p>
   <a class="scrollspy anchor" id="npm-install-hext"></a>
-  <h1 class="ui header">Installing Hext through NPM</h1>
+  <a class="scrollspy anchor" id="pip-or-npm-install-hext"></a>
+  <h1 class="ui header">Installing Hext</h1>
   <p>
-    The <a href="#nodejs-example-usage">Hext language bindings for Node</a> are installable through npm:
+    The easiest way to install a pre-built binary of the <a href="#using-htmlext">htmlext command-line utility</a> is by using pip.
   </p>
-  <pre class="ace-static-hl"><code>npm install hext</code></pre>
-  <p style="padding-top:10px">
-    Available for all flavors of Linux (x86_64) and Mac OS X ≥ 10.11.
-    See <a href="https://www.npmjs.com/package/hext">https://www.npmjs.com/package/hext</a>.
-  </p>
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <b>Pip</b> &mdash; Visit <a href="https://pypi.org/project/hext/">Hext on pypi.org</a>
+      <pre class="ace-static-hl"><code># Hext for Python and htmlext
+pip install hext</code></pre>
+    </div>
+    <div class="column">
+      <b>Npm</b> &mdash; Visit <a href="https://www.npmjs.com/package/hext">Hext on npmjs.com</a>
+      <pre class="ace-static-hl"><code># Hext for Node only
+npm install hext</code></pre>
+    </div>
+    <div class="sixteen wide column">
+      <p>
+        Available for all (moderately current) flavors of Linux (x86_64, glibc) and Mac OS X ≥ 10.11.<br>
+        If you are interested in Hext and in need of a binary package for your
+        system or language, please raise an
+        <a href="https://github.com/thomastrapp/hext/issues">issue on Github</a>!
+      </p>
+    </div>
+  </div>
   <a class="scrollspy anchor" id="building-hext"></a>
-  <h1 class="ui header">Building Hext from source</h1>
+  <h1 class="ui header">Building Hext from Source</h1>
   <div class="ui two column very relaxed stackable grid">
     <div class="column">
       <h3>On a Debian-based distribution</h3>
@@ -132,13 +134,6 @@ id: download
     <div class="eight wide column">
       <pre class="ace-static-hl"><code>{%include install-hext.sh%}</code></pre>
     </div>
-    <div class="sixteen wide column">
-      <p>
-        If you are interested in Hext and in need of a binary package for your
-        system or language, please raise an
-        <a href="https://github.com/thomastrapp/hext/issues">issue</a> on Github.
-      </p>
-    </div>
   </div>
   <a class="scrollspy anchor" id="using-htmlext"></a>
   <h1 class="ui header">Using htmlext</h1>
@@ -185,7 +180,7 @@ id: download
     </div>
   </div>
   <a class="scrollspy anchor" id="using-libhext"></a>
-  <h1 class="ui header">Using libhext in a CMake project</h1>
+  <h1 class="ui header">Using libhext in a CMake Project</h1>
   <div class="ui doubling top aligned two column grid">
     <div class="seven wide column">
       <p>
