@@ -1,4 +1,4 @@
 <div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># Load HextConfig.cmake</span>
-</div><div class='ace_line'><span class='ace_identifier'>find_package</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>Hext</span> <span class='ace_identifier'>REQUIRED</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_identifier'>find_package</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>Hext</span><span class='ace_paren ace_rparen'>)</span>
 </div><div class='ace_line'><span class='ace_comment'># Link libhext</span>
 </div><div class='ace_line'><span class='ace_identifier'>target_link_libraries</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>your</span><span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>target</span> <span class='ace_identifier'>hext::hext</span><span class='ace_paren ace_rparen'>)</span></div></div></div>
