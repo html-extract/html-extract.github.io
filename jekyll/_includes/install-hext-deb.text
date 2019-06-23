@@ -1,7 +1,0 @@
-cd /tmp
-wget https://github.com/thomastrapp/hext/releases/download/v0.7.0/hext-amd64-ubuntu18.04-v0.7.0.deb
-wget https://github.com/thomastrapp/hext/releases/download/v0.7.0/hext-python3.6-amd64-ubuntu18.04-v0.7.0.deb
-# install libhext and the htmlext command line utility
-sudo apt install ./hext-amd64-ubuntu18.04-v0.7.0.deb
-# install the hext python module
-sudo apt install ./hext-python3.6-amd64-ubuntu18.04-v0.7.0.deb
