@@ -1,7 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classhext_1_1Capture.html" title="Abstract base for every Capture. " alt="" coords="5,46,107,73"/>
-<area shape="rect" id="node2" href="$classhext_1_1Cloneable.html" title="hext::Cloneable\&lt; Attribute\lCapture, Capture \&gt;" alt="" coords="155,5,329,47"/>
-<area shape="rect" id="node4" href="$classhext_1_1Cloneable.html" title="hext::Cloneable\&lt; Function\lCapture, Capture \&gt;" alt="" coords="155,71,329,112"/>
-<area shape="rect" id="node3" href="$classhext_1_1AttributeCapture.html" title="Captures an HTML Element&#39;s attribute. " alt="" coords="377,13,528,39"/>
-<area shape="rect" id="node5" href="$classhext_1_1FunctionCapture.html" title="Captures the result of applying a function to an HTML node. " alt="" coords="377,78,528,105"/>
-</map>
