@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hext &mdash; Download</title>
+    <meta name="description" content="Download, build and install htmlext and language bindings for Node.js, PHP, Python, Ruby">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="canonical" href="https://hext.thomastrapp.com/download">
+
+    
+    <link rel="stylesheet" href="assets/combined.min.css">
+    <script src="assets/combined.min.js"></script>
+    
+
+  </head>
+  <body>
+
+    <noscript>
+      <div class="ui warning message no-radius">
+        <div class="ui center aligned page container">
+          <div class="header">
+            Site requires Javascript
+          </div>
+          Syntax highlighting and the Hext editor won't work without Javascript.
+        </div>
+      </div>
+    </noscript>
+
+    <div class="ui main-menu">
+      <div class="large-only ui container">
+        <div class="ui inverted labeled icon four item stackable menu">
+          <a href="/"
+             class="item"
+             ><img class="logo" alt="Hext" src="assets/img/hext-logo.png"></a>
+          <a href="/documentation"
+             class="item"
+             ><i class="student icon"></i> Documentation</a>
+          <a href="/download"
+             class="active item"
+             ><i class="download icon"></i>Get Hext</a>
+          <a href="https://github.com/html-extract/hext"
+             class="item"><i class="github icon"></i>Github</a>
+        </div>
+      </div>
+      <div class="small-only">
+        <div class="ui one item compact menu">
+          <a href="/"
+             class="item"
+             ><img class="logo" alt="Hext" src="assets/img/hext-logo.png"></a>
+        </div>
+        <div class="ui inverted labeled icon four item compact menu">
+          <a href="/documentation"
+             class="item"
+             ><i class="student icon"></i> Docs</a>
+          <a href="/download"
+             class="active item"
+             ><i class="download icon"></i>Get Hext</a>
+          <a href="https://github.com/html-extract/hext"
+             class="item"><i class="github square icon"></i>Github</a>
+        </div>
+      </div>
+    </div>
+
+    <main class="ui stackable grid container page-download">
+<div class="three wide column">
+  <div class="ui sticky">
+    <div class="jump-table-spacer"></div>
+    <h4>Up & Running</h4>
+    <div class="ui secondary vertical scrollspy pointing fluid menu jump-table">
+      <a class="active item" href="#pip-or-npm-install-hext">
+        Using Pip or NPM
+      </a>
+      <a class="item" href="#building-hext">
+        Building Hext
+      </a>
+      <a class="item" href="#using-htmlext">
+        Using htmlext
+      </a>
+      <a class="item" href="#using-libhext">
+        Using libhext
+      </a>
+    </div>
+    <h4>Language Bindings</h4>
+    <div class="ui secondary vertical scrollspy pointing fluid menu jump-table">
+      <a class="item" href="#building-nodejs-hext">
+        Node.js
+      </a>
+      <a class="item" href="#building-python-hext">
+        Python
+      </a>
+      <a class="item" href="#building-ruby-hext">
+        Ruby
+      </a>
+      <a class="item" href="#building-php-hext">
+        PHP
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="thirteen wide column">
+  <a class="scrollspy anchor" id="pip-install-hext"></a>
+  <a class="scrollspy anchor" id="npm-install-hext"></a>
+  <a class="scrollspy anchor" id="pip-or-npm-install-hext"></a>
+  <h1 class="ui header">Installing Hext</h1>
+  <p>
+    The easiest way to install a pre-built binary of the <a href="#using-htmlext">htmlext command-line utility</a> is by using pip.
+  </p>
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <b>Pip</b> &mdash; Visit <a href="https://pypi.org/project/hext/">Hext on pypi.org</a>
+      <pre class="ace-static-hl"><code># Hext for Python and htmlext
+pip install hext</code></pre>
+    </div>
+    <div class="column">
+      <b>Npm</b> &mdash; Visit <a href="https://www.npmjs.com/package/hext">Hext on npmjs.com</a>
+      <pre class="ace-static-hl"><code># Hext for Node only
+npm install hext</code></pre>
+    </div>
+    <div class="sixteen wide column">
+      <p>
+        Available for all (moderately current) flavors of Linux (x86_64, glibc) and Mac OS X ≥ 10.11.<br>
+        If you are interested in Hext and in need of a binary package for your
+        system or language, please raise an
+        <a href="https://github.com/html-extract/hext/issues">issue on Github</a>!
+      </p>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="building-hext"></a>
+  <h1 class="ui header">Building Hext from Source</h1>
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <h3>On a Debian-based distribution</h3>
+      <p class="bottom-attached">
+        Install the following packages:
+      </p>
+      <ul class="ui list">
+        <li>g++ ≥7.3 or clang ≥6.0</li>
+        <li>cmake ≥3.8</li>
+        <li>libboost-dev ≥1.55</li>
+        <li>libboost-regex-dev ≥1.55</li>
+        <li>libboost-program-options-dev ≥1.55</li>
+        <li>libgumbo-dev ≥0.10.1</li>
+        <li>rapidjson-dev ≥1.1.0</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>On other systems (*nix, OS X, Win)</h3>
+      <p class="bottom-attached">
+        You will need:
+      </p>
+      <ul class="ui list">
+        <li>g++ ≥7.3 or clang ≥6.0</li>
+        <li><a href="https://cmake.org/">CMake</a> ≥3.8</li>
+        <li><a href="http://www.boost.org/">Boost</a> ≥1.55,
+            specifically Boost.Regex and Boost.Program_options</li>
+        <li>libtool and autoconf for building
+            <a href="https://github.com/google/gumbo-parser">Gumbo</a></li>
+        <li>
+            Build and install <a href="https://github.com/google/gumbo-parser">Gumbo</a>
+            (<a href="https://github.com/google/gumbo-parser/archive/v0.10.1.tar.gz">v0.10.1</a>)
+            </li>
+        <li>
+            <a href="https://github.com/Tencent/rapidjson">RapidJSON</a>,
+            which is a header only library
+            (<a href="https://github.com/Tencent/rapidjson/archive/v1.1.0.tar.gz">v1.1.0</a>)
+            </li>
+      </ul>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="six wide column">
+      <p>
+        Download and extract the latest Hext release and navigate to the
+        top-level build directory.
+        Then call cmake and make to build the project.<br>
+        If all went well you'll find the htmlext binary in the current directory.
+      </p>
+    </div>
+    <div class="ten wide column">
+      <pre class="ace-static-hl"><code>wget https://github.com/html-extract/hext/archive/v0.8.0.tar.gz
+tar xf *.tar.gz
+cd hext*/build
+cmake -DBUILD_SHARED_LIBS=On .. && make -j 2
+./htmlext --help
+</code></pre>
+    </div>
+    <div class="eight wide column">
+      <p>
+        If you wish to install Hext on your system, run <i>make install</i> as root.
+        This will install the htmlext binary, libhext's header files, the
+        libhext library and package configuration files for CMake.<br>
+        Run <i>ldconfig</i> so your linker can find the newly installed libhext.
+      </p>
+    </div>
+    <div class="eight wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># run as root:</span>
+</div><div class='ace_line'><span class='ace_identifier'>make</span> <span class='ace_identifier'>install</span>
+</div><div class='ace_line'><span class='ace_comment'># tell your linker that there's a new library:</span>
+</div><div class='ace_line'><span class='ace_identifier'>ldconfig</span>
+</div></div></div></code></pre>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="using-htmlext"></a>
+  <h1 class="ui header">Using htmlext</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="six wide column">
+      <p class="operator-list">
+        <b>htmlext</b> is a command line utility that accepts Hext snippets,
+        matches them against HTML files and outputs JSON.
+      </p>
+      <p>
+        Every rule tree match gets its own JSON object containing the captured
+        name-value pairs.
+      </p>
+      <p class="operator-list">
+        <b>htmlext</b> detects whether its output is written to a terminal or
+        to a pipe. In the former case, every JSON object is pretty-printed, in
+        the latter the output is compacted, printing one object on each line.
+        You can force either behavior by using <b>--pretty</b> or <b>--compact</b>.
+      </p>
+      <p class="operator-list">
+        Another notable option is <b>--filter&nbsp;&lt;key&gt;</b>, which will
+        print nothing but the value of every capture whose name equals
+        <b>&lt;key&gt;</b>, one per line.
+      </p>
+    </div>
+    <div class="ten wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'>htmlext - Extract structured content from HTML.
+</div><div class='ace_line'>
+</div><div class='ace_line'>Usage:
+</div><div class='ace_line'>  htmlext [options] &#60;hext-file&#62; &#60;html-file...&#62;
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  Apply extraction rules from &#60;hext-file&#62; to each
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  &#60;html-file&#62; and print the captured content as JSON.
+</div><div class='ace_line'>
+</div><div class='ace_line'>Options:
+</div><div class='ace_line'>  -x [ --hext ] &#60;file&#62;  Add Hext from file
+</div><div class='ace_line'>  -i [ --html ] &#60;file&#62;  Add HTML from file
+</div><div class='ace_line'>  -s [ --str ] &#60;string&#62; Add Hext from string
+</div><div class='ace_line'>  -c [ --compact ]      Print one JSON object per line
+</div><div class='ace_line'>  -p [ --pretty ]       Pretty-print JSON
+</div><div class='ace_line'>  -a [ --array ]        Wrap results in a JSON array
+</div><div class='ace_line'>  -f [ --filter ] &#60;key&#62; Print values whose name matches &#60;key&#62;
+</div><div class='ace_line'>  -l [ --lint ]         Do Hext syntax check
+</div><div class='ace_line'>  -h [ --help ]         Print this help message
+</div><div class='ace_line'>  -V [ --version ]      Print info and version
+</div></div></div></code></pre>
+    </div>
+  </div>
+  <a class="anchor" id="examples"></a>
+  <h3 class="ui header">htmlext: Examples</h3>
+  <div class="ui doubling top aligned two column grid">
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># extract all hrefs from page.html</span>
+</div><div class='ace_line'><span class='ace_identifier'>htmlext</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>s</span> <span class='ace_string'>"&#60;a href:h /&#62;"</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>i</span> <span class='ace_identifier'>page</span>.<span class='ace_identifier'>html</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># watch every post on /r/videos with vlc</span>
+</div><div class='ace_line'><span class='ace_identifier'>htmlext</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>f</span> <span class='ace_identifier'>x</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>s</span> <span class='ace_string'>"&#60;a class='title' href:x /&#62;"</span> \
+</div><div class='ace_line'>  <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>curl</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>A</span> <span class='ace_string'>""</span> <span class='ace_string'>"https://old.reddit.com/r/videos/"</span><span class='ace_paren ace_rparen'>)</span>\
+</div><div class='ace_line'>  | <span class='ace_identifier'>xargs</span> <span class='ace_identifier'>vlc</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># use jq's magic to display the most upvoted</span>
+</div><div class='ace_line'><span class='ace_comment'># reddit thread</span>
+</div><div class='ace_line'><span class='ace_identifier'>htmlext</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>a</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>s</span> <span class='ace_string'>"</span>
+</div><div class='ace_line'><span class='ace_string'>&#60;div class='midcol'&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>  &#60;div class='unvoted' title:score /&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>&#60;/div&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>&#60;div class='entry'&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>  &#60;div&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>    &#60;p class='title'&#62;</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_string'>  &#60;a href:link @text:title /&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>    &#60;/p&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>  &#60;/div&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>&#60;/div&#62;"</span> \
+</div><div class='ace_line'> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>curl</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>A</span> <span class='ace_string'>""</span> <span class='ace_identifier'>https</span>:<span class='ace_keyword ace_operator'>//</span><span class='ace_identifier'>old</span>.<span class='ace_identifier'>reddit</span>.<span class='ace_identifier'>com</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>r</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>programming</span><span class='ace_keyword ace_operator'>/</span><span class='ace_paren ace_rparen'>)</span>\
+</div><div class='ace_line'> | <span class='ace_identifier'>jq</span> <span class='ace_string ace_start'>'</span><span class='ace_string'>sort_by(.score | tonumber) | last</span><span class='ace_string ace_end'>'</span>
+</div></div></div>
+</code></pre>
+    </div>
+    <div class="seven wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># apply href.hext to all html files</span>
+</div><div class='ace_line'><span class='ace_identifier'>htmlext</span> <span class='ace_identifier'>href</span>.<span class='ace_identifier'>hext</span> <span class='ace_keyword ace_operator'>*</span>.<span class='ace_identifier'>html</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># download every image with wget</span>
+</div><div class='ace_line'><span class='ace_identifier'>htmlext</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>s</span> <span class='ace_string'>"&#60;img src:x /&#62;"</span>            \
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>f</span> <span class='ace_identifier'>x</span>                          \
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>curl</span> <span class='ace_string'>"https://yoursite/"</span><span class='ace_paren ace_rparen'>)</span>\
+</div><div class='ace_line'>  | <span class='ace_identifier'>xargs</span> <span class='ace_identifier'>wget</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># extract external links and check</span>
+</div><div class='ace_line'><span class='ace_comment'># if they are dead</span>
+</div><div class='ace_line'><span class='ace_identifier'>htmlext</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>s</span> <span class='ace_string'>"&#60;* href^='http' href:x /&#62;"</span>\
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>s</span> <span class='ace_string'>"&#60;*  src^='http'  src:x /&#62;"</span>\
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>f</span> <span class='ace_identifier'>x</span>                          \
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>curl</span> <span class='ace_identifier'>https</span>:<span class='ace_keyword ace_operator'>//</span><span class='ace_identifier'>yoursite</span><span class='ace_paren ace_rparen'>)</span>   \
+</div><div class='ace_line'>  | <span class='ace_identifier'>sort</span>                              \
+</div><div class='ace_line'>  | <span class='ace_identifier'>uniq</span>                              \
+</div><div class='ace_line'>  | <span class='ace_keyword'>while</span> <span class='ace_keyword'>read</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>r</span> <span class='ace_identifier'>link</span> ; <span class='ace_keyword'>do</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_comment'># print link if curl fails</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>  <span class='ace_identifier'>curl</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>sf</span> <span class='ace_string'>"</span><span class='ace_constant'>$link</span><span class='ace_string'>"</span> <span class='ace_keyword ace_operator'>&#62;</span> <span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>dev</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>null</span>    \
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    || <span class='ace_support ace_function ace_builtin'>echo</span> <span class='ace_string'>"</span><span class='ace_constant'>$link</span><span class='ace_string'>"</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>done</span>
+</div></div></div></code></pre>
+    </div>
+    <div class="sixteen wide column">
+      <p class="operator-list">
+        Check out <a href="https://stedolan.github.io/jq/">jq</a>,
+        an indispensable tool when dealing with JSON in the shell.
+      </p>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="using-libhext"></a>
+  <h1 class="ui header">Using libhext in a CMake Project</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p>
+        After <a href="#building-hext">building and installing Hext</a> you can use
+        CMake's own FindPackage to add libhext to your project and you should be good to go.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># Load HextConfig.cmake</span>
+</div><div class='ace_line'><span class='ace_identifier'>find_package</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>Hext</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_comment'># Link libhext</span>
+</div><div class='ace_line'><span class='ace_identifier'>target_link_libraries</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>your</span><span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>target</span> <span class='ace_identifier'>hext::hext</span><span class='ace_paren ace_rparen'>)</span></div></div></div></code></pre>
+    </div>
+    <div style="padding-top:0" class="sixteen wide column">
+      <p>
+        Go to the
+        <a href="/libhext-documentation">main page of libhext's documentation</a> for an
+        introduction to libhext.
+      </p>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="building-nodejs-hext"></a>
+  <h1 class="ui header">Building Hext for Node.js</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <u>Note:</u> Hext for Node can be installed through <a href="#npm-install-hext">npm</a>, i.e:
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code>npm install hext</code></pre>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      <p>
+        First <a href="#building-hext">build and install Hext</a>.
+        Then, install nodejs (v8, v10, v11 or v12), nodejs-dev (or libnode-dev)
+        and <a href="https://www.npmjs.com/">npm</a>.
+      </p>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p class="bottom-attached">
+        The Node.js extension is included in the Hext project.
+        To build the extension you will need two packages which
+        are available through the Node.js package manager:
+      </p>
+      <ul class="ui list">
+        <li>
+          <a href="https://github.com/nodejs/nan">nan</a>:
+          Native Abstractions for Node.js
+        </li>
+        <li>
+          <a href="https://github.com/cmake-js/cmake-js">CMake.js</a>:
+          A Node.js/io.js native addon build tool
+        </li>
+      </ul>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># relative to the project root</span>
+</div><div class='ace_line'><span class='ace_support ace_function ace_builtin'>cd</span> <span class='ace_identifier'>libhext</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>bindings</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>nodejs</span>
+</div><div class='ace_line'><span class='ace_comment'># install build dependencies</span>
+</div><div class='ace_line'><span class='ace_identifier'>npm</span> <span class='ace_identifier'>install</span>
+</div><div class='ace_line'><span class='ace_comment'># build the project</span>
+</div><div class='ace_line'><span class='ace_identifier'>npm</span> <span class='ace_identifier'>run</span> <span class='ace_identifier'>build</span></div></div></div></code></pre>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p class="operator-list">
+        To use the extension in another project you can let npm do all the work.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># optional: install the extension for local</span>
+</div><div class='ace_line'><span class='ace_comment'># projects (requires root)</span>
+</div><div class='ace_line'><span class='ace_support ace_function ace_builtin'>cd</span> <span class='ace_identifier'>libhext</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>bindings</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>nodejs</span>
+</div><div class='ace_line'><span class='ace_identifier'>npm</span> <span class='ace_identifier'>link</span>
+</div><div class='ace_line'><span class='ace_comment'># now npm cann pull hext into your projects</span>
+</div><div class='ace_line'><span class='ace_support ace_function ace_builtin'>cd</span> <span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>path</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>to</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>your</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>project</span>
+</div><div class='ace_line'><span class='ace_identifier'>npm</span> <span class='ace_identifier'>link</span> <span class='ace_identifier'>hext</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># alternative: use the path from the repository</span>
+</div><div class='ace_line'><span class='ace_support ace_function ace_builtin'>cd</span> <span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>path</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>to</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>your</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>project</span>
+</div><div class='ace_line'><span class='ace_identifier'>npm</span> <span class='ace_identifier'>install</span> \
+</div><div class='ace_line'>  <span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>path</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>to</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>libhext</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>bindings</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>nodejs</span> <span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>save</span>
+</div><div class='ace_line'><span class='ace_comment'># test loading hext</span>
+</div><div class='ace_line'><span class='ace_identifier'>nodejs</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>e</span> <span class='ace_string'>"require('hext')"</span> &#38;&#38; <span class='ace_support ace_function ace_builtin'>echo</span> <span class='ace_string'>"It works!"</span>
+</div></div></div></code></pre>
+    </div>
+  </div>
+  <a class="anchor" id="nodejs-example-usage"></a>
+  <h3 class="ui header">Node.js: Example Usage</h3>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      This example JavaScript program demonstrates everything you can do with
+      Hext's Node.js extension as of yet.
+      Also check out
+<a href="https://github.com/html-extract/hext/blob/master/libhext/bindings/nodejs/htmlext.js">htmlext.js</a>
+      which is a stripped down JavaScript port of the htmlext command line
+      utility.
+    </div>
+    <div class="sixteen wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>hext</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>require</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>'hext'</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>// hext.Html's constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'>// containing an UTF-8 encoded string of HTML.</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_identifier'>hext</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>Html</span><span class='ace_paren ace_lparen'>(</span>
+</div><div class='ace_line'>  <span class='ace_string'>'&#60;a href="one.html"&#62;  &#60;img src="one.jpg" /&#62;  &#60;/a&#62;'</span> <span class='ace_keyword ace_operator'>+</span>
+</div><div class='ace_line'>  <span class='ace_string'>'&#60;a href="two.html"&#62;  &#60;img src="two.jpg" /&#62;  &#60;/a&#62;'</span> <span class='ace_keyword ace_operator'>+</span>
+</div><div class='ace_line'>  <span class='ace_string'>'&#60;a href="three.html"&#62;&#60;img src="three.jpg" /&#62;&#60;/a&#62;'</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>// hext.Rule's constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'>// containing a Hext snippet.</span>
+</div><div class='ace_line'><span class='ace_comment'>// Throws an Error on invalid syntax, with</span>
+</div><div class='ace_line'><span class='ace_comment'>// Error.message containing the error description.</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_identifier'>hext</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>Rule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>'&#60;a href:link&#62;'</span> <span class='ace_keyword ace_operator'>+</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>'  &#60;img src:image /&#62;'</span> <span class='ace_keyword ace_operator'>+</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>'&#60;/a&#62;'</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>// hext.Rule.extract expects an argument of type</span>
+</div><div class='ace_line'><span class='ace_comment'>// hext.Html. Returns an Array containing Objects</span>
+</div><div class='ace_line'><span class='ace_comment'>// which contain key-value pairs of type String.</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>result</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>rule</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>html</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>// print each key-value pair</span>
+</div><div class='ace_line'><span class='ace_keyword'>for</span><span class='ace_paren ace_lparen'>(</span><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>i</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>result</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>for</span><span class='ace_paren ace_lparen'>(</span><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>key</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>result</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>])</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>key</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_string'>"-&#62;"</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_identifier'>result</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>]</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>key</span><span class='ace_paren ace_rparen'>])</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="building-python-hext"></a>
+  <h1 class="ui header">Building Hext for Python</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <u>Note:</u> Hext for Python can be installed through <a href="#pip-install-hext">pip</a>, i.e:
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code>pip install hext</code></pre>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      <p>
+        First <a href="#building-hext">build and install Hext</a>.
+        Then, install python, python-dev (both version ≥2.7) and
+        <a href="http://www.swig.org/">swig</a> (version ≥3.0).
+      </p>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p>
+        The Python extension is included in the Hext project.
+        Navigate to its build directory. Call cmake and make to build
+        the extension.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># relative to the project root</span>
+</div><div class='ace_line'><span class='ace_support ace_function ace_builtin'>cd</span> <span class='ace_identifier'>libhext</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>bindings</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>python</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>build</span>
+</div><div class='ace_line'><span class='ace_identifier'>cmake</span> .. &#38;&#38; <span class='ace_identifier'>make</span>
+</div></div></div></code></pre>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p class="operator-list">
+        The Hext Python extension is comprised of two files: <b>hext.py</b> and
+        a shared library called <b>_hext.so</b>.
+        Unfortunately, there's no automated way of installing the extension yet, so
+        you'll have to take care of this part yourself :)<br>
+        Running <b>python -m site</b> will show you all the locations Python
+        will check in search of an extension. Use the directory given by
+        <b>python -m site --user-site</b> to install the extension for the
+        current user only.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># list all locations where python looks for</span>
+</div><div class='ace_line'><span class='ace_comment'># extensions</span>
+</div><div class='ace_line'><span class='ace_identifier'>python</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>m</span> <span class='ace_identifier'>site</span>
+</div><div class='ace_line'><span class='ace_comment'># create the directory where python expects</span>
+</div><div class='ace_line'><span class='ace_comment'># user installed extensions (if it doesn't</span>
+</div><div class='ace_line'><span class='ace_comment'># exist already)</span>
+</div><div class='ace_line'><span class='ace_identifier'>mkdir</span> <span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>parents</span> $<span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>python</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>m</span> <span class='ace_identifier'>site</span> <span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>user</span><span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>site</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_comment'># copy both files to this directory</span>
+</div><div class='ace_line'><span class='ace_identifier'>cp</span> <span class='ace_identifier'>hext</span>.<span class='ace_identifier'>py</span> <span class='ace_identifier'>_hext</span>.<span class='ace_identifier'>so</span> \
+</div><div class='ace_line'>    $<span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>python</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>m</span> <span class='ace_identifier'>site</span> <span class='ace_keyword ace_operator'>--</span><span class='ace_identifier'>user</span><span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>site</span><span class='ace_paren ace_rparen'>)</span>
+</div></div></div></code></pre>
+    </div>
+  </div>
+  <a class="anchor" id="python-example-usage"></a>
+  <h3 class="ui header">Python: Example Usage</h3>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      This Python script demonstrates everything you can do with Hext's Python
+      extension as of yet.
+      Also check out
+<a href="https://github.com/html-extract/hext/blob/master/libhext/bindings/python/htmlext.py">htmlext.py</a>
+      which is a stripped down Python port of the htmlext command line utility.
+    </div>
+    <div class="sixteen wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>import</span> <span class='ace_identifier'>hext</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># hext.Html's constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># containing an UTF-8 encoded string of HTML.</span>
+</div><div class='ace_line'><span class='ace_identifier'>html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>hext</span>.<span class='ace_identifier'>Html</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>"""</span>
+</div><div class='ace_line'><span class='ace_string'>    &#60;a href="one.html"&#62;  &#60;img src="one.jpg" /&#62;  &#60;/a&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>    &#60;a href="two.html"&#62;  &#60;img src="two.jpg" /&#62;  &#60;/a&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>    &#60;a href="three.html"&#62;&#60;img src="three.jpg" /&#62;&#60;/a&#62;"""</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># hext.Rule's constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># containing a Hext snippet.</span>
+</div><div class='ace_line'><span class='ace_comment'># Throws an exception of type ValueError on invalid syntax.</span>
+</div><div class='ace_line'><span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>hext</span>.<span class='ace_identifier'>Rule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>"&#60;a href:link&#62;  &#60;img src:image /&#62;  &#60;/a&#62;"</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># hext.Rule.extract expects an argument of type hext.Html.</span>
+</div><div class='ace_line'><span class='ace_comment'># Returns a list of dictionaries.</span>
+</div><div class='ace_line'><span class='ace_identifier'>results</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>rule</span>.<span class='ace_identifier'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>html</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># print each key-value pair</span>
+</div><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_identifier'>group</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>results</span>:
+</div><div class='ace_line'>    <span class='ace_keyword'>for</span> <span class='ace_identifier'>key</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>group</span>:
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>print</span> <span class='ace_string'>'{}: {}'</span>.<span class='ace_support ace_function'>format</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>key</span>, <span class='ace_identifier'>group</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>key</span><span class='ace_paren ace_rparen'>])</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>print</span>
+</div></div></div>
+</code></pre>
+    </div>
+    <div class="sixteen wide column">
+      <a href="https://scrapy.org/">Scrapy</a> is one of the most prolific tools when it
+      comes to crawling the web. For an example on how to use Hext with Scrapy, checkout <a href="https://github.com/html-extract/hext-scrapy-quotesbot">github.com/html-extract/hext-scrapy-quotesbot</a>.
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="building-ruby-hext"></a>
+  <h1 class="ui header">Building Hext for Ruby</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      <p>
+        First <a href="#building-hext">build and install Hext</a>.
+        Then, install ruby, ruby-dev (both version ≥2.1) and
+        <a href="http://www.swig.org/">swig</a> (version ≥3.0).
+      </p>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p>
+        The Ruby extension is included in the Hext project.
+        Navigate to its build directory. Call cmake and make to build
+        the extension.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># relative to the project root</span>
+</div><div class='ace_line'><span class='ace_support ace_function ace_builtin'>cd</span> <span class='ace_identifier'>libhext</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>bindings</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>ruby</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>build</span>
+</div><div class='ace_line'><span class='ace_identifier'>cmake</span> .. &#38;&#38; <span class='ace_identifier'>make</span>
+</div></div></div></code></pre>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p class="operator-list">
+        The Hext Ruby extension consists of a single shared library called
+        <b>hext.so</b>.
+        Unfortunately, there's no automated way of installing the extension yet, so
+        you'll have to take care of this part yourself :)<br>
+        Running <b>ruby -e 'puts $LOAD_PATH'</b> will show you all the locations
+        Ruby will check in search of an extension. Copying the shared library
+        to any one of these locations should suffice.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># list all locations where ruby looks for</span>
+</div><div class='ace_line'><span class='ace_comment'># extensions</span>
+</div><div class='ace_line'><span class='ace_identifier'>ruby</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>e</span> <span class='ace_string ace_start'>'</span><span class='ace_string'>puts $LOAD_PATH</span><span class='ace_string ace_end'>'</span>
+</div><div class='ace_line'><span class='ace_comment'># Example: install the extension system wide</span>
+</div><div class='ace_line'><span class='ace_comment'># (requires root)</span>
+</div><div class='ace_line'><span class='ace_identifier'>cp</span> <span class='ace_identifier'>hext</span>.<span class='ace_identifier'>so</span> <span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>usr</span><span class='ace_keyword ace_operator'>/</span><span class='ace_keyword'>local</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>lib</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>site_ruby</span>
+</div><div class='ace_line'><span class='ace_comment'># Alternative: Run ruby with the -I parameter,</span>
+</div><div class='ace_line'><span class='ace_comment'># where &#60;path&#62; is the path containing the extension.</span>
+</div><div class='ace_line'><span class='ace_identifier'>ruby</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>I</span><span class='ace_keyword ace_operator'>&#60;</span><span class='ace_identifier'>path</span><span class='ace_keyword ace_operator'>&#62;</span> <span class='ace_identifier'>your</span><span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>script</span>.<span class='ace_identifier'>rb</span>
+</div></div></div></code></pre>
+    </div>
+  </div>
+  <a class="anchor" id="ruby-example-usage"></a>
+  <h3 class="ui header">Ruby: Example Usage</h3>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      This Ruby script demonstrates everything you can do with Hext's Ruby
+      extension as of yet.
+      Also check out
+<a href="https://github.com/html-extract/hext/blob/master/libhext/bindings/ruby/htmlext.rb">htmlext.rb</a>
+      which is a stripped down Ruby port of the htmlext command line utility.
+    </div>
+    <div class="sixteen wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_support ace_function'>require</span> <span class='ace_string ace_start'>'</span><span class='ace_string'>hext</span><span class='ace_string ace_end'>'</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># Hext::Html's initializer expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># containing an UTF-8 encoded string of HTML.</span>
+</div><div class='ace_line'><span class='ace_identifier'>html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_support ace_class'>Hext</span>::<span class='ace_support ace_class'>Html</span>.<span class='ace_identifier'>new</span><span class='ace_paren ace_lparen'>(</span><span class='ace_constant'>&#60;&#60;-</span><span class='ace_string'>'</span><span class='ace_support ace_class'>HTML_INPUT</span><span class='ace_string'>'</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_string'>&#60;a href="one.html"&#62;  &#60;img src="one.jpg" /&#62;  &#60;/a&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>&#60;a href="two.html"&#62;  &#60;img src="two.jpg" /&#62;  &#60;/a&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>&#60;a href="three.html"&#62;&#60;img src="three.jpg" /&#62;&#60;/a&#62;</span>
+</div><div class='ace_line'><span class='ace_support ace_class'>HTML_INPUT</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># Hext::Rule's initializer expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># containing a Hext snippet.</span>
+</div><div class='ace_line'><span class='ace_comment'># Raises an exception of type ArgumentError on invalid syntax.</span>
+</div><div class='ace_line'><span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_support ace_class'>Hext</span>::<span class='ace_support ace_class'>Rule</span>.<span class='ace_identifier'>new</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string ace_start'>"</span><span class='ace_string'>&#60;a href:link&#62;  &#60;img src:image /&#62;  &#60;/a&#62;</span><span class='ace_string ace_end'>"</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># Hext::Rule.extract expects an argument of type Hext::Html.</span>
+</div><div class='ace_line'><span class='ace_comment'># Returns an Array of Hashes which contain key-value pairs</span>
+</div><div class='ace_line'><span class='ace_comment'># of type String.</span>
+</div><div class='ace_line'><span class='ace_identifier'>result</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>rule</span>.<span class='ace_identifier'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>html</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># print each key-value pair</span>
+</div><div class='ace_line'><span class='ace_identifier'>result</span>.<span class='ace_identifier'>each</span> <span class='ace_keyword'>do</span> |<span class='ace_identifier'>map</span>|
+</div><div class='ace_line'>  <span class='ace_identifier'>map</span>.<span class='ace_identifier'>each</span> <span class='ace_keyword'>do</span> |<span class='ace_identifier'>key</span>, <span class='ace_identifier'>value</span>|
+</div><div class='ace_line'>    <span class='ace_support ace_function'>puts</span> <span class='ace_string ace_start'>"</span><span class='ace_paren ace_start'>#{</span><span class='ace_identifier'>key</span><span class='ace_paren ace_end'>}</span><span class='ace_string'>: </span><span class='ace_paren ace_start'>#{</span><span class='ace_identifier'>value</span><span class='ace_paren ace_end'>}</span><span class='ace_string ace_end'>"</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>end</span>
+</div><div class='ace_line'>  <span class='ace_support ace_function'>puts</span>
+</div><div class='ace_line'><span class='ace_keyword'>end</span>
+</div></div></div></code></pre>
+    </div>
+  </div>
+  <a class="scrollspy anchor" id="building-php-hext"></a>
+  <h1 class="ui header">Building Hext for PHP</h1>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      <p>
+        First <a href="#building-hext">build and install Hext</a>.
+        Then, install php-cli (or php) , php-dev (both version ≥7.0) and
+        <a href="http://www.swig.org/">swig</a> (version ≥3.0.11).
+      </p>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="seven wide column">
+      <p>
+        The PHP extension is included in the Hext project.
+        Navigate to its build directory. Call cmake and make to build
+        the extension.
+      </p>
+    </div>
+    <div class="nine wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># relative to the project root</span>
+</div><div class='ace_line'><span class='ace_support ace_function ace_builtin'>cd</span> <span class='ace_identifier'>libhext</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>bindings</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>php</span><span class='ace_keyword ace_operator'>/</span><span class='ace_identifier'>build</span>
+</div><div class='ace_line'><span class='ace_identifier'>cmake</span> .. &#38;&#38; <span class='ace_identifier'>make</span>
+</div></div></div></code></pre>
+    </div>
+  </div>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      <p class="operator-list bottom-attached">
+        The Hext PHP extension is comprised of two files: <b>hext.php</b> and
+        a shared library called <b>hext.so</b>.
+        In typical PHP setups the
+        <a href="http://php.net/manual/en/function.dl.php">dl()</a> function
+        which loads dynamic libraries at runtime is disabled. Therefore
+        in most cases the extension must be loaded at PHP's startup. There are
+        two ways to do this:
+      </p>
+      <ul class="ui list">
+        <li class="item"><b>php.ini</b>: Add the line "extension=/path/to/hext.so"
+                         to your php.ini file, ideally below the section called
+                         "Dynamic Extensions".</li>
+        <li class="item"><b>PHP CLI's -d parameter:</b> Run PHP with the
+                         argument "-d extension=/path/to/hext.so".</li>
+      </ul>
+      <p class="operator-list">
+        And lastly, PHP needs to be able to find <b>hext.php</b>. This file may
+        be anywhere in your
+        <a href="http://php.net/manual/en/ini.core.php#ini.include-path">include_path</a>.
+      </p>
+    </div>
+  </div>
+  <a class="anchor" id="php-example-usage"></a>
+  <h3 class="ui header">PHP: Example Usage</h3>
+  <div class="ui doubling top aligned two column grid">
+    <div class="sixteen wide column">
+      This PHP script demonstrates everything you can do with Hext's PHP
+      extension as of yet.
+      Also check out
+<a href="https://github.com/html-extract/hext/blob/master/libhext/bindings/php/htmlext.php">htmlext.php</a>
+      which is a stripped down PHP port of the htmlext command line utility.
+    </div>
+    <div class="sixteen wide column">
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_support ace_php_tag'>&#60;?php</span>
+</div><div class='ace_line'><span class='ace_support ace_function'>require</span> <span class='ace_string'>'hext.php'</span>;
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># HextHtml's constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># containing an UTF-8 encoded string of HTML.</span>
+</div><div class='ace_line'><span class='ace_variable'>$html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_support ace_class'>HextHtml</span><span class='ace_paren ace_lparen'>(</span>
+</div><div class='ace_line'>  <span class='ace_string'>'&#60;a href="one.html"&#62;  &#60;img src="one.jpg" /&#62;  &#60;/a&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>   &#60;a href="two.html"&#62;  &#60;img src="two.jpg" /&#62;  &#60;/a&#62;</span>
+</div><div class='ace_line'><span class='ace_string'>   &#60;a href="three.html"&#62;&#60;img src="three.jpg" /&#62;&#60;/a&#62;'</span><span class='ace_paren ace_rparen'>)</span>;
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># HextRule's constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># containing a Hext snippet.</span>
+</div><div class='ace_line'><span class='ace_comment'># Throws an exception on invalid syntax.</span>
+</div><div class='ace_line'><span class='ace_variable'>$rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_support ace_class'>HextRule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>'&#60;a href:link&#62;'</span>.
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>'  &#60;img src:image /&#62;'</span>.
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>'&#60;/a&#62;'</span><span class='ace_paren ace_rparen'>)</span>;
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># HextRule-&#62;extract expects an argument of type HextHtml.</span>
+</div><div class='ace_line'><span class='ace_comment'># Returns an array containing arrays which contain</span>
+</div><div class='ace_line'><span class='ace_comment'># key-value pairs of type string.</span>
+</div><div class='ace_line'><span class='ace_variable'>$result</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_variable'>$rule</span><span class='ace_keyword ace_operator'>-&#62;</span><span class='ace_support ace_function'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_variable'>$html</span><span class='ace_paren ace_rparen'>)</span>;
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># print each key-value pair</span>
+</div><div class='ace_line'><span class='ace_keyword'>foreach</span><span class='ace_paren ace_lparen'>(</span><span class='ace_variable'>$result</span> <span class='ace_keyword'>as</span> <span class='ace_variable'>$map</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_paren ace_lparen'>{</span>
+</div><div class='ace_line'>  <span class='ace_keyword'>foreach</span><span class='ace_paren ace_lparen'>(</span><span class='ace_variable'>$map</span> <span class='ace_keyword'>as</span> <span class='ace_variable'>$key</span> <span class='ace_keyword ace_operator'>=&#62;</span> <span class='ace_variable'>$value</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>    <span class='ace_support ace_function'>echo</span> <span class='ace_string'>"</span><span class='ace_variable'>$key</span><span class='ace_string'>: </span><span class='ace_variable'>$value</span><span class='ace_constant ace_language ace_escape'>\n</span><span class='ace_string'>"</span>;
+</div><div class='ace_line'>
+</div><div class='ace_line'>  <span class='ace_support ace_function'>echo</span> <span class='ace_string'>"</span><span class='ace_constant ace_language ace_escape'>\n</span><span class='ace_string'>"</span>;
+</div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
+</div></div></div></code></pre>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <div class="ui inverted segment footer">
+      <div class="ui about-questions two column stackable grid container">
+        <div class="column">
+          <div class="ui two column grid">
+            <div class="three wide column">
+              <h3>How?</h3>
+            </div>
+            <div class="thirteen wide column">
+              <p class="slim"><b>Hext</b> was built with
+                 C++,
+                 <a href="https://github.com/google/gumbo-parser">Gumbo</a>,
+                 <a href="https://www.colm.net/open-source/ragel/">Ragel</a>,
+                 <a href="http://www.boost.org/">Boost</a>,
+                 <a href="https://github.com/miloyip/rapidjson">RapidJSON</a>,
+                 <a href="https://github.com/google/googletest">Google Test</a>,
+                 <a href="http://www.doxygen.org/">doxygen</a> and
+                 <a href="https://cmake.org/">CMake</a>.
+              </p>
+              <p><b>This page</b> was cobbled together with
+                 <a href="https://jekyllrb.com/">Jekyll</a>,
+                 <a href="http://semantic-ui.com/">Semantic UI</a>,
+                 <a href="https://jquery.com/">jQuery</a>,
+                 <a href="http://ace.c9.io/">Ace Code Editor</a> and
+                 <a href="https://github.com/boostorg/beast">Boost.Beast</a>,
+                 which powers the "Try Hext in your Browser!" section.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui two column grid">
+            <div class="three wide column">
+              <h3>Who?</h3>
+            </div>
+            <div class="thirteen wide column">
+              <p>I'm <a href="http://thomastrapp.com/">Tom</a>,
+                 a programmer from Munich and I did all this!<br>
+                 Leave a message: <script type="text/javascript">eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%68%65%78%74%40%74%68%6f%6d%61%73%74%72%61%70%70%2e%63%6f%6d%22%3e%68%65%78%74%40%74%68%6f%6d%61%73%74%72%61%70%70%2e%63%6f%6d%3c%2f%61%3e%27%29'))</script><noscript style="color:red">Please enable Javascript to display email address</noscript>
+               </p>
+            </div>
+            <div class="three wide column">
+              <h3>Hext?</h3>
+            </div>
+            <div class="thirteen wide column">
+               <p>
+                 The word "<b>Hext</b>" is a combination of "<b>HTML</b>" and
+                 "<b>extraction</b>".
+                 The German adjective "<b>ver</b>·<b>hext</b>"
+                 may be translated to "<b>bewitched</b>" or "<b>hexed</b>".
+                 <i><a href="https://en.wiktionary.org/wiki/hexen">
+                 &raquo; Wiktionary</a></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="center aligned sixteen wide column">
+          <b>Imprint/Impressum/This site is operated by:</b>
+          <a href="https://thomastrapp.com/">Thomas&nbsp;Trapp</a>
+          ·&nbsp;Rümannstr.&nbsp;61 ·&nbsp;80804&nbsp;München
+          ·&nbsp;<script type="text/javascript">eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%68%65%78%74%40%74%68%6f%6d%61%73%74%72%61%70%70%2e%63%6f%6d%22%3e%68%65%78%74%40%74%68%6f%6d%61%73%74%72%61%70%70%2e%63%6f%6d%3c%2f%61%3e%27%29'))</script><noscript style="color:red">Please enable Javascript to display email address</noscript><br>
+          <b>Datenschutzerklärung:</b> Es werden keine personenbezogenen Daten erhoben, ausgewertet oder an Dritte weitergegeben.<br>
+          <b>Privacy Policy:</b> No personal data is collected, evaluated or relayed to a third party.<br>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
