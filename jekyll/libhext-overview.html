@@ -34,8 +34,8 @@ desc: "Implementation details of the libhext C++ library"
           hext::Match</a>)
           and extraction mechanisms (by extending
           <a href="/libhext-documentation/classhext_1_1Capture.html">
-          hext::Capture</a>). Take a look at "2. Overview of libhext" and
-					"3. Building rules manually".
+          hext::Capture</a>). Take a look at <a href="#cpp-doc-section-overview">2. Overview of libhext</a> and
+          <a href="#cpp-doc-section-building-rules">3. Building rules manually</a>.
           </li>
     </ul>
     <a name="using-parsehext"></a>
@@ -46,12 +46,13 @@ desc: "Implementation details of the libhext C++ library"
       containing images from HTML documents.
     </p>
     <pre class="ace-static-hl"><code>{%include libhext-parsehext-nested.c_cpp%}</code></pre>
+    <a name="cpp-doc-section-overview"></a>
     <h3>2. Overview of libhext</h3>
     <p class="bottom-attached">
       Before diving into an example, let's introduce some components that
       are exposed by libhext's public API.<br>
       If you are in a rush take a look at
-      "4. Overview of libhext's extendable types" at the bottom of this page.
+      <a href="#cpp-doc-section-extendable-types">4. Overview of libhext's extendable types</a> at the bottom of this page.
     </p>
     <ul>
       <li><a href="/libhext-documentation/classhext_1_1Rule.html">
@@ -201,7 +202,7 @@ desc: "Implementation details of the libhext C++ library"
           An enum containing all valid HTML tags, plus HtmlTag::ANY, which
           matches any HTML tag (translates to &lt;* /&gt; in Hext).</li>
     </ul>
-    <a name="building-rules"></a>
+    <a name="cpp-doc-section-building-rules"></a>
     <h3>3. Building rules manually &mdash; An example</h3>
     <p>
       Hext offers ways to match
@@ -215,7 +216,7 @@ desc: "Implementation details of the libhext C++ library"
       these filenames.
     </p>
     <pre class="ace-static-hl"><code>{%include libhext-extended-matching.c_cpp%}</code></pre>
-    <a name="overview-extendable"></a>
+    <a name="cpp-doc-section-extendable-types"></a>
     <h3>4. Overview of libhext's extendable types</h3>
     <p>
       The following four abstract base classes can be extended to build your
