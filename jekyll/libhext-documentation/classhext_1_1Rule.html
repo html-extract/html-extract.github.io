@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libhext: C++ Library Documentation
-   &#160;<span id="projectnumber">0.8.0-0b45aa1</span>
+   &#160;<span id="projectnumber">0.8.2-e5d504d</span>
    </div>
   </td>
  </tr>
@@ -77,8 +77,11 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a801053a91aae6537b9c3197998ed4288"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhext_1_1Rule.html#a801053a91aae6537b9c3197998ed4288">Rule</a> (<a class="el" href="namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010">HtmlTag</a> tag=<a class="el" href="namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010a8e1bde3c3d303163521522cf1d62f21f">HtmlTag::ANY</a>, bool optional=false, bool greedy=false) noexcept</td></tr>
-<tr class="memdesc:a801053a91aae6537b9c3197998ed4288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a>.  <a href="#a801053a91aae6537b9c3197998ed4288">More...</a><br /></td></tr>
+<tr class="memdesc:a801053a91aae6537b9c3197998ed4288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> with a known HTML tag.  <a href="#a801053a91aae6537b9c3197998ed4288">More...</a><br /></td></tr>
 <tr class="separator:a801053a91aae6537b9c3197998ed4288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a4a9648160c3858fad7b24b01247e33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhext_1_1Rule.html#a3a4a9648160c3858fad7b24b01247e33">Rule</a> (std::string tag, bool optional=false, bool greedy=false) noexcept</td></tr>
+<tr class="memdesc:a3a4a9648160c3858fad7b24b01247e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> with the HTML tag given as a string.  <a href="#a3a4a9648160c3858fad7b24b01247e33">More...</a><br /></td></tr>
+<tr class="separator:a3a4a9648160c3858fad7b24b01247e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a517ef64667e0cdfc47061c3652ec2636"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhext_1_1Rule.html#a517ef64667e0cdfc47061c3652ec2636">~Rule</a> () noexcept=default</td></tr>
 <tr class="separator:a517ef64667e0cdfc47061c3652ec2636"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17201409035ba8a274f8719cad284282"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhext_1_1Rule.html#a17201409035ba8a274f8719cad284282">Rule</a> (<a class="el" href="classhext_1_1Rule.html">Rule</a> &amp;&amp;) noexcept=default</td></tr>
@@ -139,6 +142,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a81632ab919fae7ee4daf583cb0f52c81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhext_1_1Rule.html">Rule</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhext_1_1Rule.html#a81632ab919fae7ee4daf583cb0f52c81">set_greedy</a> (bool greedy) noexcept</td></tr>
 <tr class="memdesc:a81632ab919fae7ee4daf583cb0f52c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether this rule is to be matched repeatedly.  <a href="#a81632ab919fae7ee4daf583cb0f52c81">More...</a><br /></td></tr>
 <tr class="separator:a81632ab919fae7ee4daf583cb0f52c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ca59e6077f2507a9d2404e6bb40e5d"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhext_1_1Rule.html#a54ca59e6077f2507a9d2404e6bb40e5d">get_tagname</a> () const</td></tr>
+<tr class="memdesc:a54ca59e6077f2507a9d2404e6bb40e5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get custom HTML tag name.  <a href="#a54ca59e6077f2507a9d2404e6bb40e5d">More...</a><br /></td></tr>
+<tr class="separator:a54ca59e6077f2507a9d2404e6bb40e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113ee30e1807802bba5b6fbcd077cc05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhext_1_1Rule.html">Rule</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhext_1_1Rule.html#a113ee30e1807802bba5b6fbcd077cc05">set_tagname</a> (const std::string &amp;tagname)</td></tr>
+<tr class="memdesc:a113ee30e1807802bba5b6fbcd077cc05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set custom HTML tag name.  <a href="#a113ee30e1807802bba5b6fbcd077cc05">More...</a><br /></td></tr>
+<tr class="separator:a113ee30e1807802bba5b6fbcd077cc05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85bd9c97ebdde60fc5212e9f364ac3ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehext.html#abca4e3b5f19e70e13c69ec771aabb75a">hext::Result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhext_1_1Rule.html#a85bd9c97ebdde60fc5212e9f364ac3ec">extract</a> (const <a class="el" href="classhext_1_1Html.html">Html</a> &amp;html) const</td></tr>
 <tr class="memdesc:a85bd9c97ebdde60fc5212e9f364ac3ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively extracts values from an <a class="el" href="namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010a4c4ad5fca2e7a3f74dbb1ced00381aa4" title="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html ">hext::HTML</a>.  <a href="#a85bd9c97ebdde60fc5212e9f364ac3ec">More...</a><br /></td></tr>
 <tr class="separator:a85bd9c97ebdde60fc5212e9f364ac3ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,10 +166,10 @@ Public Member Functions</h2></td></tr>
 <p>A <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> defines how to match and capture HTML nodes. It can be applied to a GumboNode tree, where it recursively tries to find matches.</p>
 <dl class="section user"><dt>Example:</dt><dd><div class="fragment"><div class="line"><span class="comment">// create a rule that matches anchor elements, ..</span></div><div class="line"><a class="code" href="classhext_1_1Rule.html#a801053a91aae6537b9c3197998ed4288">Rule</a> anchor(<a class="code" href="namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010a7fc56270e7a70fa81a5935b72eacbe29">HtmlTag::A</a>);</div><div class="line"><span class="comment">// .. which must have an attribute called &quot;href&quot;</span></div><div class="line">anchor.append_match&lt;AttributeMatch&gt;(<span class="stringliteral">&quot;href&quot;</span>)</div><div class="line">      <span class="comment">// capture attribute href and save it as &quot;link&quot;</span></div><div class="line">      .append_capture&lt;AttributeCapture&gt;(<span class="stringliteral">&quot;href&quot;</span>, <span class="stringliteral">&quot;link&quot;</span>);</div><div class="line"></div><div class="line">{</div><div class="line">  <span class="comment">// create a rule that matches image elements</span></div><div class="line">  <a class="code" href="classhext_1_1Rule.html#a801053a91aae6537b9c3197998ed4288">Rule</a> img(<a class="code" href="namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010ab03d9d40b1fb78805d1552b3d29c9ef3">HtmlTag::IMG</a>);</div><div class="line">  <span class="comment">// capture attribute src and save it as &quot;img&quot;</span></div><div class="line">  img.append_capture&lt;AttributeCapture&gt;(<span class="stringliteral">&quot;src&quot;</span>, <span class="stringliteral">&quot;img&quot;</span>);</div><div class="line">  <span class="comment">// append the image-rule to the anchor-rule</span></div><div class="line">  anchor.append_child(std::move(img));</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">// anchor is now equivalent to the following hext:</span></div><div class="line"><span class="comment">// &lt;a href:link&gt;&lt;img src:img/&gt;&lt;/a&gt;</span></div><div class="line"></div><div class="line">Html html(</div><div class="line">    <span class="stringliteral">&quot;&lt;div&gt;&lt;a href=&#39;/bob&#39;&gt;  &lt;img src=&#39;bob.jpg&#39;/&gt;  &lt;/a&gt;&lt;/div&gt;&quot;</span></div><div class="line">    <span class="stringliteral">&quot;&lt;div&gt;&lt;a href=&#39;/alice&#39;&gt;&lt;img src=&#39;alice.jpg&#39;/&gt;&lt;/a&gt;&lt;/div&gt;&quot;</span></div><div class="line">    <span class="stringliteral">&quot;&lt;div&gt;&lt;a href=&#39;/carol&#39;&gt;&lt;img src=&#39;carol.jpg&#39;/&gt;&lt;/a&gt;&lt;/div&gt;&quot;</span>);</div><div class="line"></div><div class="line"><a class="code" href="namespacehext.html#abca4e3b5f19e70e13c69ec771aabb75a">hext::Result</a> result = anchor.extract(html);</div><div class="line"><span class="comment">// result will be equivalent to this:</span></div><div class="line"><span class="comment">// vector{</span></div><div class="line"><span class="comment">//   map{</span></div><div class="line"><span class="comment">//     {&quot;link&quot;, &quot;/bob&quot;}</span></div><div class="line"><span class="comment">//     {&quot;img&quot;, &quot;bob.jpg&quot;}</span></div><div class="line"><span class="comment">//   },</span></div><div class="line"><span class="comment">//   map{</span></div><div class="line"><span class="comment">//     {&quot;link&quot;, &quot;/alice&quot;}</span></div><div class="line"><span class="comment">//     {&quot;img&quot;, &quot;alice.jpg&quot;}</span></div><div class="line"><span class="comment">//   },</span></div><div class="line"><span class="comment">//   map{</span></div><div class="line"><span class="comment">//     {&quot;link&quot;, &quot;/carol&quot;}</span></div><div class="line"><span class="comment">//     {&quot;img&quot;, &quot;carol.jpg&quot;}</span></div><div class="line"><span class="comment">//   },</span></div><div class="line"><span class="comment">// }</span></div></div><!-- fragment --> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Rule_8h_source.html#l00086">86</a> of file <a class="el" href="Rule_8h_source.html">Rule.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Rule_8h_source.html#l00088">88</a> of file <a class="el" href="Rule_8h_source.html">Rule.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a801053a91aae6537b9c3197998ed4288"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a801053a91aae6537b9c3197998ed4288">&#9670;&nbsp;</a></span>Rule() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a801053a91aae6537b9c3197998ed4288">&#9670;&nbsp;</a></span>Rule() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,10 +208,62 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a>. </p>
+<p>Constructs a <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> with a known HTML tag. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>The HtmlTag that this rule matches. Default: <a class="el" href="classhext_1_1Match.html" title="Abstract base for every Match. ">Match</a> any tag. </td></tr>
+    <tr><td class="paramname">optional</td><td>A subtree matches only if all mandatory rules were matched. Optional rules on the other hand are ignored if not found. Default: <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> is mandatory. </td></tr>
+    <tr><td class="paramname">greedy</td><td>Whether this rule should be repeated once a match is found. Default: <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> is matched once. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a4a9648160c3858fad7b24b01247e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4a9648160c3858fad7b24b01247e33">&#9670;&nbsp;</a></span>Rule() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">hext::Rule::Rule </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>optional</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>greedy</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> with the HTML tag given as a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tag</td><td>The HTML tagname that this rule matches. Custom/unknown HTML tags are allowed. If the tagname is a standard-HTML tag, it is converted to an HtmlTag. </td></tr>
     <tr><td class="paramname">optional</td><td>A subtree matches only if all mandatory rules were matched. Optional rules on the other hand are ignored if not found. Default: <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> is mandatory. </td></tr>
     <tr><td class="paramname">greedy</td><td>Whether this rule should be repeated once a match is found. Default: <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> is matched once. </td></tr>
   </table>
@@ -237,7 +298,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a17201409035ba8a274f8719cad284282"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17201409035ba8a274f8719cad284282">&#9670;&nbsp;</a></span>Rule() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a17201409035ba8a274f8719cad284282">&#9670;&nbsp;</a></span>Rule() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +324,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a11f15a085e64b8f4bcf3b23c7f54d420"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11f15a085e64b8f4bcf3b23c7f54d420">&#9670;&nbsp;</a></span>Rule() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a11f15a085e64b8f4bcf3b23c7f54d420">&#9670;&nbsp;</a></span>Rule() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +399,7 @@ template&lt;typename CaptureType , typename... Args&gt; </div>
 <p>Forwards arguments to std::make_unique.</p>
 <dl class="section return"><dt>Returns</dt><dd>A reference for this <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> to enable method chaining. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Rule_8h_source.html#l00162">162</a> of file <a class="el" href="Rule_8h_source.html">Rule.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Rule_8h_source.html#l00181">181</a> of file <a class="el" href="Rule_8h_source.html">Rule.h</a>.</p>
 
 </div>
 </div>
@@ -426,7 +487,7 @@ template&lt;typename MatchType , typename... Args&gt; </div>
 <p>Forwards arguments to std::make_unique.</p>
 <dl class="section return"><dt>Returns</dt><dd>A reference for this <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> to enable method chaining. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="Rule_8h_source.html#l00145">145</a> of file <a class="el" href="Rule_8h_source.html">Rule.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Rule_8h_source.html#l00164">164</a> of file <a class="el" href="Rule_8h_source.html">Rule.h</a>.</p>
 
 </div>
 </div>
@@ -603,6 +664,26 @@ template&lt;typename MatchType , typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns the HtmlTag this rule matches. </p>
+
+</div>
+</div>
+<a id="a54ca59e6077f2507a9d2404e6bb40e5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54ca59e6077f2507a9d2404e6bb40e5d">&#9670;&nbsp;</a></span>get_tagname()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;std::string&gt; hext::Rule::get_tagname </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get custom HTML tag name. </p>
+<dl class="section return"><dt>Returns</dt><dd>Empty optional if no custom HTML tag name. </dd></dl>
 
 </div>
 </div>
@@ -868,6 +949,28 @@ template&lt;typename MatchType , typename... Args&gt; </div>
 </div><div class="memdoc">
 
 <p>Sets the HtmlTag this rule matches. </p>
+<dl class="section return"><dt>Returns</dt><dd>A reference for this <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> to enable method chaining. </dd></dl>
+
+</div>
+</div>
+<a id="a113ee30e1807802bba5b6fbcd077cc05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113ee30e1807802bba5b6fbcd077cc05">&#9670;&nbsp;</a></span>set_tagname()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhext_1_1Rule.html">Rule</a>&amp; hext::Rule::set_tagname </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tagname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set custom HTML tag name. </p>
+<dl class="section note"><dt>Note</dt><dd>The HTML tag name is only matched if this <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a>'s HtmlTag equals <a class="el" href="namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010a696b031073e74bf2cb98e5ef201d4aa3" title="Unknown (i.e. non-standard) tag. ">HtmlTag::UNKNOWN</a>. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>A reference for this <a class="el" href="classhext_1_1Rule.html" title="Extracts values from HTML. ">Rule</a> to enable method chaining. </dd></dl>
 
 </div>

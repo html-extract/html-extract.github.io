@@ -8,6 +8,7 @@ var searchData=
   ['set_5fgreedy',['set_greedy',['../classhext_1_1Rule.html#a81632ab919fae7ee4daf583cb0f52c81',1,'hext::Rule']]],
   ['set_5foptional',['set_optional',['../classhext_1_1Rule.html#acdb29471690f284a6fcf7c711a6939cb',1,'hext::Rule']]],
   ['set_5ftag',['set_tag',['../classhext_1_1Rule.html#a9042383cae735966cb906da6cbaa7380',1,'hext::Rule']]],
+  ['set_5ftagname',['set_tagname',['../classhext_1_1Rule.html#a113ee30e1807802bba5b6fbcd077cc05',1,'hext::Rule']]],
   ['small',['SMALL',['../namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010a9b9c17e13f0e3dc9860a26e08b59b2a7',1,'hext']]],
   ['source',['SOURCE',['../namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010ae60b4854b44ccfb2d92aa6f035171bb4',1,'hext']]],
   ['spacer',['SPACER',['../namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010ace0b72f2e10619ba2ad20763113ca0cd',1,'hext']]],
