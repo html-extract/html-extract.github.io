@@ -1,7 +1,7 @@
 
 var hext_ws = (function() {
   var m = {
-      hext_host: "wss://hext.thomastrapp.com:8080/",
+      hext_host: "wss://hextws.thomastrapp.com:8080/",
       websocket: null,
       onmessage: null,
       onerror:   null
