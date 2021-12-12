@@ -1,4 +1,5 @@
 <map id="hext::FunctionMatch" name="hext::FunctionMatch">
-<area shape="rect" id="node2" href="$classhext_1_1Cloneable.html" title="hext::Cloneable\&lt; Function\lMatch, Match \&gt;" alt="" coords="5,80,180,121"/>
-<area shape="rect" id="node3" href="$classhext_1_1Match.html" title="Abstract base for every Match. " alt="" coords="47,5,138,32"/>
+<area shape="rect" id="node1" title="Matches if the result of applying a given MatchFunction to an HTML node returns true." alt="" coords="22,169,163,196"/>
+<area shape="rect" id="node2" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="5,80,180,121"/>
+<area shape="rect" id="node3" href="$classhext_1_1Match.html" title="Abstract base for every Match." alt="" coords="47,5,138,32"/>
 </map>
