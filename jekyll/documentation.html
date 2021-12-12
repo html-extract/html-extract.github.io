@@ -242,6 +242,16 @@ id: documentation
     </div>
     <div class="column">
       <p>
+        <b>Rules may have nested rules.</b> If a rule matches an HTML element,
+        all the rule's nested rules are matched against the element's inner HTML.
+        A nested rule can find a match at any depth.
+      </p>
+    </div>
+    <div class="column">
+      <pre class="ace-static-hl"><code>{%include intro-nested.hext%}</code></pre>
+    </div>
+    <div class="column">
+      <p>
         <b>Rules may be optional.</b> A Hext template only matches if each rule
         finds its match, unless it is marked optional with a question mark. These
         rules are simply skipped if no match is found. Mandatory rules always
