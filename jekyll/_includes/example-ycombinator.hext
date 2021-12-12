@@ -1,0 +1,12 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>&#60;tr></span>
+</div><div class='ace_line'>  <span class='ace_keyword'>&#60;td>&#60;span</span><span class='ace_whitespace'> </span>@text<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>rank</span> <span class='ace_keyword'>/>&#60;/td></span>
+</div><div class='ace_line'>  <span class='ace_keyword'>&#60;td>&#60;a</span><span class='ace_whitespace'> </span>href<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>href</span> @text<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>title</span> <span class='ace_keyword'>/>&#60;/td></span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;/tr></span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;?tr></span>
+</div><div class='ace_line'>  <span class='ace_keyword'>&#60;td></span>
+</div><div class='ace_line'>    <span class='ace_keyword'>&#60;span</span><span class='ace_whitespace'> </span>@text<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>score</span> <span class='ace_keyword'>/></span>
+</div><div class='ace_line'>    <span class='ace_keyword'>&#60;a</span><span class='ace_whitespace'> </span>@text<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>user</span> <span class='ace_keyword'>/></span>
+</div><div class='ace_line'>    <span class='ace_keyword'>&#60;a</span><span class='ace_entity ace_name ace_tag'>:last-child</span><span class='ace_whitespace'> </span>@text<span class='ace_entity ace_name ace_tag'>:</span><span class='ace_constant ace_numeric'>filter(</span><span class='ace_string'>/\d+/</span><span class='ace_constant ace_numeric'>)</span><span class='ace_entity ace_name ace_tag'>:</span><span class='ace_storage'>comment_count</span> <span class='ace_keyword'>/></span>
+</div><div class='ace_line'>  <span class='ace_keyword'>&#60;/td></span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;/tr></span>
+</div></div></div>
