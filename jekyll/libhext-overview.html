@@ -82,7 +82,7 @@ desc: "Implementation details of the libhext C++ library"
           <a href="/libhext-documentation/classhext_1_1Match.html#ab7d5a70bb35cdf1d3a0346b3229e9f12">
           Match::matches</a>.
           Rules accept Matches via
-          <a href="/libhext-documentation/classhext_1_1Rule.html#a9796a79b76cfcbd8dc047872a5e66d85">
+          <a href="/libhext-documentation/classhext_1_1Rule.html#ae8217b026c122eb832dfc66154878bd9">
           Rule::append_match.</a><br>
           The following subclasses of Match are available out of the box:
           <a href="/libhext-documentation/classhext_1_1AttributeCountMatch.html">
@@ -106,7 +106,7 @@ desc: "Implementation details of the libhext C++ library"
           This is the common base class for all capture mechanisms in Hext.
           As with hext::Match you can create your own by inheriting Capture.
           Rules accept Captures via
-          <a href="/libhext-documentation/classhext_1_1Rule.html#ad1d274edbbabce814dfd24b7386a73c6">
+          <a href="/libhext-documentation/classhext_1_1Rule.html#abdbea21671fab7a03cd3addf8cb26224">
           Rule::append_capture</a>.<br>
           Captures may extract one name-value pair. A capture's name does not
           have to be unique.
@@ -240,14 +240,14 @@ desc: "Implementation details of the libhext C++ library"
   <li>
     <div style="color:#008000">// Move a unique_ptr containing your Match
     type into a Rule:</div>
-    <a href="/libhext-documentation/classhext_1_1Rule.html#a9796a79b76cfcbd8dc047872a5e66d85">
+    <a href="/libhext-documentation/classhext_1_1Rule.html#a01e3a1daefa24c5e71b25ae31edba6a6">
     Rule&amp; &nbsp;&nbsp;Rule::append_match(unique_ptr&lt;Match&gt;
     match);</a>
   </li>
   <li>
     <div style="color:#008000">// Let a Rule construct and append your Match
     type:</div>
-    <a href="/libhext-documentation/classhext_1_1Rule.html#acf40499289b71a2ec8af980bbbf33bd0">
+    <a href="/libhext-documentation/classhext_1_1Rule.html#abdbea21671fab7a03cd3addf8cb26224">
     Rule&amp; &nbsp;&nbsp;Rule::append_match&lt;Match&gt;(Args&amp;&amp;...
     arg);</a>
   </li>
@@ -264,14 +264,14 @@ desc: "Implementation details of the libhext C++ library"
   <li>
     <div style="color:#008000">// Move a unique_ptr containing your Capture
     type into a Rule:</div>
-    <a href="/libhext-documentation/classhext_1_1Rule.html#ad1d274edbbabce814dfd24b7386a73c6">
+    <a href="/libhext-documentation/classhext_1_1Rule.html#a2857fe8f2fe209952d51278b580374be">
       Rule&amp; &nbsp;&nbsp;Rule::append_capture(unique_ptr&lt;Capture&gt;
       cap);</a>
   </li>
   <li>
     <div style="color:#008000">// Let a Rule construct and append your Capture
     type:</div>
-    <a href="/libhext-documentation/classhext_1_1Rule.html#a0dae253dcea3ce45bc75a40cbe4ae4dd">
+    <a href="/libhext-documentation/classhext_1_1Rule.html#abdbea21671fab7a03cd3addf8cb26224">
       Rule&amp; &nbsp;&nbsp;Rule::append_capture&lt;Capture&gt;(Args&amp;&amp;...
       arg);</a>
   </li>
