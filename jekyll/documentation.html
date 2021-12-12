@@ -55,7 +55,7 @@ id: documentation
           Suppose you want to extract all hyperlinks from a web page.
           Hyperlinks have an anchor tag <span style="color:#af956f">&lt;a&gt;
           </span>, an attribute called href
-          and a text that visitors can click. The Hext snippet
+          and a text that visitors can click. The Hext template
           <span class="intro-large-only">on the right</span>
           <span class="intro-small-only">below</span> extracts exactly that.
           Let's break it down one by one.
@@ -69,7 +69,7 @@ id: documentation
       <div class="sixteen wide column">
         <a href="assets/img/example-attribute-text.png">
           <img class="ui fluid image"
-               alt="*** Image containing a detailed description of the Hext snippet mentioned above ***"
+               alt="*** Image containing a detailed description of the Hext template mentioned above ***"
                src="assets/img/example-attribute-text.png" />
         </a>
       </div>
@@ -99,7 +99,7 @@ id: documentation
         <p>
           Hext's strength is that you can put together something that looks like the
           HTML you want to extract data from.
-          Hext snippets can be thought of as a counterpart to
+          Hext templates can be thought of as a counterpart to
           <a href="https://en.wikipedia.org/wiki/Web_template_system">web templates</a>.
           Web developers typically use templates to embed data in HTML and that's why
           most content on the web does have some sort of structure which is to Hext's
@@ -110,7 +110,7 @@ id: documentation
     <div class="two column row">
       <div class="column">
         <p>
-          The snippet <span class="intro-large-only">on the right</span>
+          The template <span class="intro-large-only">on the right</span>
           <span class="intro-small-only">below</span> collects all Youtube videos
           from a Youtuber's channel page. For example, if applied to<br>
           <a href="https://www.youtube.com/user/CppCon/videos?disable_polymer=1">
@@ -159,7 +159,7 @@ id: documentation
   <div class="ui doubling top aligned two column grid">
     <div class="row bottom-attached">
       <div class="eight wide column capture-list">
-        The Hext snippet <span class="intro-large-only">on the right</span>
+        The Hext template <span class="intro-large-only">on the right</span>
         <span class="intro-small-only">below</span> matches
         <span style="color:#af956f">&lt;a&gt;</span> containing at least two
         elements:
@@ -207,9 +207,9 @@ id: documentation
   <div class="ui doubling top aligned two column grid">
     <div class="column">
       <p>
-        <b>A Hext snippet is a set of rules that is matched against
+        <b>A Hext template is a set of rules that is matched against
         an HTML document.</b> Each HTML element is tested by the first rule
-        of a Hext snippet. A rule begins with either an HTML tag or
+        of a Hext template. A rule begins with either an HTML tag or
         an asterisk which matches every HTML element.
       </p>
     </div>
@@ -239,7 +239,7 @@ id: documentation
     </div>
     <div class="column">
       <p>
-        <b>Rules may be optional.</b> A Hext snippet only matches if each rule
+        <b>Rules may be optional.</b> A Hext template only matches if each rule
         finds its match, unless it is marked optional with a question mark. These
         rules are simply skipped if no match is found. Mandatory rules always
         take precedence over optional rules.
@@ -315,7 +315,7 @@ id: documentation
     <div class="column">
       <p>
         <b>Rules may contain captures.</b> After a successful and complete
-        match of a Hext snippet the data is extracted. There are two possible
+        match of a Hext template the data is extracted. There are two possible
         sources for data: HTML attributes and the result of
         <a href="#builtin-functions">built-in functions</a>. Each capture must be
         named.

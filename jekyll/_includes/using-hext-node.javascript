@@ -8,7 +8,7 @@
 </div><div class='ace_line'>  <span class='ace_string'>'&#60;a href="three.html"&#62;&#60;img src="three.jpg" /&#62;&#60;/a&#62;'</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'>
 </div><div class='ace_line'><span class='ace_comment'>// hext.Rule's constructor expects a single argument</span>
-</div><div class='ace_line'><span class='ace_comment'>// containing a Hext snippet.</span>
+</div><div class='ace_line'><span class='ace_comment'>// containing a Hext template.</span>
 </div><div class='ace_line'><span class='ace_comment'>// Throws an Error on invalid syntax, with</span>
 </div><div class='ace_line'><span class='ace_comment'>// Error.message containing the error description.</span>
 </div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_identifier'>hext</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>Rule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>'&#60;a href:link&#62;'</span> <span class='ace_keyword ace_operator'>+</span>

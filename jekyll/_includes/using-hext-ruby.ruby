@@ -9,7 +9,7 @@
 </div><div class='ace_line'><span class='ace_support ace_class'>HTML_INPUT</span>
 </div><div class='ace_line'>
 </div><div class='ace_line'><span class='ace_comment'># Hext::Rule's initializer expects a single argument</span>
-</div><div class='ace_line'><span class='ace_comment'># containing a Hext snippet.</span>
+</div><div class='ace_line'><span class='ace_comment'># containing a Hext template.</span>
 </div><div class='ace_line'><span class='ace_comment'># Raises an exception of type ArgumentError on invalid syntax.</span>
 </div><div class='ace_line'><span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_support ace_class'>Hext</span>::<span class='ace_support ace_class'>Rule</span>.<span class='ace_identifier'>new</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string ace_start'>"</span><span class='ace_string'>&#60;a href:link&#62;  &#60;img src:image /&#62;  &#60;/a&#62;</span><span class='ace_string ace_end'>"</span><span class='ace_paren ace_rparen'>)</span>
 </div><div class='ace_line'>

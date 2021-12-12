@@ -9,7 +9,7 @@
 </div><div class='ace_line'><span class='ace_string'>   &#60;a href="three.html"&#62;&#60;img src="three.jpg" /&#62;&#60;/a&#62;'</span><span class='ace_paren ace_rparen'>)</span>;
 </div><div class='ace_line'>
 </div><div class='ace_line'><span class='ace_comment'># HextRule's constructor expects a single argument</span>
-</div><div class='ace_line'><span class='ace_comment'># containing a Hext snippet.</span>
+</div><div class='ace_line'><span class='ace_comment'># containing a Hext template.</span>
 </div><div class='ace_line'><span class='ace_comment'># Throws an exception on invalid syntax.</span>
 </div><div class='ace_line'><span class='ace_variable'>$rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_support ace_class'>HextRule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>'&#60;a href:link&#62;'</span>.
 </div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>'  &#60;img src:image /&#62;'</span>.
