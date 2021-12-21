@@ -1,0 +1,5 @@
+<map id="hext::EndsWithTest" name="hext::EndsWithTest">
+<area shape="rect" id="node1" title="Tests whether a string ends with a given literal." alt="" coords="32,169,179,196"/>
+<area shape="rect" id="node2" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="5,80,205,121"/>
+<area shape="rect" id="node3" href="$classhext_1_1ValueTest.html" title="Abstract base for every ValueTest." alt="" coords="45,5,166,32"/>
+</map>

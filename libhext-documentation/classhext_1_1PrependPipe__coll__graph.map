@@ -1,0 +1,5 @@
+<map id="hext::PrependPipe" name="hext::PrependPipe">
+<area shape="rect" id="node1" title="Prepends a given string to a string." alt="" coords="31,169,171,196"/>
+<area shape="rect" id="node2" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="5,80,197,121"/>
+<area shape="rect" id="node3" href="$classhext_1_1StringPipe.html" title="Abstract base for every StringPipe." alt="" coords="39,5,164,32"/>
+</map>

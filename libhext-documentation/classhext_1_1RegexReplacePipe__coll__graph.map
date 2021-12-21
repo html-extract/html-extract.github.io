@@ -1,0 +1,5 @@
+<map id="hext::RegexReplacePipe" name="hext::RegexReplacePipe">
+<area shape="rect" id="node1" title="Replaces a string within a string according to a given regex." alt="" coords="31,169,211,196"/>
+<area shape="rect" id="node2" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="5,80,237,121"/>
+<area shape="rect" id="node3" href="$classhext_1_1StringPipe.html" title="Abstract base for every StringPipe." alt="" coords="59,5,184,32"/>
+</map>

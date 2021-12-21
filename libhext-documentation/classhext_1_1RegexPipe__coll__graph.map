@@ -1,0 +1,5 @@
+<map id="hext::RegexPipe" name="hext::RegexPipe">
+<area shape="rect" id="node1" title="Filters a string according to a given regex." alt="" coords="47,169,175,196"/>
+<area shape="rect" id="node2" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="5,80,217,121"/>
+<area shape="rect" id="node3" href="$classhext_1_1StringPipe.html" title="Abstract base for every StringPipe." alt="" coords="49,5,174,32"/>
+</map>
