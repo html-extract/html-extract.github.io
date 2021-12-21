@@ -45,9 +45,3 @@ The parts that were authored by me are licensed under the [Creative Commons Attr
 
 If the CC-BY-NC-4.0 license is too restrictive for your purposes, [contact me](https://thomastrapp.com/), and we'll work something out.
 
-## About the author
-I am [Tom](https://github.com/thomastrapp), a freelancing software developer
-living in Munich. Visit [thomastrapp.com](https://thomastrapp.com) for my email
-address.
-
-
