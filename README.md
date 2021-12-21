@@ -2,8 +2,7 @@
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/) This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/) unless noted otherwise. See the section 'Licensing' of this readme.
 
-These are the build files for Hext's project page [hext.thomastrapp.com](https://hext.thomastrapp.com/) and its mirror on [html-extract.github.io](https://html-extract.github.io/). Builds are published in the repository [html-extract/html-extract.github.io](https://github.com/html-extract/html-extract.github.io/).
-
+These are the build files for Hext's project page [hext.thomastrapp.com](https://hext.thomastrapp.com/), which is hosted on [Github Pages](https://github.com/html-extract/html-extract.github.io/tree/gh-pages).
 
 ## Build instructions
 
