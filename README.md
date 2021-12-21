@@ -38,7 +38,7 @@ This project includes work authored by third parties.
 	[MIT License](https://jquery.org/license/).
 * [Google Fonts](https://fonts.google.com/) — The font [Lato](https://fonts.google.com/specimen/Lato) is embedded in this project.
 	[Open Font License](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web).
-* [ReconnectingWebSocket](https://github.com/joewalnes/reconnecting-websocket) — Automatically reconnects to the websocket server at `hext.thomastrapp.com:8080` if the connection is lost.
+* [ReconnectingWebSocket](https://github.com/joewalnes/reconnecting-websocket) — Automatically reconnects to the websocket server at `hextws.thomastrapp.com:8080` if the connection is lost.
 	[MIT License](https://github.com/joewalnes/reconnecting-websocket/blob/master/LICENSE.txt).
 
 The parts that were authored by me are licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
