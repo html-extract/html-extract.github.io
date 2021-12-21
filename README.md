@@ -25,7 +25,7 @@ To switch to non-minified/non-combined assets, edit `jekyll/_config.yml` and add
 
 
 ## Licensing
-This project includes work authored by third parties.
+This project includes work authored by third parties, which have their own respective licenses.
 
 * [Ace](https://ace.c9.io/) — Used as the code editor in the
   "[Try Hext in your Browser!](https://hext.thomastrapp.com)" section and as a
@@ -40,7 +40,6 @@ This project includes work authored by third parties.
 * [ReconnectingWebSocket](https://github.com/joewalnes/reconnecting-websocket) — Automatically reconnects to the websocket server at `hextws.thomastrapp.com:8080` if the connection is lost.
 	[MIT License](https://github.com/joewalnes/reconnecting-websocket/blob/master/LICENSE.txt).
 
-The parts that were authored by me are licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
-
+Everything else is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
 If the CC-BY-NC-4.0 license is too restrictive for your purposes, [contact me](https://thomastrapp.com/), and we'll work something out.
 
