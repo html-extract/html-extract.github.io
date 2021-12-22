@@ -373,18 +373,21 @@ $(function() {
   if( $(window).width() > 767 )
     $('.ui.sticky').sticky();
 
-  hext_tryit.init();
-  hext_tryit.print_hext_result(JSON.parse($('#tryit-example-attribute-json').html()));
-
-  // Load specific example if hash was given
-  if( window.location.hash )
+  if( $('#tryit-example-attribute-json').length )
   {
-    var hash = window.location.hash.substring(1);
-    var $menu_item = $('.example-menu .item[data-example="' + hash + '"]');
-    if( $menu_item.length === 1 )
+    hext_tryit.init();
+    hext_tryit.print_hext_result(JSON.parse($('#tryit-example-attribute-json').html()));
+
+    // Load specific example if hash was given
+    if( window.location.hash )
     {
-      $menu_item.click();
-      $('#anchor-tryit-hext')[0].scrollIntoView();
+      var hash = window.location.hash.substring(1);
+      var $menu_item = $('.example-menu .item[data-example="' + hash + '"]');
+      if( $menu_item.length === 1 )
+      {
+        $menu_item.click();
+        $('#anchor-tryit-hext')[0].scrollIntoView();
+      }
     }
   }
 
