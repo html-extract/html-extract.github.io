@@ -413,37 +413,46 @@ cmake -DBUILD_SHARED_LIBS=On .. && make -j 2
       utility.
     </div>
     <div class="sixteen wide column">
-      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>hext</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>require</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>'hext'</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>hext</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>require</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#39;hext&#39;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'>
-</div><div class='ace_line'><span class='ace_comment'>// hext.Html's constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'>// hext.Html&#39;s constructor expects a single argument</span>
 </div><div class='ace_line'><span class='ace_comment'>// containing an UTF-8 encoded string of HTML.</span>
 </div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_identifier'>hext</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>Html</span><span class='ace_paren ace_lparen'>(</span>
-</div><div class='ace_line'>  <span class='ace_string'>'&#60;a href="one.html"&#62;  &#60;img src="one.jpg" /&#62;  &#60;/a&#62;'</span> <span class='ace_keyword ace_operator'>+</span>
-</div><div class='ace_line'>  <span class='ace_string'>'&#60;a href="two.html"&#62;  &#60;img src="two.jpg" /&#62;  &#60;/a&#62;'</span> <span class='ace_keyword ace_operator'>+</span>
-</div><div class='ace_line'>  <span class='ace_string'>'&#60;a href="three.html"&#62;&#60;img src="three.jpg" /&#62;&#60;/a&#62;'</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>  <span class='ace_string'>&#39;&#60;a href=&#34;one.html&#34;>  &#60;img src=&#34;one.jpg&#34; />  &#60;/a>&#39;</span> <span class='ace_keyword ace_operator'>+</span>
+</div><div class='ace_line'>  <span class='ace_string'>&#39;&#60;a href=&#34;two.html&#34;>  &#60;img src=&#34;two.jpg&#34; />  &#60;/a>&#39;</span> <span class='ace_keyword ace_operator'>+</span>
+</div><div class='ace_line'>  <span class='ace_string'>&#39;&#60;a href=&#34;three.html&#34;>&#60;img src=&#34;three.jpg&#34; />&#60;/a>&#39;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'>
-</div><div class='ace_line'><span class='ace_comment'>// hext.Rule's constructor expects a single argument</span>
-</div><div class='ace_line'><span class='ace_comment'>// containing a Hext template.</span>
+</div><div class='ace_line'><span class='ace_comment'>// hext.Rule&#39;s constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'>// containing a Hext snippet.</span>
 </div><div class='ace_line'><span class='ace_comment'>// Throws an Error on invalid syntax, with</span>
 </div><div class='ace_line'><span class='ace_comment'>// Error.message containing the error description.</span>
-</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_identifier'>hext</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>Rule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>'&#60;a href:link&#62;'</span> <span class='ace_keyword ace_operator'>+</span>
-</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>'  &#60;img src:image /&#62;'</span> <span class='ace_keyword ace_operator'>+</span>
-</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>'&#60;/a&#62;'</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_identifier'>hext</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>Rule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#39;&#60;a href:link>&#39;</span> <span class='ace_keyword ace_operator'>+</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>&#39;  &#60;img src:image />&#39;</span> <span class='ace_keyword ace_operator'>+</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>&#39;&#60;/a>&#39;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'>
 </div><div class='ace_line'><span class='ace_comment'>// hext.Rule.extract expects an argument of type</span>
 </div><div class='ace_line'><span class='ace_comment'>// hext.Html. Returns an Array containing Objects</span>
 </div><div class='ace_line'><span class='ace_comment'>// which contain key-value pairs of type String.</span>
 </div><div class='ace_line'><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>result</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>rule</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>html</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'>// hext.Rule.extract has a second, optional parameter</span>
+</div><div class='ace_line'><span class='ace_comment'>// of type unsigned int, called max_searches.</span>
+</div><div class='ace_line'><span class='ace_comment'>// The search for matching elements is aborted by</span>
+</div><div class='ace_line'><span class='ace_comment'>// throwing an exception after this limit is reached.</span>
+</div><div class='ace_line'><span class='ace_comment'>// The default is 0, which never aborts. If running</span>
+</div><div class='ace_line'><span class='ace_comment'>// untrusted hext templates, it is recommend to set</span>
+</div><div class='ace_line'><span class='ace_comment'>// max_searches to some high value, like 10000, to</span>
+</div><div class='ace_line'><span class='ace_comment'>// protect against resource exhaustion.</span>
+</div><div class='ace_line'><span class='ace_comment'>// var result = rule.extract(html, 10000);</span>
+</div><div class='ace_line'>
 </div><div class='ace_line'><span class='ace_comment'>// print each key-value pair</span>
 </div><div class='ace_line'><span class='ace_keyword'>for</span><span class='ace_paren ace_lparen'>(</span><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>i</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>result</span><span class='ace_paren ace_rparen'>)</span>
 </div><div class='ace_line'><span class='ace_paren ace_lparen'>{</span>
 </div><div class='ace_line'>  <span class='ace_keyword'>for</span><span class='ace_paren ace_lparen'>(</span><span class='ace_storage ace_type'>var</span> <span class='ace_identifier'>key</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>result</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>])</span>
-</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>key</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_string'>"-&#62;"</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_identifier'>result</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>]</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>key</span><span class='ace_paren ace_rparen'>])</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>    <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>key</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_string'>&#34;->&#34;</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_identifier'>result</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>i</span><span class='ace_paren ace_rparen'>]</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>key</span><span class='ace_paren ace_rparen'>])</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'>  <span class='ace_storage ace_type'>console</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function ace_firebug'>log</span><span class='ace_paren ace_lparen'>(</span><span class='ace_paren ace_rparen'>)</span>
 </div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
-</div></div></div>
-</code></pre>
+</div></div></div></code></pre>
     </div>
   </div>
   <a class="scrollspy anchor" id="building-python-hext"></a>
@@ -520,29 +529,38 @@ cmake -DBUILD_SHARED_LIBS=On .. && make -j 2
     <div class="sixteen wide column">
       <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_keyword'>import</span> <span class='ace_identifier'>hext</span>
 </div><div class='ace_line'>
-</div><div class='ace_line'><span class='ace_comment'># hext.Html's constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># hext.Html&#39;s constructor expects a single argument</span>
 </div><div class='ace_line'><span class='ace_comment'># containing an UTF-8 encoded string of HTML.</span>
-</div><div class='ace_line'><span class='ace_identifier'>html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>hext</span>.<span class='ace_identifier'>Html</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>"""</span>
-</div><div class='ace_line'><span class='ace_string'>    &#60;a href="one.html"&#62;  &#60;img src="one.jpg" /&#62;  &#60;/a&#62;</span>
-</div><div class='ace_line'><span class='ace_string'>    &#60;a href="two.html"&#62;  &#60;img src="two.jpg" /&#62;  &#60;/a&#62;</span>
-</div><div class='ace_line'><span class='ace_string'>    &#60;a href="three.html"&#62;&#60;img src="three.jpg" /&#62;&#60;/a&#62;"""</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_identifier'>html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>hext</span><span class='ace_punctuation'>.</span><span class='ace_function ace_support'>Html</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;&#34;&#34;</span>
+</div><div class='ace_line'><span class='ace_string'>    &#60;a href=&#34;one.html&#34;>  &#60;img src=&#34;one.jpg&#34; />  &#60;/a></span>
+</div><div class='ace_line'><span class='ace_string'>    &#60;a href=&#34;two.html&#34;>  &#60;img src=&#34;two.jpg&#34; />  &#60;/a></span>
+</div><div class='ace_line'><span class='ace_string'>    &#60;a href=&#34;three.html&#34;>&#60;img src=&#34;three.jpg&#34; />&#60;/a>&#34;&#34;&#34;</span><span class='ace_paren ace_rparen'>)</span>
 </div><div class='ace_line'>
-</div><div class='ace_line'><span class='ace_comment'># hext.Rule's constructor expects a single argument</span>
-</div><div class='ace_line'><span class='ace_comment'># containing a Hext template.</span>
+</div><div class='ace_line'><span class='ace_comment'># hext.Rule&#39;s constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># containing a Hext snippet.</span>
 </div><div class='ace_line'><span class='ace_comment'># Throws an exception of type ValueError on invalid syntax.</span>
-</div><div class='ace_line'><span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>hext</span>.<span class='ace_identifier'>Rule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>"&#60;a href:link&#62;  &#60;img src:image /&#62;  &#60;/a&#62;"</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>hext</span><span class='ace_punctuation'>.</span><span class='ace_function ace_support'>Rule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#34;&#60;a href:link>  &#60;img src:image />  &#60;/a>&#34;</span><span class='ace_paren ace_rparen'>)</span>
 </div><div class='ace_line'>
 </div><div class='ace_line'><span class='ace_comment'># hext.Rule.extract expects an argument of type hext.Html.</span>
 </div><div class='ace_line'><span class='ace_comment'># Returns a list of dictionaries.</span>
-</div><div class='ace_line'><span class='ace_identifier'>results</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>rule</span>.<span class='ace_identifier'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>html</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_identifier'>results</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>rule</span><span class='ace_punctuation'>.</span><span class='ace_function ace_support'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>html</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># hext.Rule.extract has a second, optional parameter</span>
+</div><div class='ace_line'><span class='ace_comment'># of type unsigned int, called max_searches.</span>
+</div><div class='ace_line'><span class='ace_comment'># The search for matching elements is aborted by</span>
+</div><div class='ace_line'><span class='ace_comment'># throwing an exception after this limit is reached.</span>
+</div><div class='ace_line'><span class='ace_comment'># The default is 0, which never aborts. If running</span>
+</div><div class='ace_line'><span class='ace_comment'># untrusted hext templates, it is recommend to set</span>
+</div><div class='ace_line'><span class='ace_comment'># max_searches to some high value, like 10000, to</span>
+</div><div class='ace_line'><span class='ace_comment'># protect against resource exhaustion.</span>
+</div><div class='ace_line'><span class='ace_comment'># results = rule.extract(html, 10000);</span>
 </div><div class='ace_line'>
 </div><div class='ace_line'><span class='ace_comment'># print each key-value pair</span>
-</div><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_identifier'>group</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>results</span>:
-</div><div class='ace_line'>    <span class='ace_keyword'>for</span> <span class='ace_identifier'>key</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>group</span>:
-</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>print</span> <span class='ace_string'>'{}: {}'</span>.<span class='ace_support ace_function'>format</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>key</span>, <span class='ace_identifier'>group</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>key</span><span class='ace_paren ace_rparen'>])</span>
+</div><div class='ace_line'><span class='ace_keyword'>for</span> <span class='ace_identifier'>group</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>results</span><span class='ace_punctuation'>:</span>
+</div><div class='ace_line'>    <span class='ace_keyword'>for</span> <span class='ace_identifier'>key</span> <span class='ace_keyword'>in</span> <span class='ace_identifier'>group</span><span class='ace_punctuation'>:</span>
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword'>print</span> <span class='ace_string'>&#39;{}: {}&#39;</span><span class='ace_punctuation'>.</span><span class='ace_function ace_support'>format</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>key</span><span class='ace_punctuation'>,</span> <span class='ace_identifier'>group</span><span class='ace_paren ace_lparen'>[</span><span class='ace_identifier'>key</span><span class='ace_paren ace_rparen'>])</span>
 </div><div class='ace_line'>    <span class='ace_keyword'>print</span>
-</div></div></div>
-</code></pre>
+</div></div></div></code></pre>
     </div>
     <div class="sixteen wide column">
       <a href="https://scrapy.org/">Scrapy</a> is one of the most prolific tools when it
@@ -611,35 +629,44 @@ cmake -DBUILD_SHARED_LIBS=On .. && make -j 2
       which is a stripped down Ruby port of the htmlext command line utility.
     </div>
     <div class="sixteen wide column">
-      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_support ace_function'>require</span> <span class='ace_string ace_start'>'</span><span class='ace_string'>hext</span><span class='ace_string ace_end'>'</span>
+      <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_support ace_function'>require</span> <span class='ace_string ace_start'>&#39;</span><span class='ace_string'>hext</span><span class='ace_string ace_end'>&#39;</span>
 </div><div class='ace_line'>
-</div><div class='ace_line'><span class='ace_comment'># Hext::Html's initializer expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># Hext::Html&#39;s initializer expects a single argument</span>
 </div><div class='ace_line'><span class='ace_comment'># containing an UTF-8 encoded string of HTML.</span>
-</div><div class='ace_line'><span class='ace_identifier'>html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_support ace_class'>Hext</span>::<span class='ace_support ace_class'>Html</span>.<span class='ace_identifier'>new</span><span class='ace_paren ace_lparen'>(</span><span class='ace_constant'>&#60;&#60;-</span><span class='ace_string'>'</span><span class='ace_support ace_class'>HTML_INPUT</span><span class='ace_string'>'</span><span class='ace_paren ace_rparen'>)</span>
-</div><div class='ace_line'><span class='ace_string'>&#60;a href="one.html"&#62;  &#60;img src="one.jpg" /&#62;  &#60;/a&#62;</span>
-</div><div class='ace_line'><span class='ace_string'>&#60;a href="two.html"&#62;  &#60;img src="two.jpg" /&#62;  &#60;/a&#62;</span>
-</div><div class='ace_line'><span class='ace_string'>&#60;a href="three.html"&#62;&#60;img src="three.jpg" /&#62;&#60;/a&#62;</span>
+</div><div class='ace_line'><span class='ace_identifier'>html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_support ace_class'>Hext</span><span class='ace_punctuation'>::</span><span class='ace_support ace_class'>Html</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function'>new</span><span class='ace_paren ace_lparen'>(</span><span class='ace_constant'>&#60;&#60;-</span><span class='ace_string'>&#39;</span><span class='ace_support ace_class'>HTML_INPUT</span><span class='ace_string'>&#39;</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_string'>&#60;a href=&#34;one.html&#34;>  &#60;img src=&#34;one.jpg&#34; />  &#60;/a></span>
+</div><div class='ace_line'><span class='ace_string'>&#60;a href=&#34;two.html&#34;>  &#60;img src=&#34;two.jpg&#34; />  &#60;/a></span>
+</div><div class='ace_line'><span class='ace_string'>&#60;a href=&#34;three.html&#34;>&#60;img src=&#34;three.jpg&#34; />&#60;/a></span>
 </div><div class='ace_line'><span class='ace_support ace_class'>HTML_INPUT</span>
 </div><div class='ace_line'>
-</div><div class='ace_line'><span class='ace_comment'># Hext::Rule's initializer expects a single argument</span>
-</div><div class='ace_line'><span class='ace_comment'># containing a Hext template.</span>
+</div><div class='ace_line'><span class='ace_comment'># Hext::Rule&#39;s initializer expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># containing a Hext snippet.</span>
 </div><div class='ace_line'><span class='ace_comment'># Raises an exception of type ArgumentError on invalid syntax.</span>
-</div><div class='ace_line'><span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_support ace_class'>Hext</span>::<span class='ace_support ace_class'>Rule</span>.<span class='ace_identifier'>new</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string ace_start'>"</span><span class='ace_string'>&#60;a href:link&#62;  &#60;img src:image /&#62;  &#60;/a&#62;</span><span class='ace_string ace_end'>"</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_identifier'>rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_support ace_class'>Hext</span><span class='ace_punctuation'>::</span><span class='ace_support ace_class'>Rule</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function'>new</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string ace_start'>&#34;</span><span class='ace_string'>&#60;a href:link>  &#60;img src:image />  &#60;/a></span><span class='ace_string ace_end'>&#34;</span><span class='ace_paren ace_rparen'>)</span>
 </div><div class='ace_line'>
 </div><div class='ace_line'><span class='ace_comment'># Hext::Rule.extract expects an argument of type Hext::Html.</span>
 </div><div class='ace_line'><span class='ace_comment'># Returns an Array of Hashes which contain key-value pairs</span>
 </div><div class='ace_line'><span class='ace_comment'># of type String.</span>
-</div><div class='ace_line'><span class='ace_identifier'>result</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>rule</span>.<span class='ace_identifier'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>html</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'><span class='ace_identifier'>result</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_identifier'>rule</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_support ace_function'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>html</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># hext.Rule.extract has a second, optional parameter</span>
+</div><div class='ace_line'><span class='ace_comment'># of type unsigned int, called max_searches.</span>
+</div><div class='ace_line'><span class='ace_comment'># The search for matching elements is aborted by</span>
+</div><div class='ace_line'><span class='ace_comment'># throwing an exception after this limit is reached.</span>
+</div><div class='ace_line'><span class='ace_comment'># The default is 0, which never aborts. If running</span>
+</div><div class='ace_line'><span class='ace_comment'># untrusted hext templates, it is recommend to set</span>
+</div><div class='ace_line'><span class='ace_comment'># max_searches to some high value, like 10000, to</span>
+</div><div class='ace_line'><span class='ace_comment'># protect against resource exhaustion.</span>
+</div><div class='ace_line'><span class='ace_comment'># result = rule.extract(html, 10000);</span>
 </div><div class='ace_line'>
 </div><div class='ace_line'><span class='ace_comment'># print each key-value pair</span>
-</div><div class='ace_line'><span class='ace_identifier'>result</span>.<span class='ace_identifier'>each</span> <span class='ace_keyword'>do</span> |<span class='ace_identifier'>map</span>|
-</div><div class='ace_line'>  <span class='ace_identifier'>map</span>.<span class='ace_identifier'>each</span> <span class='ace_keyword'>do</span> |<span class='ace_identifier'>key</span>, <span class='ace_identifier'>value</span>|
-</div><div class='ace_line'>    <span class='ace_support ace_function'>puts</span> <span class='ace_string ace_start'>"</span><span class='ace_paren ace_start'>#{</span><span class='ace_identifier'>key</span><span class='ace_paren ace_end'>}</span><span class='ace_string'>: </span><span class='ace_paren ace_start'>#{</span><span class='ace_identifier'>value</span><span class='ace_paren ace_end'>}</span><span class='ace_string ace_end'>"</span>
+</div><div class='ace_line'><span class='ace_identifier'>result</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>each</span> <span class='ace_keyword'>do</span> <span class='ace_keyword ace_operator'>|</span><span class='ace_identifier'>map</span><span class='ace_keyword ace_operator'>|</span>
+</div><div class='ace_line'>  <span class='ace_identifier'>map</span><span class='ace_punctuation ace_operator'>.</span><span class='ace_identifier'>each</span> <span class='ace_keyword'>do</span> <span class='ace_keyword ace_operator'>|</span><span class='ace_identifier'>key</span><span class='ace_punctuation ace_operator'>,</span> <span class='ace_identifier'>value</span><span class='ace_keyword ace_operator'>|</span>
+</div><div class='ace_line'>    <span class='ace_support ace_function'>puts</span> <span class='ace_string ace_start'>&#34;</span><span class='ace_paren ace_start'>#{</span><span class='ace_identifier'>key</span><span class='ace_paren ace_rparen'>}</span><span class='ace_string'>: </span><span class='ace_paren ace_start'>#{</span><span class='ace_identifier'>value</span><span class='ace_paren ace_rparen'>}</span><span class='ace_string ace_end'>&#34;</span>
 </div><div class='ace_line'>  <span class='ace_keyword'>end</span>
 </div><div class='ace_line'>  <span class='ace_support ace_function'>puts</span>
 </div><div class='ace_line'><span class='ace_keyword'>end</span>
-</div></div></div>
-</code></pre>
+</div></div></div></code></pre>
     </div>
   </div>
   <a class="scrollspy anchor" id="building-php-hext"></a>
@@ -705,37 +732,46 @@ cmake -DBUILD_SHARED_LIBS=On .. && make -j 2
     </div>
     <div class="sixteen wide column">
       <pre class="ace-static-hl"><code><div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_support ace_php_tag'>&#60;?php</span>
-</div><div class='ace_line'><span class='ace_support ace_function'>require</span> <span class='ace_string'>'hext.php'</span>;
+</div><div class='ace_line'><span class='ace_support ace_function'>require</span> <span class='ace_string'>&#39;hext.php&#39;</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'>
-</div><div class='ace_line'><span class='ace_comment'># HextHtml's constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># HextHtml&#39;s constructor expects a single argument</span>
 </div><div class='ace_line'><span class='ace_comment'># containing an UTF-8 encoded string of HTML.</span>
 </div><div class='ace_line'><span class='ace_variable'>$html</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_support ace_class'>HextHtml</span><span class='ace_paren ace_lparen'>(</span>
-</div><div class='ace_line'>  <span class='ace_string'>'&#60;a href="one.html"&#62;  &#60;img src="one.jpg" /&#62;  &#60;/a&#62;</span>
-</div><div class='ace_line'><span class='ace_string'>   &#60;a href="two.html"&#62;  &#60;img src="two.jpg" /&#62;  &#60;/a&#62;</span>
-</div><div class='ace_line'><span class='ace_string'>   &#60;a href="three.html"&#62;&#60;img src="three.jpg" /&#62;&#60;/a&#62;'</span><span class='ace_paren ace_rparen'>)</span>;
+</div><div class='ace_line'>  <span class='ace_string'>&#39;&#60;a href=&#34;one.html&#34;>  &#60;img src=&#34;one.jpg&#34; />  &#60;/a></span>
+</div><div class='ace_line'><span class='ace_string'>   &#60;a href=&#34;two.html&#34;>  &#60;img src=&#34;two.jpg&#34; />  &#60;/a></span>
+</div><div class='ace_line'><span class='ace_string'>   &#60;a href=&#34;three.html&#34;>&#60;img src=&#34;three.jpg&#34; />&#60;/a>&#39;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'>
-</div><div class='ace_line'><span class='ace_comment'># HextRule's constructor expects a single argument</span>
-</div><div class='ace_line'><span class='ace_comment'># containing a Hext template.</span>
+</div><div class='ace_line'><span class='ace_comment'># HextRule&#39;s constructor expects a single argument</span>
+</div><div class='ace_line'><span class='ace_comment'># containing a Hext snippet.</span>
 </div><div class='ace_line'><span class='ace_comment'># Throws an exception on invalid syntax.</span>
-</div><div class='ace_line'><span class='ace_variable'>$rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_support ace_class'>HextRule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>'&#60;a href:link&#62;'</span>.
-</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>'  &#60;img src:image /&#62;'</span>.
-</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>'&#60;/a&#62;'</span><span class='ace_paren ace_rparen'>)</span>;
+</div><div class='ace_line'><span class='ace_variable'>$rule</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_keyword'>new</span> <span class='ace_support ace_class'>HextRule</span><span class='ace_paren ace_lparen'>(</span><span class='ace_string'>&#39;&#60;a href:link>&#39;</span>.
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>&#39;  &#60;img src:image />&#39;</span>.
+</div><div class='ace_line'><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span><span class='ace_indent-guide'>    </span> <span class='ace_string'>&#39;&#60;/a>&#39;</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'>
-</div><div class='ace_line'><span class='ace_comment'># HextRule-&#62;extract expects an argument of type HextHtml.</span>
+</div><div class='ace_line'><span class='ace_comment'># HextRule->extract expects an argument of type HextHtml.</span>
 </div><div class='ace_line'><span class='ace_comment'># Returns an array containing arrays which contain</span>
 </div><div class='ace_line'><span class='ace_comment'># key-value pairs of type string.</span>
-</div><div class='ace_line'><span class='ace_variable'>$result</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_variable'>$rule</span><span class='ace_keyword ace_operator'>-&#62;</span><span class='ace_support ace_function'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_variable'>$html</span><span class='ace_paren ace_rparen'>)</span>;
+</div><div class='ace_line'><span class='ace_variable'>$result</span> <span class='ace_keyword ace_operator'>=</span> <span class='ace_variable'>$rule</span><span class='ace_keyword ace_operator'>-></span><span class='ace_support ace_function'>extract</span><span class='ace_paren ace_lparen'>(</span><span class='ace_variable'>$html</span><span class='ace_paren ace_rparen'>)</span><span class='ace_punctuation ace_operator'>;</span>
+</div><div class='ace_line'>
+</div><div class='ace_line'><span class='ace_comment'># hext.Rule.extract has a second, optional parameter</span>
+</div><div class='ace_line'><span class='ace_comment'># of type unsigned int, called max_searches.</span>
+</div><div class='ace_line'><span class='ace_comment'># The search for matching elements is aborted by</span>
+</div><div class='ace_line'><span class='ace_comment'># throwing an exception after this limit is reached.</span>
+</div><div class='ace_line'><span class='ace_comment'># The default is 0, which never aborts. If running</span>
+</div><div class='ace_line'><span class='ace_comment'># untrusted hext templates, it is recommend to set</span>
+</div><div class='ace_line'><span class='ace_comment'># max_searches to some high value, like 10000, to</span>
+</div><div class='ace_line'><span class='ace_comment'># protect against resource exhaustion.</span>
+</div><div class='ace_line'><span class='ace_comment'># $result = $rule->extract($html, 10000);</span>
 </div><div class='ace_line'>
 </div><div class='ace_line'><span class='ace_comment'># print each key-value pair</span>
 </div><div class='ace_line'><span class='ace_keyword'>foreach</span><span class='ace_paren ace_lparen'>(</span><span class='ace_variable'>$result</span> <span class='ace_keyword'>as</span> <span class='ace_variable'>$map</span><span class='ace_paren ace_rparen'>)</span>
 </div><div class='ace_line'><span class='ace_paren ace_lparen'>{</span>
-</div><div class='ace_line'>  <span class='ace_keyword'>foreach</span><span class='ace_paren ace_lparen'>(</span><span class='ace_variable'>$map</span> <span class='ace_keyword'>as</span> <span class='ace_variable'>$key</span> <span class='ace_keyword ace_operator'>=&#62;</span> <span class='ace_variable'>$value</span><span class='ace_paren ace_rparen'>)</span>
-</div><div class='ace_line'>    <span class='ace_support ace_function'>echo</span> <span class='ace_string'>"</span><span class='ace_variable'>$key</span><span class='ace_string'>: </span><span class='ace_variable'>$value</span><span class='ace_constant ace_language ace_escape'>\n</span><span class='ace_string'>"</span>;
+</div><div class='ace_line'>  <span class='ace_keyword'>foreach</span><span class='ace_paren ace_lparen'>(</span><span class='ace_variable'>$map</span> <span class='ace_keyword'>as</span> <span class='ace_variable'>$key</span> <span class='ace_keyword ace_operator'>=></span> <span class='ace_variable'>$value</span><span class='ace_paren ace_rparen'>)</span>
+</div><div class='ace_line'>    <span class='ace_support ace_function'>echo</span> <span class='ace_string'>&#34;</span><span class='ace_variable'>$key</span><span class='ace_string'>: </span><span class='ace_variable'>$value</span><span class='ace_constant ace_language ace_escape'>\n</span><span class='ace_string'>&#34;</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'>
-</div><div class='ace_line'>  <span class='ace_support ace_function'>echo</span> <span class='ace_string'>"</span><span class='ace_constant ace_language ace_escape'>\n</span><span class='ace_string'>"</span>;
+</div><div class='ace_line'>  <span class='ace_support ace_function'>echo</span> <span class='ace_string'>&#34;</span><span class='ace_constant ace_language ace_escape'>\n</span><span class='ace_string'>&#34;</span><span class='ace_punctuation ace_operator'>;</span>
 </div><div class='ace_line'><span class='ace_paren ace_rparen'>}</span>
-</div></div></div>
-</code></pre>
+</div></div></div></code></pre>
     </div>
   </div>
 </div>
