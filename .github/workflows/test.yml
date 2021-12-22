@@ -1,5 +1,6 @@
 name: Test hext.thomastrapp.com
 on:
+  workflow_dispatch
   schedule:
     - cron: '0 0 * * *'
 
