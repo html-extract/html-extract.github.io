@@ -1,0 +1,30 @@
+name: Test hext.thomastrapp.com
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+env:
+  WEBSOCAT_URL: "https://github.com/vi/websocat/releases/download/v1.9.0/websocat_linux64"
+  WEBSOCAT_SHASUM: "9ab17a9e03cca60fbf00aa709a1df5d9fb99a4514240cf7fac390470d6022bc5"
+
+jobs:
+  test:
+    name: Test hext.thomastrapp.com
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Check version
+      run: ./scripts/github-actions/check-version.sh
+
+    - name: Install websocat
+      shell: bash
+      run: |
+        wget "$WEBSOCAT_URL"
+        echo "$WEBSOCAT_SHASUM  websocat_linux64" | sha256sum -c
+        chmod +x ./websocat_linux64
+        sudo mv ./websocat_linux64 /usr/bin
+
+    - name: Test hextws.thomastrapp.com
+      run: ./scripts/github-actions/test-hextws.sh
+
