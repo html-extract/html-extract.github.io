@@ -352,7 +352,7 @@ var scrollspy = (function() {
     var index = m.$menu_items.index($current_item);
     if( index > 0 ) --index;
     var $previous_item = m.$menu_items.eq(index);
-    if( $previous_item.size() )
+    if( $previous_item.length )
     {
       m.$menu_items.removeClass('active');
       $previous_item.addClass('active');
