@@ -21,7 +21,7 @@ jobs:
         wget "$WEBSOCAT_URL"
         echo "$WEBSOCAT_SHASUM  websocat_linux64" | sha256sum -c
         chmod +x ./websocat_linux64
-        sudo mv ./websocat_linux64 /usr/bin
+        sudo mv ./websocat_linux64 /usr/bin/websocat
 
     - name: Test hextws.thomastrapp.com
       run: ./scripts/github-actions/test-hextws.sh
