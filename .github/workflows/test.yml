@@ -18,7 +18,7 @@ jobs:
     - name: Install websocat
       shell: bash
       run: |
-        wget "$WEBSOCAT_URL"
+        wget -q "$WEBSOCAT_URL"
         echo "$WEBSOCAT_SHASUM  websocat_linux64" | sha256sum -c
         chmod +x ./websocat_linux64
         sudo mv ./websocat_linux64 /usr/bin/websocat
