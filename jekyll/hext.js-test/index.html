@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>hext.js blackbox tests</title>
+    <script src="https://cdn.jsdelivr.net/gh/thomastrapp/hext-emscripten@v1.0.3/dist/hext.js"></script>
+    <script src="blackbox.tests.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mocha@9.1.3/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chai@4.3.4/chai.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mocha@9.1.3/mocha.js"></script>
+
+    <script class="mocha-init">
+      mocha.setup('bdd');
+      mocha.checkLeaks();
+    </script>
+    <script class="mocha-exec">
+
+// echo "const hext_blackbox_tests = $(for i in *.hext ; do i="${i%.*}" ; jq -c -n --arg name "$i" --rawfile hext "$i.hext" --rawfile html "$i.html" --slurpfile expected "$i.expected" '{name: $name, hext: $hext, html: $html, expected: $expected}' ; done | jq -sc);" > blackbox.tests.js
+
+
+function is_equal_result(left, right)
+{
+  const keys = Object.keys(left);
+
+  if( keys.length !== Object.keys(right).length )
+    return false;
+
+  return keys.every( key => {
+    if( Array.isArray(left[key]) )
+      return left[key].every((e, i) => e == right[key][i]);
+    return left[key] == right[key];
+  });
+}
+
+function is_equal_result_array(left, right)
+{
+  if( left.length !== right.length )
+    return false;
+
+  const leftHasRight = left.every(
+      item => right.find(
+        i => is_equal_result(item, i)));
+
+  const rightHasLeft = right.every(
+      item => left.find(
+        i => is_equal_result(item, i)));
+
+  return leftHasRight && rightHasLeft;
+}
+
+function hext_extract(hext, str_hext, str_html)
+{
+  const rule = new hext.Rule(str_hext);
+  const html = new hext.Html(str_html);
+  return rule.extract(html, /*max_searches:*/ 10000);
+}
+
+(function() {
+  loadHext().then(hext => {
+    chai.config.truncateThreshold = 0;
+    describe("hext.js blackbox tests", function() {
+      hext_blackbox_tests.forEach(test_case => {
+        it(test_case.name, function() {
+          const actual = hext_extract(hext, test_case.hext, test_case.html);
+          const expected = test_case.expected;
+          chai.assert(
+            is_equal_result_array(actual, expected),
+            "'" + JSON.stringify(actual) + "' vs '" +
+              JSON.stringify(expected) + "'\n");
+        });
+      });
+    });
+
+    describe("self-test", function() {
+      const failing_test_cases = [
+        {
+          name: "too little data",
+          hext: "<a href:x />",
+          expected: [{x:'one'}],
+          html: "<a href='one'></a><a href='two'></a>"
+        },
+        {
+          name: "too much data",
+          hext: "<a href:x />",
+          expected: [{x:'one'},{x:'two'},{}],
+          html: "<a href='one'></a><a href='two'></a>"
+        },
+        {
+          name: "no data",
+          hext: "<a href:x />",
+          expected: [],
+          html: "<a href='one'></a><a href='two'></a>"
+        }
+      ];
+      failing_test_cases.forEach(test_case => {
+        it(test_case.name, function() {
+          const actual = hext_extract(hext, test_case.hext, test_case.html);
+          const expected = test_case.expected;
+          chai.assert(
+            !is_equal_result_array(actual, expected),
+            "'" + JSON.stringify(actual) + "' vs '" +
+              JSON.stringify(expected) + "'\n");
+        });
+      });
+    });
+
+    mocha.run();
+  });
+})();
+    </script>
+  </body>
+</html>
+
