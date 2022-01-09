@@ -1,0 +1,66 @@
+<a class="scrollspy anchor" id="build-hext-from-source"></a>
+<h1 class="ui header">Building Hext from Source</h1>
+<div class="ui two column very relaxed stackable grid">
+  <div class="column">
+    <h3>On a Debian-based distribution</h3>
+    <p class="bottom-attached">
+      Install the following packages:
+    </p>
+    <ul class="ui list">
+      <li>g++ ≥7.3 or clang ≥6.0</li>
+      <li>cmake ≥3.8</li>
+      <li>libboost-dev ≥1.55</li>
+      <li>libboost-regex-dev ≥1.55</li>
+      <li>libboost-program-options-dev ≥1.55</li>
+      <li>libgumbo-dev ≥0.10.1</li>
+      <li>rapidjson-dev ≥1.1.0</li>
+    </ul>
+  </div>
+  <div class="column">
+    <h3>On other systems (*nix, OS X, Win)</h3>
+    <p class="bottom-attached">
+      You will need:
+    </p>
+    <ul class="ui list">
+      <li>g++ ≥7.3 or clang ≥6.0</li>
+      <li><a href="https://cmake.org/">CMake</a> ≥3.8</li>
+      <li><a href="http://www.boost.org/">Boost</a> ≥1.55,
+          specifically Boost.Regex and Boost.Program_options</li>
+      <li>libtool and autoconf for building
+          <a href="https://github.com/google/gumbo-parser">Gumbo</a></li>
+      <li>
+          Build and install <a href="https://github.com/google/gumbo-parser">Gumbo</a>
+          (<a href="https://github.com/google/gumbo-parser/archive/v0.10.1.tar.gz">v0.10.1</a>)
+          </li>
+      <li>
+          <a href="https://github.com/Tencent/rapidjson">RapidJSON</a>,
+          which is a header only library
+          (<a href="https://github.com/Tencent/rapidjson/archive/v1.1.0.tar.gz">v1.1.0</a>)
+          </li>
+    </ul>
+  </div>
+</div>
+<div class="ui doubling top aligned two column grid">
+  <div class="six wide column">
+    <p>
+      Download and extract the latest Hext release and navigate to the
+      top-level build directory.
+      Then call cmake and make to build the project.<br>
+      If all went well you'll find the htmlext binary in the current directory.
+    </p>
+  </div>
+  <div class="ten wide column">
+    <pre class="ace-static-hl"><code>{%include build-hext.text%}</code></pre>
+  </div>
+  <div class="eight wide column">
+    <p>
+      If you wish to install Hext on your system, run <i>make install</i> as root.
+      This will install the htmlext binary, libhext's header files, the
+      libhext library and package configuration files for CMake.<br>
+      Run <i>ldconfig</i> so your linker can find the newly installed libhext.
+    </p>
+  </div>
+  <div class="eight wide column">
+    <pre class="ace-static-hl"><code>{%include install-hext.sh%}</code></pre>
+  </div>
+</div>

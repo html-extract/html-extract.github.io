@@ -1,0 +1,50 @@
+{
+  "titles": {
+    "meth": "Install Method",
+    "lang": "Languages",
+    "plat": "Platforms",
+    "arch": "Arch"
+  },
+  "methods": [
+    {
+      "meth": "pip install hext",
+      "lang": "Python v3.6-3.10 <sup><a href=\"https://pypi.org/project/hext/\">PyPI</a></sup>, <a href=\"#htmlext\">htmlext</a>",
+      "plat": "macOS, Linux",
+      "arch": "x86-64",
+      "link": [
+        ["Usage", "#hext-for-python"],
+        ["Source", "https://github.com/html-extract/hext/tree/master/libhext/bindings/python"]
+      ]
+    },
+    {
+      "meth": "npm install hext",
+      "lang": "Node v12-17 <sup><a href=\"https://www.npmjs.com/package/hext\">npmjs</a></sup>",
+      "plat": "macOS, Linux",
+      "arch": "x86-64",
+      "link": [
+        ["Usage", "#hext-for-node"],
+        ["Source", "https://github.com/html-extract/hext/tree/master/libhext/bindings/nodejs"]
+      ]
+    },
+    {
+      "meth": "hext.js",
+      "lang": "JavaScript (WebAssembly)",
+      "plat": "Browser, Node",
+      "arch": "All",
+      "link": [
+        ["Usage", "#hext-for-javascript"],
+        ["Source", "https://github.com/html-extract/hext.js"]
+      ]
+    },
+    {
+      "meth": "Build from source",
+      "lang": "<a href=\"/libhext-documentation/\">C++</a>, <a href=\"https://github.com/html-extract/hext/tree/master/libhext/bindings/python\">Python</a>, <a href=\"https://github.com/html-extract/hext/tree/master/libhext/bindings/nodejs\">Node</a>, <a href=\"https://github.com/html-extract/hext/tree/master/libhext/bindings/ruby\">Ruby</a>, <a href=\"https://github.com/html-extract/hext/tree/master/libhext/bindings/php\">PHP</a>",
+      "plat": "All",
+      "arch": "All",
+      "link": [
+        ["Instructions", "#build-hext-from-source"],
+        ["Github", "https://github.com/html-extract/hext"]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<a class="scrollspy anchor" id="htmlext"></a>
+<h1 class="ui header">Hext on the command line</h1>
+<div class="ui doubling top aligned two column grid">
+  <div class="six wide column">
+    <p class="operator-list">
+      <b>htmlext</b> is a command line utility that accepts Hext templates,
+      matches them against HTML files and outputs JSON.
+    </p>
+    <p>
+      Every rule tree match gets its own JSON object containing the captured
+      name-value pairs.
+    </p>
+    <p class="operator-list">
+      <b>htmlext</b> detects whether its output is written to a terminal or
+      to a pipe. In the former case, every JSON object is pretty-printed, in
+      the latter the output is compacted, printing one object on each line.
+      You can force either behavior by using <b>--pretty</b> or <b>--compact</b>.
+    </p>
+    <p class="operator-list">
+      Another notable option is <b>--filter&nbsp;&lt;key&gt;</b>, which will
+      print nothing but the value of every capture whose name equals
+      <b>&lt;key&gt;</b>, one per line.
+    </p>
+  </div>
+  <div class="ten wide column">
+    <pre class="ace-static-hl"><code>{%include htmlext-help.text%}</code></pre>
+  </div>
+</div>
+<a class="anchor" id="htmlext-examples"></a>
+<h3 class="ui header">Some examples using htmlext</h3>
+<div class="ui doubling top aligned two column grid">
+  <div class="nine wide column">
+    <pre class="ace-static-hl"><code>{%include htmlext-reddit.sh%}</code></pre>
+  </div>
+  <div class="seven wide column">
+    <pre class="ace-static-hl"><code>{%include htmlext-links.sh%}</code></pre>
+  </div>
+  <div class="sixteen wide column">
+    <p class="operator-list">
+      Check out <a href="https://stedolan.github.io/jq/">jq</a>,
+      an indispensable tool when dealing with JSON in the shell.
+    </p>
+  </div>
+</div>

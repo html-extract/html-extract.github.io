@@ -1,0 +1,42 @@
+<a class="scrollspy anchor" id="get-hext"></a>
+<h1 class="ui header">Get Hext</h1>
+<p>
+  The easiest way to use Hext is with Python, Node, a Browser or on the command line.
+  If you think Hext should be available for another language, package manager, operating system or architecture, please raise an
+  <a href="https://github.com/html-extract/hext/issues">issue on Github</a>.
+</p>
+
+<table class="ui celled table">
+  <thead>
+    <tr>
+      {% for title in site.data.hext-install-methods.titles %}
+      <th>{{ title[1] }}</th>
+      {% endfor %}
+	  </tr>
+	</thead>
+  <tbody>
+    {% for method in site.data.hext-install-methods.methods %}
+    <tr>
+      <td data-label="{{ site.data.hext-install-methods.titles.meth }}">
+        {{ method.meth }}
+        {% if method.link %}
+          &nbsp;<sup>
+          {% for link in method.link %}
+            <a href="{{ link[1] }}">{{ link[0] }}</a>
+            {% if forloop.last == false %}
+              <span style="color:#ccc">|</span>
+            {% endif %}
+          {% endfor %}
+          </sup>
+        {% endif %}
+      </td>
+      <td data-label="{{ site.data.hext-install-methods.titles.lang }}">
+        {{ method.lang }}</td>
+      <td data-label="{{ site.data.hext-install-methods.titles.plat }}">
+        {{ method.plat }}</td>
+      <td data-label="{{ site.data.hext-install-methods.titles.arch }}">
+        {{ method.arch }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
