@@ -19,10 +19,6 @@
       mocha.checkLeaks();
     </script>
     <script class="mocha-exec">
-
-// echo "const hext_blackbox_tests = $(for i in *.hext ; do i="${i%.*}" ; jq -c -n --arg name "$i" --rawfile hext "$i.hext" --rawfile html "$i.html" --slurpfile expected "$i.expected" '{name: $name, hext: $hext, html: $html, expected: $expected}' ; done | jq -sc);" > blackbox.tests.js
-
-
 function is_equal_result(left, right)
 {
   const keys = Object.keys(left);
@@ -115,4 +111,3 @@ function hext_extract(hext, str_hext, str_html)
     </script>
   </body>
 </html>
-
