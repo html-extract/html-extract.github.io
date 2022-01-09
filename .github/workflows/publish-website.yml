@@ -17,6 +17,9 @@ jobs:
     - name: Add libhext documentation
       run: ./scripts/refresh-libhext-documentation.sh jekyll
 
+    - name: Add hext.js test cases
+      run: ./scripts/refresh-hext.js-blackbox-tests.sh jekyll
+
     - name: Jekyll build
       shell: bash
       run: cd jekyll && jekyll build
