@@ -1,4 +1,4 @@
-wget https://github.com/html-extract/hext/archive/v1.0.2.tar.gz
+wget https://github.com/html-extract/hext/archive/v1.0.3.tar.gz
 tar xf *.tar.gz
 cd hext*/build
 cmake -DBUILD_SHARED_LIBS=On .. && make -j 2
