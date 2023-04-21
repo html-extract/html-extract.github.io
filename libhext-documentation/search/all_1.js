@@ -5,7 +5,7 @@ var searchData=
   ['basefont_28',['BASEFONT',['../namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010a4cf7b458fd9a0d56ffd09cc198335e0d',1,'hext']]],
   ['bdi_29',['BDI',['../namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010a43972807f8e87cbe7ad2477cbbbb7411',1,'hext']]],
   ['bdo_30',['BDO',['../namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010a9cacb64fa3110f7958c79cd6bfa80db8',1,'hext']]],
-  ['beginswithtest_31',['BeginsWithTest',['../classhext_1_1BeginsWithTest.html',1,'hext::BeginsWithTest'],['../classhext_1_1BeginsWithTest.html#a01d2ade40adb92ac4e93f6c2e19af089',1,'hext::BeginsWithTest::BeginsWithTest()']]],
+  ['beginswithtest_31',['BeginsWithTest',['../classhext_1_1BeginsWithTest.html#a01d2ade40adb92ac4e93f6c2e19af089',1,'hext::BeginsWithTest::BeginsWithTest()'],['../classhext_1_1BeginsWithTest.html',1,'hext::BeginsWithTest']]],
   ['beginswithtest_2eh_32',['BeginsWithTest.h',['../BeginsWithTest_8h.html',1,'']]],
   ['bgsound_33',['BGSOUND',['../namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010a14699e6ed0070a0aa170650a173d5983',1,'hext']]],
   ['big_34',['BIG',['../namespacehext.html#a5a0dc11dee920f412f90bc68be1cc010aa60c6c694491d75b439073b8cb05b139',1,'hext']]],
