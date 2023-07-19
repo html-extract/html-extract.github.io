@@ -1,7 +1,4 @@
-<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># apply href.hext to all html files</span>
-</div><div class='ace_line'><span class='ace_identifier'>htmlext</span> <span class='ace_identifier'>href</span>.<span class='ace_identifier'>hext</span> <span class='ace_keyword ace_operator'>*</span>.<span class='ace_identifier'>html</span>
-</div><div class='ace_line'>
-</div><div class='ace_line'><span class='ace_comment'># download every image with wget</span>
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># download every image with wget</span>
 </div><div class='ace_line'><span class='ace_identifier'>htmlext</span> <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>s</span> <span class='ace_string'>"&#60;img src:x /&#62;"</span>            \
 </div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>f</span> <span class='ace_identifier'>x</span>                          \
 </div><div class='ace_line'><span class='ace_indent-guide'>    </span>    <span class='ace_keyword ace_operator'>-</span><span class='ace_identifier'>i</span> <span class='ace_keyword ace_operator'>&#60;</span><span class='ace_paren ace_lparen'>(</span><span class='ace_identifier'>curl</span> <span class='ace_string'>"https://yoursite/"</span><span class='ace_paren ace_rparen'>)</span>\
