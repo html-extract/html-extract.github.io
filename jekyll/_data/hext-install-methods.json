@@ -10,7 +10,7 @@
       "meth": "pip install hext",
       "lang": "Python v3.8-3.12 <sup><a href=\"https://pypi.org/project/hext/\">PyPI</a></sup>, <a href=\"#htmlext\">htmlext</a>",
       "plat": "macOS, Linux",
-      "arch": "x86-64",
+      "arch": "x86-64, arm64",
       "link": [
         ["Usage", "#hext-for-python"],
         ["Source", "https://github.com/html-extract/hext/tree/master/libhext/bindings/python"]
@@ -20,14 +20,14 @@
       "meth": "npm install hext",
       "lang": "Node v18-21 <sup><a href=\"https://www.npmjs.com/package/hext\">npmjs</a></sup>",
       "plat": "macOS, Linux",
-      "arch": "x86-64",
+      "arch": "x86-64, arm64",
       "link": [
         ["Usage", "#hext-for-node"],
         ["Source", "https://github.com/html-extract/hext/tree/master/libhext/bindings/nodejs"]
       ]
     },
     {
-      "meth": "hext.js",
+      "meth": "npm install hext.js",
       "lang": "JavaScript (WebAssembly)",
       "plat": "Browser, Node",
       "arch": "All",
