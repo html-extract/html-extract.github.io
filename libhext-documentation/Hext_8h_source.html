@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">libhext: C++ Library Documentation
-   &#160;<span id="projectnumber">1.0.8-3ad0ae4</span>
+   &#160;<span id="projectnumber">1.0.9-c8ac8b6</span>
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ $(function() {
 <div class="title">Hext.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="Hext_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2015-2021 Thomas Trapp</span></div>
+<a href="Hext_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2015-2024 Thomas Trapp</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
@@ -134,29 +134,30 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="NegateMatch_8h.html">hext/NegateMatch.h</a>&quot;</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="NthChildMatch_8h.html">hext/NthChildMatch.h</a>&quot;</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="OnlyChildMatch_8h.html">hext/OnlyChildMatch.h</a>&quot;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TypeRegexMatch_8h.html">hext/TypeRegexMatch.h</a>&quot;</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">// ValueTests</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ValueTest_8h.html">hext/ValueTest.h</a>&quot;</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="BeginsWithTest_8h.html">hext/BeginsWithTest.h</a>&quot;</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ContainsTest_8h.html">hext/ContainsTest.h</a>&quot;</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ContainsWordsTest_8h.html">hext/ContainsWordsTest.h</a>&quot;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="EndsWithTest_8h.html">hext/EndsWithTest.h</a>&quot;</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="EqualsTest_8h.html">hext/EqualsTest.h</a>&quot;</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="NegateTest_8h.html">hext/NegateTest.h</a>&quot;</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="RegexTest_8h.html">hext/RegexTest.h</a>&quot;</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">// ValueTests</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ValueTest_8h.html">hext/ValueTest.h</a>&quot;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="BeginsWithTest_8h.html">hext/BeginsWithTest.h</a>&quot;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ContainsTest_8h.html">hext/ContainsTest.h</a>&quot;</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ContainsWordsTest_8h.html">hext/ContainsWordsTest.h</a>&quot;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="EndsWithTest_8h.html">hext/EndsWithTest.h</a>&quot;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="EqualsTest_8h.html">hext/EqualsTest.h</a>&quot;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="NegateTest_8h.html">hext/NegateTest.h</a>&quot;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="RegexTest_8h.html">hext/RegexTest.h</a>&quot;</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">// Helpers</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Cloneable_8h.html">hext/Cloneable.h</a>&quot;</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// Helpers</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Cloneable_8h.html">hext/Cloneable.h</a>&quot;</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">// Version</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Version_8h.html">hext/Version.h</a>&quot;</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">// Version</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Version_8h.html">hext/Version.h</a>&quot;</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// HEXT_HEXT_H_INCLUDED</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// HEXT_HEXT_H_INCLUDED</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="ttc" id="aAppendPipe_8h_html"><div class="ttname"><a href="AppendPipe_8h.html">AppendPipe.h</a></div><div class="ttdoc">Declares hext::AppendPipe.</div></div>
 <div class="ttc" id="aAttributeCapture_8h_html"><div class="ttname"><a href="AttributeCapture_8h.html">AttributeCapture.h</a></div><div class="ttdoc">Declares hext::AttributeCapture.</div></div>
 <div class="ttc" id="aAttributeCountMatch_8h_html"><div class="ttname"><a href="AttributeCountMatch_8h.html">AttributeCountMatch.h</a></div><div class="ttdoc">Declares hext::AttributeCountMatch.</div></div>
@@ -195,6 +196,7 @@ $(function() {
 <div class="ttc" id="aStringPipe_8h_html"><div class="ttname"><a href="StringPipe_8h.html">StringPipe.h</a></div><div class="ttdoc">Declares hext::StringPipe.</div></div>
 <div class="ttc" id="aSyntaxError_8h_html"><div class="ttname"><a href="SyntaxError_8h.html">SyntaxError.h</a></div><div class="ttdoc">Declares hext::SyntaxError.</div></div>
 <div class="ttc" id="aTrimPipe_8h_html"><div class="ttname"><a href="TrimPipe_8h.html">TrimPipe.h</a></div><div class="ttdoc">Declares hext::TrimPipe.</div></div>
+<div class="ttc" id="aTypeRegexMatch_8h_html"><div class="ttname"><a href="TypeRegexMatch_8h.html">TypeRegexMatch.h</a></div><div class="ttdoc">Declares hext::TypeRegexMatch.</div></div>
 <div class="ttc" id="aValueTest_8h_html"><div class="ttname"><a href="ValueTest_8h.html">ValueTest.h</a></div><div class="ttdoc">Declares hext::ValueTest.</div></div>
 <div class="ttc" id="aVersion_8h_html"><div class="ttname"><a href="Version_8h.html">Version.h</a></div><div class="ttdoc">Version numbers.</div></div>
 </div><!-- fragment --></div><!-- contents -->

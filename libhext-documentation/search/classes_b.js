@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['stringpipe_368',['StringPipe',['../classhext_1_1StringPipe.html',1,'hext']]],
-  ['syntaxerror_369',['SyntaxError',['../classhext_1_1SyntaxError.html',1,'hext']]]
+  ['stringpipe_372',['StringPipe',['../classhext_1_1StringPipe.html',1,'hext']]],
+  ['syntaxerror_373',['SyntaxError',['../classhext_1_1SyntaxError.html',1,'hext']]]
 ];
