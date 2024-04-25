@@ -1,0 +1,5 @@
+<div class='ace-clouds'><div class='ace_static_highlight' style='counter-reset:ace_line 0'><div class='ace_line'><span class='ace_comment'># match paragraphs or headings</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;*</span><span class='ace_entity ace_name ace_tag'>:type-matches</span>(<span class='ace_entity ace_name ace_tag'>/^(p)$|^(h[1-6])/$</span>)<span class='ace_whitespace'> </span><span class='ace_keyword'>/&#62;</span>
+</div><div class='ace_line'><span class='ace_comment'># match &#60;CustomTag&#62; or &#60;custom-tag&#62;</span>
+</div><div class='ace_line'><span class='ace_keyword'>&#60;*</span><span class='ace_entity ace_name ace_tag'>:type-matches</span>(<span class='ace_entity ace_name ace_tag'>/^custom[-]?tag$/i</span>)<span class='ace_whitespace'> </span><span class='ace_keyword'>/&#62;</span>
+</div></div></div>
