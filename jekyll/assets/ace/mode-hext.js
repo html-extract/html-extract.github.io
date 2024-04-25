@@ -67,7 +67,7 @@ define("ace/mode/hext_highlight_rules",["require","exports","module","ace/lib/oo
         (":empty|:child-count|:attribute-count|:nth-child|" +
          ":nth-last-child|:nth-of-type|:first-child|:first-of-type|" +
          ":last-child|:last-of-type|:nth-last-of-type|:only-child|" +
-         ":only-of-type|:not").split("|"));
+         ":only-of-type|:not|:type-matches").split("|"));
     var nodeTraitToken = function(value) {
       if( nodeTraits.hasOwnProperty(value.toLowerCase()) )
         return "entity.name.tag";
