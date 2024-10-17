@@ -8,7 +8,7 @@
   "methods": [
     {
       "meth": "pip install hext",
-      "lang": "Python v3.8-3.12 <sup><a href=\"https://pypi.org/project/hext/\">PyPI</a></sup>, <a href=\"#htmlext\">htmlext</a>",
+      "lang": "Python v3.9-3.13 <sup><a href=\"https://pypi.org/project/hext/\">PyPI</a></sup>, <a href=\"#htmlext\">htmlext</a>",
       "plat": "macOS, Linux",
       "arch": "x86-64, arm64",
       "link": [
