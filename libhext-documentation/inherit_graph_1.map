@@ -1,4 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,60,39"/>
-<area shape="rect" id="node2" href="$classhext_1_1Cloneable.html" title="Curiously recurring template pattern that extends a base class to provide a virtual method Cloneable:..." alt="" coords="108,5,303,47"/>
+<area shape="rect" id="Node000000" href="$classhext_1_1Capture.html" title="Abstract base for every Capture." alt="" coords="5,45,116,70"/>
+<area shape="rect" id="Node000001" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="164,5,360,45"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="129,44,163,38,164,44,130,49"/>
+<area shape="rect" id="Node000003" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="165,69,359,109"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="130,66,165,71,164,76,129,71"/>
+<area shape="rect" id="Node000002" href="$classhext_1_1AttributeCapture.html" title="Captures an HTML Element&#39;s attribute." alt="" coords="408,13,575,38"/>
+<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="374,23,408,23,408,28,374,28"/>
+<area shape="rect" id="Node000004" href="$classhext_1_1FunctionCapture.html" title="Captures the result of applying a function to an HTML node." alt="" coords="409,77,574,102"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="373,87,408,87,408,92,373,92"/>
 </map>

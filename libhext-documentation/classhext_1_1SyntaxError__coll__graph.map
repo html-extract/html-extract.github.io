@@ -1,4 +1,5 @@
 <map id="hext::SyntaxError" name="hext::SyntaxError">
-<area shape="rect" id="node1" title="The exception that is thrown when parsing invalid hext." alt="" coords="7,80,142,107"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,144,32"/>
+<area shape="rect" id="Node000001" title="The exception that is thrown when parsing invalid hext." alt="" coords="7,79,142,104"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,144,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,44,77,79,72,79,72,44"/>
 </map>

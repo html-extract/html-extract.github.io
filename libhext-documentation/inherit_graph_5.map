@@ -1,3 +1,31 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classhext_1_1Rule.html" title="Extracts values from HTML." alt="" coords="5,5,93,32"/>
+<area shape="rect" id="Node000000" href="$classhext_1_1StringPipe.html" title="Abstract base for every StringPipe." alt="" coords="5,205,131,230"/>
+<area shape="rect" id="Node000001" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="185,5,405,45"/>
+<area shape="poly" id="edge24_Node000000_Node000001" title=" " alt="" coords="78,190,115,123,143,86,177,55,198,43,201,48,180,59,147,90,119,126,82,193"/>
+<area shape="rect" id="Node000003" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="193,69,396,109"/>
+<area shape="poly" id="edge26_Node000000_Node000003" title=" " alt="" coords="88,192,127,154,177,119,204,107,206,112,180,124,131,158,92,196"/>
+<area shape="rect" id="Node000005" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="197,133,392,173"/>
+<area shape="poly" id="edge28_Node000000_Node000005" title=" " alt="" coords="125,198,178,183,220,171,222,176,179,188,126,203"/>
+<area shape="rect" id="Node000007" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="199,197,391,237"/>
+<area shape="poly" id="edge30_Node000000_Node000007" title=" " alt="" coords="145,215,199,215,199,220,145,220"/>
+<area shape="rect" id="Node000009" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="189,261,401,301"/>
+<area shape="poly" id="edge32_Node000000_Node000009" title=" " alt="" coords="126,231,179,247,222,259,220,264,178,252,125,237"/>
+<area shape="rect" id="Node000011" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="179,325,411,365"/>
+<area shape="poly" id="edge34_Node000000_Node000011" title=" " alt="" coords="92,239,131,276,180,311,206,323,204,328,177,316,127,280,88,243"/>
+<area shape="rect" id="Node000013" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="195,389,394,429"/>
+<area shape="poly" id="edge36_Node000000_Node000013" title=" " alt="" coords="82,242,119,309,147,345,180,375,201,387,198,392,177,379,143,348,115,312,78,244"/>
+<area shape="rect" id="Node000002" href="$classhext_1_1AppendPipe.html" title="Appends a given string to a string." alt="" coords="481,13,617,38"/>
+<area shape="poly" id="edge25_Node000001_Node000002" title=" " alt="" coords="418,23,480,23,480,28,418,28"/>
+<area shape="rect" id="Node000004" href="$classhext_1_1CasePipe.html" title="Changes the case of a string. Changes to lower case by default." alt="" coords="489,77,608,102"/>
+<area shape="poly" id="edge27_Node000003_Node000004" title=" " alt="" coords="410,87,489,87,489,92,410,92"/>
+<area shape="rect" id="Node000006" href="$classhext_1_1CollapseWsPipe.html" title="Removes whitespace from beginning and end and collapses multiple whitespace to a single space." alt="" coords="467,141,630,166"/>
+<area shape="poly" id="edge29_Node000005_Node000006" title=" " alt="" coords="406,151,467,151,467,156,406,156"/>
+<area shape="rect" id="Node000008" href="$classhext_1_1PrependPipe.html" title="Prepends a given string to a string." alt="" coords="479,205,619,230"/>
+<area shape="poly" id="edge31_Node000007_Node000008" title=" " alt="" coords="404,215,478,215,478,220,404,220"/>
+<area shape="rect" id="Node000010" href="$classhext_1_1RegexPipe.html" title="Filters a string according to a given regex." alt="" coords="485,269,613,294"/>
+<area shape="poly" id="edge33_Node000009_Node000010" title=" " alt="" coords="414,279,484,279,484,284,414,284"/>
+<area shape="rect" id="Node000012" href="$classhext_1_1RegexReplacePipe.html" title="Replaces a string within a string according to a given regex." alt="" coords="459,333,639,358"/>
+<area shape="poly" id="edge35_Node000011_Node000012" title=" " alt="" coords="424,343,458,343,458,348,424,348"/>
+<area shape="rect" id="Node000014" href="$classhext_1_1TrimPipe.html" title="Trims characters from the beginning and end of a string." alt="" coords="491,397,606,422"/>
+<area shape="poly" id="edge37_Node000013_Node000014" title=" " alt="" coords="408,407,491,407,491,412,408,412"/>
 </map>

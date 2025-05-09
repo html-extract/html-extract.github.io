@@ -1,5 +1,7 @@
 <map id="hext::ChildCountMatch" name="hext::ChildCountMatch">
-<area shape="rect" id="node1" title="Matches HTML elements that have a certain amount of children of type element (excluding text nodes,..." alt="" coords="25,169,196,196"/>
-<area shape="rect" id="node2" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="5,80,216,121"/>
-<area shape="rect" id="node3" href="$classhext_1_1Match.html" title="Abstract base for every Match." alt="" coords="61,5,160,32"/>
+<area shape="rect" id="Node000001" title="Matches HTML elements that have a certain amount of children of type element (excluding text nodes,..." alt="" coords="25,167,196,192"/>
+<area shape="rect" id="Node000002" href="$classhext_1_1Cloneable.html" title=" " alt="" coords="5,79,216,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,132,113,166,108,166,108,132"/>
+<area shape="rect" id="Node000003" href="$classhext_1_1Match.html" title="Abstract base for every Match." alt="" coords="61,5,160,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,44,113,79,108,79,108,44"/>
 </map>
