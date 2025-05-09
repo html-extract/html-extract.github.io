@@ -18,7 +18,7 @@
     },
     {
       "meth": "npm install hext",
-      "lang": "Node v18-23 <sup><a href=\"https://www.npmjs.com/package/hext\">npmjs</a></sup>",
+      "lang": "Node v20-24 <sup><a href=\"https://www.npmjs.com/package/hext\">npmjs</a></sup>",
       "plat": "macOS, Linux",
       "arch": "x86-64, arm64",
       "link": [
